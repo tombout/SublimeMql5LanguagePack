@@ -10,18 +10,17 @@ variables:
   macro_identifier: \b[[:upper:]_][[:upper:][:digit:]_]{2,}\b # only uppercase, at least 3 chars
   path_lookahead: '(?:::\s*)?(?:{{identifier}}\s*::\s*)*(?:template\s+)?{{identifier}}'
   operator_method_name: '\boperator\s*(?:[-+*/%^&|~!=<>]|[-+*/%^&|=!<>]=|<<=?|>>=?|&&|\|\||\+\+|--|,|->\*?|\(\)|\[\]|""\s*{{identifier}})'
-  casts: 'const_cast|dynamic_cast|reinterpret_cast|static_cast'
-  operator_keywords: 'and|and_eq|bitand|bitor|compl|not|not_eq|or|or_eq|xor|xor_eq|noexcept'
-  control_keywords: 'break|case|catch|continue|default|do|else|for|goto|if|_Pragma|return|switch|throw|try|while'
+  casts: 'dynamic_cast'
+  control_keywords: 'break|case|continue|default|do|else|for|if|return|switch|while'
   memory_operators: 'new|delete'
-  basic_types: 'asm|__asm__|auto|bool|_Bool|char|_Complex|double|float|_Imaginary|int|long|short|signed|unsigned|void'
-  before_tag: 'struct|union|enum\s+class|enum\s+struct|enum|class'
+  basic_types: 'bool|char|color|datetime|double|enum|float|int|long|short|string|struct|uchar|uint|ulong|union|ushort|void'
+  before_tag: 'struct|union|enum|class'
   declspec: '__declspec\(\s*\w+(?:\([^)]+\))?\s*\)'
-  storage_classes: 'static|export|extern|friend|explicit|virtual|register|thread_local'
-  type_qualifier: 'const|constexpr|mutable|typename|volatile'
-  compiler_directive: 'inline|restrict|__restrict__|__restrict'
+  storage_classes: 'static|export|extern|virtual'
+  type_qualifier: 'const|typename'
+  compiler_directive: 'inline'
   visibility_modifiers: 'private|protected|public'
-  other_keywords: 'typedef|nullptr|{{visibility_modifiers}}|static_assert|sizeof|using|typeid|alignof|alignas|namespace|template'
+  other_keywords: 'typedef|{{visibility_modifiers}}|sizeof|namespace|template'
   modifiers: '{{storage_classes}}|{{type_qualifier}}|{{compiler_directive}}'
   non_angle_brackets: '(?=<<|<=)'
 
@@ -85,8 +84,6 @@ contexts:
       scope: keyword.control.flow.break.mq5
     - match: \bcontinue\b
       scope: keyword.control.flow.continue.mq5
-    - match: \bgoto\b
-      scope: keyword.control.flow.goto.mq5
     - match: \breturn\b
       scope: keyword.control.flow.return.mq5
     - match: \bthrow\b
@@ -95,8 +92,6 @@ contexts:
       scope: keyword.control.mq5
     - match: '\bdelete\b(\s*\[\])?|\bnew\b(?!])'
       scope: keyword.control.mq5
-    - match: \b({{operator_keywords}})\b
-      scope: keyword.operator.word.mq5
 
   unique-types:
     - match: \b(char16_t|char32_t|wchar_t|nullptr_t)\b
@@ -158,7 +153,7 @@ contexts:
         1: punctuation.accessor.mq5
 
   function-specifiers:
-    - match: \b(const|final|noexcept|override)\b
+    - match: \b(const|final|override)\b
       scope: storage.modifier.mq5
 
   #############################################################################
@@ -794,9 +789,7 @@ contexts:
 
   global-type:
     - include: comments
-    - match: \*|&
-      scope: keyword.operator.mq5
-    - match: '(?=\b({{control_keywords}}|{{operator_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}}|operator)\b)'
+    - match: '(?=\b({{control_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}}|operator)\b)'
       pop: true
     - match: '(?=\s)'
       set: global-maybe-function
@@ -854,9 +847,7 @@ contexts:
   global-maybe-function:
     - include: comments
     # Consume pointer info, macros and any type info that was offset by macros
-    - match: \*|&
-      scope: keyword.operator.mq5
-    - match: '(?=\b({{control_keywords}}|{{operator_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}})\b)'
+    - match: '(?=\b({{control_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}})\b)'
       pop: true
     - match: '\b({{type_qualifier}})\b'
       scope: storage.modifier.mq5
@@ -1255,10 +1246,9 @@ contexts:
       # Cast methods
     - match: '(operator)\s+({{identifier}})(?=\s*(\(|$))'
       captures:
-        1: keyword.control.mq5
-        2: meta.method.mq5 entity.name.function.mq5
+        1: meta.method.mq5 entity.name.function.mq5
       set: method-definition-params
-    - match: '(?=\b({{control_keywords}}|{{operator_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}}|operator)\b)'
+    - match: '(?=\b({{control_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}}|operator)\b)'
       pop: true
     - match: '(?=\s)'
       set: data-structures-maybe-method
@@ -1301,9 +1291,7 @@ contexts:
   data-structures-maybe-method:
     - include: comments
     # Consume pointer info, macros and any type info that was offset by macros
-    - match: \*|&
-      scope: keyword.operator.mq5
-    - match: '(?=\b({{control_keywords}}|{{operator_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}})\b)'
+    - match: '(?=\b({{control_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}})\b)'
       pop: true
     - match: '\b({{type_qualifier}})\b'
       scope: storage.modifier.mq5
