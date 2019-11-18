@@ -9,9 +9,14 @@ EXTENSION  = ['.mq5','mq4']
 
 class Mql5CompilerCommand(sublime_plugin.TextCommand):
 
+    settings = sublime.load_settings("Mql5Compiler.sublime-settings")
+    log_file = tempfile.gettempdir() + '/compile.log'
+    metaeditor = "wrong"
+
     def init(self):
         view = self.view
-
+        self.settings = sublime.load_settings("Mql5Compiler.sublime-settings")
+        self.metaeditor = self.settings.get("metaeditor_file")
         if view.file_name() is not None :
             self.dirname   = os.path.realpath(os.path.dirname(view.file_name()))
             self.filename  = os.path.basename(view.file_name())
@@ -19,7 +24,7 @@ class Mql5CompilerCommand(sublime_plugin.TextCommand):
 
     def isError(self):
         iserror = False
-        if not os.path.exists(metaeditor):
+        if not os.path.exists(self.metaeditor):
             print ("Mql5 Compiler | error: metaeditor64.exe not found")
             iserror = True
 
@@ -35,11 +40,8 @@ class Mql5CompilerCommand(sublime_plugin.TextCommand):
         return iserror
 
     def compile(self):
-        settings = sublime.load_settings("SublimeMql5Compiler.sublime-settings")
-        metaeditor = settings.get("metaeditor_file")
-        log_file = tempfile.gettempdir() + '/compile.log'
-        inc_path = expandvars(settings.get("mql5_home"))
-        proc = subprocess.Popen([metaeditor,"/compile:"+self.filename,"/log:"+log_file,"/inc:"+inc_path],
+        inc_path = expandvars(self.settings.get("mql5_home"))
+        proc = subprocess.Popen([self.metaeditor,"/compile:"+self.filename,"/log:"+self.log_file,"/inc:"+inc_path],
         cwd= self.dirname,
         stdout=subprocess.PIPE,
         shell=False,
@@ -47,7 +49,7 @@ class Mql5CompilerCommand(sublime_plugin.TextCommand):
         return proc.stdout.read()
 
     def showlog_file(self):
-        with open(log_file, 'r', encoding='utf-16') as myfile:
+        with open(self.log_file, 'r', encoding='utf-16') as myfile:
             content = myfile.read()
         window = self.view.window()
 
