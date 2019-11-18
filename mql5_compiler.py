@@ -5,12 +5,7 @@ import re
 import tempfile
 from os.path import expandvars
 
-settings = sublime.load_settings("MQL5 Compiler.sublime-settings")
-
-METAEDITOR = settings.get("metaeditor_file")
-COMPILELOG = tempfile.gettempdir() + '/compile.log'
 EXTENSION  = ['.mq5','mq4']
-INC_PATH = expandvars(settings.get("mql5_home"))
 
 class Mql5CompilerCommand(sublime_plugin.TextCommand):
 
@@ -24,7 +19,7 @@ class Mql5CompilerCommand(sublime_plugin.TextCommand):
 
     def isError(self):
         iserror = False
-        if not os.path.exists(METAEDITOR):
+        if not os.path.exists(metaeditor):
             print ("Mql5 Compiler | error: metaeditor64.exe not found")
             iserror = True
 
@@ -40,15 +35,19 @@ class Mql5CompilerCommand(sublime_plugin.TextCommand):
         return iserror
 
     def compile(self):
-        proc = subprocess.Popen([METAEDITOR,"/compile:"+self.filename,"/log:"+COMPILELOG,"/inc:"+INC_PATH],
+        settings = sublime.load_settings("SublimeMql5Compiler.sublime-settings")
+        metaeditor = settings.get("metaeditor_file")
+        log_file = tempfile.gettempdir() + '/compile.log'
+        inc_path = expandvars(settings.get("mql5_home"))
+        proc = subprocess.Popen([metaeditor,"/compile:"+self.filename,"/log:"+log_file,"/inc:"+inc_path],
         cwd= self.dirname,
         stdout=subprocess.PIPE,
         shell=False,
         startupinfo=None)
         return proc.stdout.read()
 
-    def showCompileLog(self):
-        with open(COMPILELOG, 'r', encoding='utf-16') as myfile:
+    def showlog_file(self):
+        with open(log_file, 'r', encoding='utf-16') as myfile:
             content = myfile.read()
         window = self.view.window()
 
@@ -57,7 +56,7 @@ class Mql5CompilerCommand(sublime_plugin.TextCommand):
         new_view.run_command('append', {'characters': content})
         window.run_command("show_panel", {"panel": "output.mql5log"})
 
-        sublime.status_message('Metaeditor64')
+        sublime.status_message('metaeditor64')
 
         pass
 
@@ -67,4 +66,4 @@ class Mql5CompilerCommand(sublime_plugin.TextCommand):
             return
 
         self.compile()
-        self.showCompileLog()
+        self.showlog_file()

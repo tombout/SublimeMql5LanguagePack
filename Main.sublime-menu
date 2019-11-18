@@ -10,19 +10,19 @@
                 "id": "package-settings", 
                 "children": [
                     {
-                        "caption": "MQL5 Compiler", 
+                        "caption": "Mql5Compiler", 
                         "children": [
                             {
                                 "caption": "Settings – Default", 
                                 "args": {
-                                    "file": "${packages}/MQL5 Compiler/MQL5 Compiler.sublime-settings"
+                                    "file": "${packages}/SublimeMql5Compiler/Mql5Compiler.sublime-settings"
                                 }, 
                                 "command": "open_file"
                             }, 
                             {
                                 "caption": "Settings – User", 
                                 "args": {
-                                    "file": "${packages}/User/MQL5 Compiler.sublime-settings"
+                                    "file": "${packages}/User/Mql5Compiler.sublime-settings"
                                 }, 
                                 "command": "open_file"
                             }, 

@@ -7,4 +7,4 @@ Default key: ctrl + alt + m
 ## Manual Install
 
 - `cd <Packages directory>`   (e.g. `~\Sublime Text 3\Data\Packages`)
-- `git clone https://github.com/tombout/sublime-mql5compiler.git`
+- `git clone https://github.com/tombout/SublimeMql5Compiler.git`
