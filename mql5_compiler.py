@@ -12,7 +12,7 @@ class Mql5CompilerCommand(sublime_plugin.TextCommand):
     def init(self):
         view = self.view
         self.is_error = True
-        self.settings = sublime.load_settings("Mql5Compiler.sublime-settings")
+        self.settings = sublime.load_settings("Mql5LanguagePack.sublime-settings")
         if view.file_name() is not None :
             self.metaeditor = self.settings.get("metaeditor_file")
             self.log_file = tempfile.gettempdir() + '/compile.log'

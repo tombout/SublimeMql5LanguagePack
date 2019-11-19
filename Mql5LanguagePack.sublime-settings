@@ -1,4 +1,5 @@
 {
     "metaeditor_file": "C:/Program Files/MetaTrader 5/metaeditor64.exe",
+    "terminal_file": "C:/Program Files/MetaTrader 5/terminal64.exe",
     "mql5_home" : "%APPDATA%/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5"
 }
