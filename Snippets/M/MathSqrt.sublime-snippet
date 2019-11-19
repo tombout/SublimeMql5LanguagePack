@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:23:57.487000. -->
+<snippet>
+	<content><![CDATA[
+MathSqrt(${1:value})${0}
+]]></content>
+	<tabTrigger>MathSqrt</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the square root of a number.</description>
+</snippet>

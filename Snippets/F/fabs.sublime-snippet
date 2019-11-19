@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:46:14.724000. -->
+<snippet>
+	<content><![CDATA[
+MathAbs(${1:value})${0}
+]]></content>
+	<tabTrigger>fabs</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the absolute value (modulus) of the specified numeric value.</description>
+</snippet>

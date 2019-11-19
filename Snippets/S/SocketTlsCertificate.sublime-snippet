@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:05:44.166000. -->
+<snippet>
+	<content><![CDATA[
+SocketTlsCertificate(${1:socket}, ${2:  }, ${3:subject}, ${4:              }, ${5:issuer}, ${6:               }, ${7:serial}, ${8:              }, ${9:thumbprint}, ${10:           }, ${11:expiration            })${0}
+]]></content>
+	<tabTrigger>SocketTlsCertificate</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Get data on the certificate used to secure network connection.</description>
+</snippet>

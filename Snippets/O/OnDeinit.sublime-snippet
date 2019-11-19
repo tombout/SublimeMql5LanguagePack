@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:18:48.198000. -->
+<snippet>
+	<content><![CDATA[
+OnDeinit(${1:reason})${0}
+]]></content>
+	<tabTrigger>OnDeinit</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function is called in indicators and EAs when the  event occurs. It is used to deinitialize a running MQL5 program.</description>
+</snippet>

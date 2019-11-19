@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:06:03.882000. -->
+<snippet>
+	<content><![CDATA[
+SocketSend(${1:socket}, ${2:  }, ${3:buffer[]}, ${4:             }, ${5:buffer_len            })${0}
+]]></content>
+	<tabTrigger>SocketSend</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Write data to a socket.</description>
+</snippet>

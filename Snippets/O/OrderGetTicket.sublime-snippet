@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:15:52.091000. -->
+<snippet>
+	<content><![CDATA[
+OrderGetTicket(${1:index})${0}
+]]></content>
+	<tabTrigger>OrderGetTicket</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns ticket of a corresponding order and automatically selects the order for further working with it using functions.</description>
+</snippet>

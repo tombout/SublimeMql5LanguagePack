@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:52:45.440000. -->
+<snippet>
+	<content><![CDATA[
+ColorToARGB(${1:clr}, ${2:alpha=255     })${0}
+]]></content>
+	<tabTrigger>ColorToARGB</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function converts  type into  type to get ARGB representation of the color. ARGB color format is used to generate a , , as well as for CCanvas standard library class.</description>
+</snippet>

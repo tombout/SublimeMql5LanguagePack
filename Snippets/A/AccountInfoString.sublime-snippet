@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 23:03:41.493000. -->
+<snippet>
+	<content><![CDATA[
+AccountInfoString(${1:property_id})${0}
+]]></content>
+	<tabTrigger>AccountInfoString</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the value of the corresponding account property.</description>
+</snippet>

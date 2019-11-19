@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:45:55.839000. -->
+<snippet>
+	<content><![CDATA[
+FileCopy(${1:src_file_name}, ${2:common_flag}, ${3:dst_file_name}, ${4:mode_flags})${0}
+]]></content>
+	<tabTrigger>FileCopy</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function copies the original file from a local or shared folder to another file.</description>
+</snippet>

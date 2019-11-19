@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 23:00:28.789000. -->
+<snippet>
+	<content><![CDATA[
+MathArctan(${1:value})${0}
+]]></content>
+	<tabTrigger>atan</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the arc tangent of x. If x is equal to 0, the function returns 0.</description>
+</snippet>

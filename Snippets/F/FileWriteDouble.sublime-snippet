@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:41:46.246000. -->
+<snippet>
+	<content><![CDATA[
+FileWriteDouble(${1:file_handle}, ${2:value})${0}
+]]></content>
+	<tabTrigger>FileWriteDouble</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function writes the value of a double parameter to a a bin-file, starting from the current position of the file pointer.</description>
+</snippet>

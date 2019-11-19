@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:13:43.774000. -->
+<snippet>
+	<content><![CDATA[
+PlotIndexSetString(${1:plot_index}, ${2:prop_id}, ${3:prop_value})${0}
+]]></content>
+	<tabTrigger>PlotIndexSetString</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function sets the value of the corresponding property of the corresponding indicator line. The indicator property must be of the string type.</description>
+</snippet>

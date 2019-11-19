@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:28:25.064000. -->
+<snippet>
+	<content><![CDATA[
+iStochastic(${1:symbol}, ${2:period}, ${3:Kperiod}, ${4:Dperiod}, ${5:slowing}, ${6:ma_method}, ${7:price_field})${0}
+]]></content>
+	<tabTrigger>iStochastic</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the handle of the Stochastic Oscillator indicator.</description>
+</snippet>

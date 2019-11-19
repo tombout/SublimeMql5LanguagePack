@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:48:52.910000. -->
+<snippet>
+	<content><![CDATA[
+CustomRatesDelete(${1:symbol}, ${2:from}, ${3:to})${0}
+]]></content>
+	<tabTrigger>CustomRatesDelete</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Deletes all bars from the price history of the custom symbol in the specified time interval.</description>
+</snippet>

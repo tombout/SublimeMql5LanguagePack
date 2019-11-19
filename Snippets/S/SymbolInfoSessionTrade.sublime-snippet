@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:00:17.628000. -->
+<snippet>
+	<content><![CDATA[
+SymbolInfoSessionTrade(${1:name}, ${2:day_of_week}, ${3:session_index}, ${4:from}, ${5:to})${0}
+]]></content>
+	<tabTrigger>SymbolInfoSessionTrade</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Allows receiving time of beginning and end of the specified trading sessions for a specified symbol and day of week.</description>
+</snippet>

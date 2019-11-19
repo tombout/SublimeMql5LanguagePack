@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:17:36.938000. -->
+<snippet>
+	<content><![CDATA[
+OnChartEvent(${1:id}, ${2:lparam}, ${3:dparam}, ${4:sparam })${0}
+]]></content>
+	<tabTrigger>OnChartEvent</tabTrigger>
+	<scope>source.mq5</scope>
+	<description></description>
+</snippet>

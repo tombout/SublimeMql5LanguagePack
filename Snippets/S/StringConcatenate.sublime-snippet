@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:04:13.633000. -->
+<snippet>
+	<content><![CDATA[
+StringConcatenate(${1:string_var}, ${2:argument1      }, ${3:   }, ${4:argument2 }, ${5:...})${0}
+]]></content>
+	<tabTrigger>StringConcatenate</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function forms a string of passed parameters and returns the size of the formed string. Parameters can be of any type. Number of parameters can't be less than 2 or more than 64.</description>
+</snippet>

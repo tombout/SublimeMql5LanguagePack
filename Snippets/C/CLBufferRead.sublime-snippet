@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:54:51.871000. -->
+<snippet>
+	<content><![CDATA[
+CLBufferRead(${1:buffer}, ${2:data[]}, ${3:buffer_offset=0}, ${4:data_offset=0}, ${5:data_count=WHOLE_ARRAY})${0}
+]]></content>
+	<tabTrigger>CLBufferRead</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Reads an OpenCL buffer into an array and returns the number of read elements.</description>
+</snippet>

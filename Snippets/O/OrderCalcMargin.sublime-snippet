@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:16:49.845000. -->
+<snippet>
+	<content><![CDATA[
+OrderCalcMargin(${1:action}, ${2:,}, ${3:symbol}, ${4:,}, ${5:volume}, ${6:,}, ${7:price}, ${8:,}, ${9:margin })${0}
+]]></content>
+	<tabTrigger>OrderCalcMargin</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function calculates the margin required for the specified order type, on the current account, in the current market environment not taking into account current pending orders and open positions. It allows the evaluation of margin for the trade operation planned. The value is returned in the account currency.</description>
+</snippet>

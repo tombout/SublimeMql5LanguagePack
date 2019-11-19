@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 23:02:58.200000. -->
+<snippet>
+	<content><![CDATA[
+ArrayCompare(${1:array1[]}, ${2:array2[]}, ${3:start1=0}, ${4:start2=0}, ${5:count=WHOLE_ARRAY})${0}
+]]></content>
+	<tabTrigger>ArrayCompare</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the result of comparing two arrays of the same type. It can be used to compare arrays of  or custom structures without , that is the custom structures that do not contain , , classes and other structures with complex objects.</description>
+</snippet>

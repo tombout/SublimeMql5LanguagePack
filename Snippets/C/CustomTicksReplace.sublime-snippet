@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:48:08.411000. -->
+<snippet>
+	<content><![CDATA[
+CustomTicksReplace(${1:symbol}, ${2:from_msc}, ${3:to_msc}, ${4:ticks[]}, ${5:count=WHOLE_ARRAY})${0}
+]]></content>
+	<tabTrigger>CustomTicksReplace</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Fully replaces the price history of the custom symbol within the specified time interval with the data from the  type array.</description>
+</snippet>

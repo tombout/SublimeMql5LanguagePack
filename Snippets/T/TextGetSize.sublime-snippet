@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 21:58:19.662000. -->
+<snippet>
+	<content><![CDATA[
+TextGetSize(${1:text}, ${2:width}, ${3:height})${0}
+]]></content>
+	<tabTrigger>TextGetSize</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the line width and height at the current .</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:32:17.928000. -->
+<snippet>
+	<content><![CDATA[
+iDeMarker(${1:symbol}, ${2:period}, ${3:ma_period})${0}
+]]></content>
+	<tabTrigger>iDeMarker</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the handle of the DeMarker indicator. It has only one buffer.</description>
+</snippet>

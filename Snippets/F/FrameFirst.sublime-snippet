@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:39:37.633000. -->
+<snippet>
+	<content><![CDATA[
+FrameFirst()${0}
+]]></content>
+	<tabTrigger>FrameFirst</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Moves a pointer of frame reading to the beginning and resets a set filter.</description>
+</snippet>

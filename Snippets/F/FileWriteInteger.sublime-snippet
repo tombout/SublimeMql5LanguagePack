@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:41:32.708000. -->
+<snippet>
+	<content><![CDATA[
+FileWriteInteger(${1:file_handle}, ${2:value}, ${3:size=INT_VALUE})${0}
+]]></content>
+	<tabTrigger>FileWriteInteger</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function writes the value of the int parameter to a bin-file, starting from the current position of the file pointer.</description>
+</snippet>

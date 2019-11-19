@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 21:57:29.658000. -->
+<snippet>
+	<content><![CDATA[
+TimeGMT()${0}
+]]></content>
+	<tabTrigger>TimeGMT</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the GMT, which is calculated taking into account the DST switch by the local time on the computer where the client terminal is running. There are 2 variants of the function.</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 23:02:09.442000. -->
+<snippet>
+	<content><![CDATA[
+ArrayInitialize(${1:array[]}, ${2:value})${0}
+]]></content>
+	<tabTrigger>ArrayInitialize</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function initializes a numeric array by a preset value.</description>
+</snippet>

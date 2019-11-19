@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:44:19.881000. -->
+<snippet>
+	<content><![CDATA[
+FileMove(${1:src_file_name}, ${2:common_flag}, ${3:dst_file_name}, ${4:mode_flags})${0}
+]]></content>
+	<tabTrigger>FileMove</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Moves a file from a local or shared folder to another folder.</description>
+</snippet>

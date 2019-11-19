@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:42:59.603000. -->
+<snippet>
+	<content><![CDATA[
+FileReadNumber(${1:file_handle})${0}
+]]></content>
+	<tabTrigger>FileReadNumber</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function reads from the CSV file a string from the current position till a separator (or till the end of a text string) and converts the read string to a value of double type.</description>
+</snippet>

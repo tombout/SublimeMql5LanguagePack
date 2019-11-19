@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:29:52.556000. -->
+<snippet>
+	<content><![CDATA[
+IndicatorSetInteger(${1:prop_id}, ${2:prop_value})${0}
+]]></content>
+	<tabTrigger>IndicatorSetInteger</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function sets the value of the corresponding indicator property. Indicator property must be of the int or color type. There are two variants of the function.</description>
+</snippet>

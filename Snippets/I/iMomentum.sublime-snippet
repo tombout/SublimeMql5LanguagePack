@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:30:40.794000. -->
+<snippet>
+	<content><![CDATA[
+iMomentum(${1:symbol}, ${2:period}, ${3:mom_period}, ${4:applied_price})${0}
+]]></content>
+	<tabTrigger>iMomentum</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the handle of the Momentum indicator. It has only one buffer.</description>
+</snippet>

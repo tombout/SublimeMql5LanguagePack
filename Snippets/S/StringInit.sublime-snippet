@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:03:35.249000. -->
+<snippet>
+	<content><![CDATA[
+StringInit(${1:string_var}, ${2:new_len=0}, ${3:character=0})${0}
+]]></content>
+	<tabTrigger>StringInit</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Initializes a string by specified symbols and provides the specified string size.</description>
+</snippet>

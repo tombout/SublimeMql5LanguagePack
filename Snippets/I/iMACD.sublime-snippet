@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:30:59.257000. -->
+<snippet>
+	<content><![CDATA[
+iMACD(${1:symbol}, ${2:period}, ${3:fast_ema_period}, ${4:slow_ema_period}, ${5:signal_period}, ${6:applied_price})${0}
+]]></content>
+	<tabTrigger>iMACD</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the handle of the Moving Averages Convergence/Divergence indicator. In systems where OsMA is called MACD Histogram, this indicator is shown as two lines. In the client terminal the Moving Averages Convergence/Divergence looks like a histogram.</description>
+</snippet>

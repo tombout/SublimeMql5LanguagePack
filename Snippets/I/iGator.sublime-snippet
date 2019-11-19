@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:31:26.981000. -->
+<snippet>
+	<content><![CDATA[
+iGator(${1:symbol}, ${2:period}, ${3:jaw_period}, ${4:jaw_shift}, ${5:teeth_period}, ${6:teeth_shift}, ${7:lips_period}, ${8:lips_shift}, ${9:ma_method}, ${10:applied_price})${0}
+]]></content>
+	<tabTrigger>iGator</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the handle of the Gator indicator. The Oscillator shows the difference between the blue and red lines of Alligator (upper histogram) and difference between red and green lines (lower histogram).</description>
+</snippet>

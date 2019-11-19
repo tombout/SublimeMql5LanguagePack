@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:46:54.357000. -->
+<snippet>
+	<content><![CDATA[
+EventSetMillisecondTimer(${1:milliseconds})${0}
+]]></content>
+	<tabTrigger>EventSetMillisecondTimer</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function indicates to the client terminal that  events should be generated at intervals less than one second for this Expert Advisor or indicator.</description>
+</snippet>

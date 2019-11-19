@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 23:01:23.838000. -->
+<snippet>
+	<content><![CDATA[
+ArrayRange(${1:array[]}, ${2:rank_index})${0}
+]]></content>
+	<tabTrigger>ArrayRange</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the number of elements in a selected array dimension.</description>
+</snippet>

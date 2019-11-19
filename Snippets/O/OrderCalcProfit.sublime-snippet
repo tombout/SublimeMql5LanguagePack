@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:16:39.871000. -->
+<snippet>
+	<content><![CDATA[
+OrderCalcProfit(${1:action}, ${2:,}, ${3:symbol}, ${4:,}, ${5:volume}, ${6:,}, ${7:price_open}, ${8:,}, ${9:price_close}, ${10:,}, ${11:profit})${0}
+]]></content>
+	<tabTrigger>OrderCalcProfit</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function calculates the profit for the current account, in the current market conditions, based on the parameters passed. The function is used for pre-evaluation of the result of a trade operation. The value is returned in the account currency.</description>
+</snippet>

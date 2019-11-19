@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:26:10.374000. -->
+<snippet>
+	<content><![CDATA[
+MathCeil(${1:val})${0}
+]]></content>
+	<tabTrigger>MathCeil</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns integer numeric value closest from above.</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 23:00:17.621000. -->
+<snippet>
+	<content><![CDATA[
+Bars(${1:symbol_name}, ${2:timeframe })${0}
+]]></content>
+	<tabTrigger>Bars</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the number of bars count in the history for a specified symbol and period. There are 2 variants of functions calls.</description>
+</snippet>

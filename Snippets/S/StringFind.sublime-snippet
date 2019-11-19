@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:04:00.044000. -->
+<snippet>
+	<content><![CDATA[
+StringFind(${1:string_value}, ${2:match_substring}, ${3:start_pos=0})${0}
+]]></content>
+	<tabTrigger>StringFind</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Search for a substring in a string.</description>
+</snippet>

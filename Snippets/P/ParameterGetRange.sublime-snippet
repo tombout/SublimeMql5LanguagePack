@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:15:01.779000. -->
+<snippet>
+	<content><![CDATA[
+ParameterGetRange(${1:name}, ${2:enable}, ${3:value}, ${4:start}, ${5:step}, ${6:stop})${0}
+]]></content>
+	<tabTrigger>ParameterGetRange</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Receives data on the values range and the change step for an  when optimizing an Expert Advisor in the Strategy Tester. There are 2 variants of the function.</description>
+</snippet>

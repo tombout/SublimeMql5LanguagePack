@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:40:09.857000. -->
+<snippet>
+	<content><![CDATA[
+FolderCreate(${1:folder_name}, ${2:common_flag=0})${0}
+]]></content>
+	<tabTrigger>FolderCreate</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Creates a directory in the Files folder (depending on the common_flag value)</description>
+</snippet>

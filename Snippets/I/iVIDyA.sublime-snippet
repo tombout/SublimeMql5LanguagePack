@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:27:55.879000. -->
+<snippet>
+	<content><![CDATA[
+iVIDyA(${1:symbol}, ${2:period}, ${3:cmo_period}, ${4:ema_period}, ${5:ma_shift}, ${6:applied_price})${0}
+]]></content>
+	<tabTrigger>iVIDyA</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the handle of the Variable Index Dynamic Average indicator. It has only one buffer.</description>
+</snippet>

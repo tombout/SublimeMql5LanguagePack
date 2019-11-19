@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:03:43.612000. -->
+<snippet>
+	<content><![CDATA[
+StringGetCharacter(${1:string_value}, ${2:pos})${0}
+]]></content>
+	<tabTrigger>StringGetCharacter</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns value of a symbol, located in the specified position of a string.</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:02:44.566000. -->
+<snippet>
+	<content><![CDATA[
+StringToColor(${1:color_string})${0}
+]]></content>
+	<tabTrigger>StringToColor</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Converting "R,G,B" string or string with color name into color type value.</description>
+</snippet>

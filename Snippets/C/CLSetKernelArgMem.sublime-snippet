@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:52:53.730000. -->
+<snippet>
+	<content><![CDATA[
+CLSetKernelArgMem(${1:kernel}, ${2:arg_index}, ${3:cl_mem_handle})${0}
+]]></content>
+	<tabTrigger>CLSetKernelArgMem</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Sets an OpenCL buffer as a parameter of the OpenCL function.</description>
+</snippet>

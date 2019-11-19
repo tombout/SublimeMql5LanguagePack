@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:38:56.850000. -->
+<snippet>
+	<content><![CDATA[
+GetPointer(${1:anyobject})${0}
+]]></content>
+	<tabTrigger>GetPointer</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the object .</description>
+</snippet>

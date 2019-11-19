@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:51:36.042000. -->
+<snippet>
+	<content><![CDATA[
+CopyRates(${1:symbol_name}, ${2:timeframe}, ${3:start_pos}, ${4:count}, ${5:rates_array[]})${0}
+]]></content>
+	<tabTrigger>CopyRates</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Gets history data of  structure of a specified symbol-period in specified quantity into the rates_array array. The elements ordering of the copied data is from present to the past, i.e., starting position of 0 means the current bar.</description>
+</snippet>

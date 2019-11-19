@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:36:06.227000. -->
+<snippet>
+	<content><![CDATA[
+HistoryOrderGetDouble(${1:ticket_number}, ${2:property_id})${0}
+]]></content>
+	<tabTrigger>HistoryOrderGetDouble</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the requested order property. The order property must be of the double type. There are 2 variants of the function.</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:59:34.336000. -->
+<snippet>
+	<content><![CDATA[
+CalendarCountries(${1:countries[]      })${0}
+]]></content>
+	<tabTrigger>CalendarCountries</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Get the array of country names available in the Calendar.</description>
+</snippet>

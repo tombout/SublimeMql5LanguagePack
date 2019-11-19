@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 23:01:34.784000. -->
+<snippet>
+	<content><![CDATA[
+ArrayMinimum(${1:array[]}, ${2:start=0}, ${3:count=WHOLE_ARRAY    })${0}
+]]></content>
+	<tabTrigger>ArrayMinimum</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Searches for the lowest element in the first dimension of a multidimensional numeric array.</description>
+</snippet>

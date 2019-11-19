@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:19:13.731000. -->
+<snippet>
+	<content><![CDATA[
+ObjectsTotal(${1:chart_id}, ${2:sub_window=-1}, ${3:type=-1})${0}
+]]></content>
+	<tabTrigger>ObjectsTotal</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the number of objects in the specified chart, specified subwindow, of the specified type.</description>
+</snippet>

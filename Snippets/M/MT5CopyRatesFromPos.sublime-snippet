@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:22:02.899000. -->
+<snippet>
+	<content><![CDATA[
+MT5CopyRatesFromPos(${1:symbol}, ${2:timeframe}, ${3:start_pos}, ${4:count})${0}
+]]></content>
+	<tabTrigger>MT5CopyRatesFromPos</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Get bars from the MetaTrader 5 terminal starting from the specified index.</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:39:07.835000. -->
+<snippet>
+	<content><![CDATA[
+GetLastError()${0}
+]]></content>
+	<tabTrigger>GetLastError</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the contents of the system variable .</description>
+</snippet>

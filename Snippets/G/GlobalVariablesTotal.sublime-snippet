@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:37:26.805000. -->
+<snippet>
+	<content><![CDATA[
+GlobalVariablesTotal()${0}
+]]></content>
+	<tabTrigger>GlobalVariablesTotal</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the total number of global variables of the client terminal.</description>
+</snippet>

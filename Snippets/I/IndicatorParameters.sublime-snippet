@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:30:20.424000. -->
+<snippet>
+	<content><![CDATA[
+IndicatorParameters(${1:indicator_handle}, ${2:indicator_type}, ${3:parameters[]    })${0}
+]]></content>
+	<tabTrigger>IndicatorParameters</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Based on the specified handle, returns the number of input parameters of the indicator, as well as the values and types of the parameters.</description>
+</snippet>

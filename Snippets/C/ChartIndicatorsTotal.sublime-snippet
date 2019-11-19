@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 21:54:43.984000. -->
+<snippet>
+	<content><![CDATA[
+ChartIndicatorsTotal(${1:chart_id}, ${2:sub_window })${0}
+]]></content>
+	<tabTrigger>ChartIndicatorsTotal</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the number of all indicators applied to the specified chart window.</description>
+</snippet>

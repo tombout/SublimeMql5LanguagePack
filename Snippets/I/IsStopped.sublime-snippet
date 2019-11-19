@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:28:42.955000. -->
+<snippet>
+	<content><![CDATA[
+IsStopped()${0}
+]]></content>
+	<tabTrigger>IsStopped</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Checks the forced shutdown of an mql5 program.</description>
+</snippet>

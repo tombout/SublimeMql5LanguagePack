@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:04:54.274000. -->
+<snippet>
+	<content><![CDATA[
+MathSrand(${1:seed})${0}
+]]></content>
+	<tabTrigger>srand</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Sets the starting point for generating a series of pseudorandom integers.</description>
+</snippet>

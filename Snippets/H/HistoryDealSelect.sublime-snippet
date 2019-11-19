@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:36:23.362000. -->
+<snippet>
+	<content><![CDATA[
+HistoryDealSelect(${1:ticket})${0}
+]]></content>
+	<tabTrigger>HistoryDealSelect</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Selects a deal in the history for further calling it through appropriate functions. It returns true if the function has been successfully completed. Returns false if the function has failed. For more details on error call .</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 21:55:07.016000. -->
+<snippet>
+	<content><![CDATA[
+ChartIndicatorDelete(${1:chart_id}, ${2:sub_window }, ${3:indicator_shortname })${0}
+]]></content>
+	<tabTrigger>ChartIndicatorDelete</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Removes an indicator with a specified name from the specified chart window.</description>
+</snippet>

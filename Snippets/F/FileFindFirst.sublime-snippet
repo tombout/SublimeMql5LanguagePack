@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:45:35.159000. -->
+<snippet>
+	<content><![CDATA[
+FileFindFirst(${1:file_filter}, ${2:returned_filename}, ${3:common_flag=0})${0}
+]]></content>
+	<tabTrigger>FileFindFirst</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function starts the search of files or subdirectories in a directory in accordance with the specified filter.</description>
+</snippet>

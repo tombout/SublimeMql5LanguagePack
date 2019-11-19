@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:29:27.800000. -->
+<snippet>
+	<content><![CDATA[
+iOBV(${1:symbol}, ${2:period}, ${3:applied_volume})${0}
+]]></content>
+	<tabTrigger>iOBV</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the handle of the On Balance Volume indicator. It has only one buffer.</description>
+</snippet>

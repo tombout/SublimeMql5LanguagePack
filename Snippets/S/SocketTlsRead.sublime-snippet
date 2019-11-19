@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:05:35.611000. -->
+<snippet>
+	<content><![CDATA[
+SocketTlsRead(${1:socket}, ${2:  }, ${3:buffer[]}, ${4:             }, ${5:buffer_maxlen         })${0}
+]]></content>
+	<tabTrigger>SocketTlsRead</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Read data from secure TLS connection.</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:49:39.992000. -->
+<snippet>
+	<content><![CDATA[
+CustomSymbolSetDouble(${1:symbol_name}, ${2:property_id}, ${3:property_value})${0}
+]]></content>
+	<tabTrigger>CustomSymbolSetDouble</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Sets the real type property value for a custom symbol.</description>
+</snippet>

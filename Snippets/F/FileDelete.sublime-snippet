@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:45:44.794000. -->
+<snippet>
+	<content><![CDATA[
+FileDelete(${1:file_name}, ${2:common_flag=0})${0}
+]]></content>
+	<tabTrigger>FileDelete</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Deletes the specified file in a local folder of the client terminal.</description>
+</snippet>

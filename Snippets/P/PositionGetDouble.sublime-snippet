@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:13:24.411000. -->
+<snippet>
+	<content><![CDATA[
+PositionGetDouble(${1:property_id})${0}
+]]></content>
+	<tabTrigger>PositionGetDouble</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the requested property of an open position, pre-selected using  or . The position property must be of the double type. There are 2 variants of the function.</description>
+</snippet>

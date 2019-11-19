@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:07:33.048000. -->
+<snippet>
+	<content><![CDATA[
+Sleep(${1:milliseconds})${0}
+]]></content>
+	<tabTrigger>Sleep</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function suspends execution of the current Expert Advisor or script within a specified interval.</description>
+</snippet>

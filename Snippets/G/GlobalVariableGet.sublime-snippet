@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:38:17.449000. -->
+<snippet>
+	<content><![CDATA[
+GlobalVariableGet(${1:name})${0}
+]]></content>
+	<tabTrigger>GlobalVariableGet</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the value of an existing global variable of the client terminal. There are 2 variants of the function.</description>
+</snippet>

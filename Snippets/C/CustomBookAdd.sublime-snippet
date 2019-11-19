@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:47:57.437000. -->
+<snippet>
+	<content><![CDATA[
+CustomBookAdd(${1:symbol}, ${2:books[]}, ${3:count=WHOLE_ARRAY})${0}
+]]></content>
+	<tabTrigger>CustomBookAdd</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Passes the status of the Depth of Market for a custom symbol. The function allows broadcasting the Depth of Market as if the prices arrive from a broker's server.</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:46:34.934000. -->
+<snippet>
+	<content><![CDATA[
+MathExp(${1:value})${0}
+]]></content>
+	<tabTrigger>exp</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the value of e raised to the power of d.</description>
+</snippet>

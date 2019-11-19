@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:21:45.620000. -->
+<snippet>
+	<content><![CDATA[
+MT5CopyTicksFrom(${1:symbol}, ${2:from}, ${3:count}, ${4:flags })${0}
+]]></content>
+	<tabTrigger>MT5CopyTicksFrom</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Get ticks from the MetaTrader 5 terminal starting from the specified date.</description>
+</snippet>

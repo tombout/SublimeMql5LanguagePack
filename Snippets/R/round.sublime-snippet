@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:10:45.616000. -->
+<snippet>
+	<content><![CDATA[
+MathRound(${1:value})${0}
+]]></content>
+	<tabTrigger>round</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns a value rounded off to the nearest integer of the specified numeric value.</description>
+</snippet>

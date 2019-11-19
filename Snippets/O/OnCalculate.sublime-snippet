@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:18:37.501000. -->
+<snippet>
+	<content><![CDATA[
+OnCalculate(${1:rates_total}, ${2:prev_calculated}, ${3:begin}, ${4:price[]     })${0}
+]]></content>
+	<tabTrigger>OnCalculate</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function is called in the indicators when the  event occurs for processing price data changes. There are two function types. Only one of them can be used within a single indicator.</description>
+</snippet>

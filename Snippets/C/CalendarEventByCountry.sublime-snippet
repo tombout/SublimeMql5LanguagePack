@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:59:25.726000. -->
+<snippet>
+	<content><![CDATA[
+CalendarEventByCountry(${1:country_code}, ${2:events[]   })${0}
+]]></content>
+	<tabTrigger>CalendarEventByCountry</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Get the array of descriptions of all events available in the Calendar by a specified country code.</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:01:09.049000. -->
+<snippet>
+	<content><![CDATA[
+Symbol()${0}
+]]></content>
+	<tabTrigger>Symbol</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the name of a symbol of the current chart.</description>
+</snippet>

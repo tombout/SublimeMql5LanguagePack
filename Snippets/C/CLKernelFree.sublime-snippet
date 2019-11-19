@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:53:30.311000. -->
+<snippet>
+	<content><![CDATA[
+CLKernelFree(${1:kernel})${0}
+]]></content>
+	<tabTrigger>CLKernelFree</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Removes an OpenCL start function.</description>
+</snippet>

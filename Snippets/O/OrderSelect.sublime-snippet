@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:15:42.421000. -->
+<snippet>
+	<content><![CDATA[
+OrderSelect(${1:ticket})${0}
+]]></content>
+	<tabTrigger>OrderSelect</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Selects an order to work with. Returns true if the function has been successfully completed. Returns false if the function completion has failed. For more information about an error call .</description>
+</snippet>

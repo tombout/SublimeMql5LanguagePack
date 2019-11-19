@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:55:51.026000. -->
+<snippet>
+	<content><![CDATA[
+ChartXOnDropped()${0}
+]]></content>
+	<tabTrigger>ChartXOnDropped</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the X coordinate of the chart point the Expert Advisor or script has been dropped to.</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:10:36.094000. -->
+<snippet>
+	<content><![CDATA[
+SendFTP(${1:filename}, ${2:ftp_path=NULL})${0}
+]]></content>
+	<tabTrigger>SendFTP</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Sends a file at the address, specified in the setting window of the "FTP" tab.</description>
+</snippet>

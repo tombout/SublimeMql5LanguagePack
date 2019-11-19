@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:42:24.121000. -->
+<snippet>
+	<content><![CDATA[
+FileSize(${1:file_handle})${0}
+]]></content>
+	<tabTrigger>FileSize</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>The function returns the file size in bytes.</description>
+</snippet>

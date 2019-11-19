@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:07:58.485000. -->
+<snippet>
+	<content><![CDATA[
+SignalSubscribe(${1:signal_id     })${0}
+]]></content>
+	<tabTrigger>SignalSubscribe</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Subscribes to the trading signal.</description>
+</snippet>

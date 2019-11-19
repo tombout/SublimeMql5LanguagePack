@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 21:59:34.870000. -->
+<snippet>
+	<content><![CDATA[
+SymbolSelect(${1:name}, ${2:select})${0}
+]]></content>
+	<tabTrigger>SymbolSelect</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Selects a symbol in the Market Watch window or removes a symbol from the window.</description>
+</snippet>

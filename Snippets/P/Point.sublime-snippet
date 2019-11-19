@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:13:33.841000. -->
+<snippet>
+	<content><![CDATA[
+Point()${0}
+]]></content>
+	<tabTrigger>Point</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the point size of the current symbol in the quote currency.</description>
+</snippet>

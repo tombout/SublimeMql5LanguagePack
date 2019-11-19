@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-19 22:09:19.216000. -->
+<snippet>
+	<content><![CDATA[
+SignalBaseGetInteger(${1:property_id})${0}
+]]></content>
+	<tabTrigger>SignalBaseGetInteger</tabTrigger>
+	<scope>source.mq5</scope>
+	<description>Returns the value of  type property for selected signal.</description>
+</snippet>
