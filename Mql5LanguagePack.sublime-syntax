@@ -4,7 +4,7 @@
 file_extensions:
   - mq5
   - mqh
-scope: source.mq5
+scope: source.mql5
 variables:
   identifier: \b[[:alpha:]_][[:alnum:]_]*\b # upper and lowercase
   macro_identifier: \b[[:upper:]_][[:upper:][:digit:]_]{2,}\b # only uppercase, at least 3 chars
@@ -42,72 +42,63 @@ contexts:
 
   #############################################################################
   # Reusable contexts
-  #
-  # The follow contexts are currently constructed to be reused in the
-  # Objetive-mq5 syntax. They are specifically constructed to not push into
-  # sub-contexts, which ensures that Objective-mq5 code isn't accidentally
-  # lexed as plain mq5.
-  #
-  # The "unique-*" contexts are additions that mq5 makes over C, and thus can
-  # be directly reused in Objective-mq5 along with contexts from Objective-C
-  # and C.
   #############################################################################
 
   unique-late-expressions:
     # This is highlighted after all of the other control keywords
     # to allow operator overloading to be lexed properly
     - match: \boperator\b
-      scope: keyword.control.mq5
+      scope: keyword.control.mql5
 
   unique-modifiers:
     - match: \b({{modifiers}})\b
-      scope: storage.modifier.mq5
+      scope: storage.modifier.mql5
 
   unique-variables:
     - match: \bthis\b
-      scope: variable.language.mq5
-    # common mq5 instance var naming idiom -- fMemberName
+      scope: variable.language.mql5
+    # common mql5 instance var naming idiom -- fMemberName
     - match: '\b(f|m)[[:upper:]]\w*\b'
-      scope: variable.other.readwrite.member.mq5
-    # common mq5 instance var naming idiom -- m_member_name
+      scope: variable.other.readwrite.member.mql5
+    # common mql5 instance var naming idiom -- m_member_name
     - match: '\bm_[[:alnum:]_]+\b'
-      scope: variable.other.readwrite.member.mq5
+      scope: variable.other.readwrite.member.mql5
 
   unique-constants:
     - match: \bnullptr\b
-      scope: constant.language.mq5
+      scope: constant.language.mql5
 
   unique-keywords:
     - match: \busing\b
-      scope: keyword.control.mq5
+      scope: keyword.control.mql5
     - match: \bbreak\b
-      scope: keyword.control.flow.break.mq5
+      scope: keyword.control.flow.break.mql5
     - match: \bcontinue\b
-      scope: keyword.control.flow.continue.mq5
+      scope: keyword.control.flow.continue.mql5
     - match: \breturn\b
-      scope: keyword.control.flow.return.mq5
+      scope: keyword.control.flow.return.mql5
     - match: \bthrow\b
-      scope: keyword.control.flow.throw.mq5
+      scope: keyword.control.flow.throw.mql5
     - match: \b({{control_keywords}})\b
-      scope: keyword.control.mq5
+      scope: keyword.control.mql5
     - match: '\bdelete\b(\s*\[\])?|\bnew\b(?!])'
-      scope: keyword.control.mq5
+      scope: keyword.control.mql5
 
   unique-types:
     - match: \b(char16_t|char32_t|wchar_t|nullptr_t)\b
-      scope: storage.type.mq5
+      scope: storage.type.mql5
     - match: \bclass\b
-      scope: storage.type.mq5
+      scope: storage.type.mql5
 
   unique-strings:
     - match: '((?:L|u8|u|U)?R)("([^\(\)\\ ]{0,16})\()'
       captures:
-        1: storage.type.string.mq5
-        2: punctuation.definition.string.begin.mq5
+        1: storage.type.string.mql5
+        2: punctuation.definition.string.begin.mql5
       push:
-        - meta_scope: string.quoted.double.mq5
+        - meta_scope: string.quoted.double.mql5
         - match: '\)\3"'
-          scope: punctuation.definition.string.end.mq5
+          scope: punctuation.definition.string.end.mql5
           pop: true
 
   unique-numbers:
@@ -142,23 +133,23 @@ contexts:
           (?:(?:l{1,2}|L{1,2})[uU]?|[uU](?:l{0,2}|L{0,2})|(?:i[fl]?|h|min|[mun]?s|_\w*))?)\b
         )
         (?!\.) # Number must not be followed by a decimal point
-      scope: constant.numeric.mq5
+      scope: constant.numeric.mql5
 
   identifiers:
     - match: '{{identifier}}\s*(::)\s*'
       captures:
-        1: punctuation.accessor.mq5
+        1: punctuation.accessor.mql5
     - match: '(?:(::)\s*)?{{identifier}}'
       captures:
-        1: punctuation.accessor.mq5
+        1: punctuation.accessor.mql5
 
   function-specifiers:
     - match: \b(const|final|override)\b
-      scope: storage.modifier.mq5
+      scope: storage.modifier.mql5
 
   #############################################################################
-  # The following are mq5-specific contexts that should not be reused. This is
-  # because they push into subcontexts and use variables that are mq5-specific.
+  # The following are mql5-specific contexts that should not be reused. This is
+  # because they push into subcontexts and use variables that are mql5-specific.
   #############################################################################
 
   ## Common context layout
@@ -187,26 +178,26 @@ contexts:
             pop: true
     - include: early-expressions
     - match: ^\s*\b(extern)(?=\s+"C(\+\+)?")
-      scope: storage.modifier.mq5
+      scope: storage.modifier.mql5
       push:
         - include: comments
         - include: strings
         - match: '\{'
-          scope: punctuation.section.block.begin.mq5
+          scope: punctuation.section.block.begin.mql5
           set:
-            - meta_scope: meta.extern-c.mq5
+            - meta_scope: meta.extern-c.mql5
             - match: '^\s*(#\s*ifdef)\s*__cplusplus\s*'
-              scope: meta.preprocessor.mq5
+              scope: meta.preprocessor.mql5
               captures:
-                1: keyword.control.import.mq5
+                1: keyword.control.import.mql5
               set:
                 - match: '\}'
-                  scope: punctuation.section.block.end.mq5
+                  scope: punctuation.section.block.end.mql5
                   pop: true
                 - include: preprocessor-global
                 - include: global
             - match: '\}'
-              scope: punctuation.section.block.end.mq5
+              scope: punctuation.section.block.end.mql5
               pop: true
             - include: preprocessor-global
             - include: global
@@ -255,9 +246,9 @@ contexts:
     - include: variables
     - include: constants
     - match: ','
-      scope: punctuation.separator.mq5
+      scope: punctuation.separator.mql5
     - match: '\)|\}'
-      scope: invalid.illegal.stray-bracket-end.mq5
+      scope: invalid.illegal.stray-bracket-end.mql5
 
   expressions-minus-generic-type:
     - include: early-expressions-before-generic-type
@@ -272,14 +263,14 @@ contexts:
     - include: late-expressions-before-function-call
     - include: identifiers
     - match: ';'
-      scope: punctuation.terminator.mq5
+      scope: punctuation.terminator.mql5
 
   late-expressions:
     - include: late-expressions-before-function-call
     - include: function-call
     - include: identifiers
     - match: ';'
-      scope: punctuation.terminator.mq5
+      scope: punctuation.terminator.mql5
 
   late-expressions-before-function-call:
     - include: unique-late-expressions
@@ -292,7 +283,7 @@ contexts:
     - include: late-expressions-before-function-call
     - include: identifiers
     - match: ';'
-      scope: punctuation.terminator.mq5
+      scope: punctuation.terminator.mql5
 
   comments:
     - include: scope:source.c#comments
@@ -317,104 +308,116 @@ contexts:
     - include: scope:source.c#keywords
 
   types:
-    - include: unique-types
-    - include: types-parens
-    - include: scope:source.c#types
+    - match: \b({{basic_types}})\b
+      scope: storage.type.mql5
 
   strings:
-    - include: unique-strings
-    - include: scope:source.c#strings
+    - match: '"'
+      scope: punctuation.definition.string.begin.mql5
+      push:
+        - meta_scope: string.quoted.double.mql5
+        - match: '"'
+          scope: punctuation.definition.string.end.mql5
+          pop: true
+        - include: string_escaped_char
+
+  string_escaped_char:
+    - match: '(\\)$\n'
+      captures:
+        1: punctuation.separator.continuation.mql5
+    - match: \\(?:\\|[abefnrtv\'"?]|[0-3][0-9]{0,2}|[4-7][0-9]?|x[a-fA-F0-9]+|u[a-fA-F0-9]{4}|U[a-fA-F0-9]{8})
+      scope: constant.character.escape.mql5
+    - match: \\.
+      scope: invalid.illegal.unknown-escape.mql5
 
   numbers:
     - include: unique-numbers
     - include: scope:source.c#numbers
 
-  ## mq5-specific contexts
-
   case-default:
     - match: '\b(default|case)\b'
-      scope: keyword.control.mq5
+      scope: keyword.control.mql5
       push:
         - match: (?=[);,])
           pop: true
         - match: ':'
-          scope: punctuation.separator.mq5
+          scope: punctuation.separator.mql5
           pop: true
         - include: expressions
 
   modifiers-parens:
     - match: '\b(alignas)\b\s*(\()'
       captures:
-        1: storage.modifier.mq5
-        2: meta.group.mq5 punctuation.section.group.begin.mq5
+        1: storage.modifier.mql5
+        2: meta.group.mql5 punctuation.section.group.begin.mql5
       push:
-        - meta_content_scope: meta.group.mq5
+        - meta_content_scope: meta.group.mql5
         - match: '\)'
-          scope: meta.group.mq5 punctuation.section.group.end.mq5
+          scope: meta.group.mql5 punctuation.section.group.end.mql5
           pop: true
         - include: expressions
     - match: \b(__attribute__)\s*(\(\()
       captures:
-        1: storage.modifier.mq5
-        2: meta.group.mq5 punctuation.section.group.begin.mq5
+        1: storage.modifier.mql5
+        2: meta.group.mql5 punctuation.section.group.begin.mql5
       push :
-        - meta_scope: meta.attribute.mq5
-        - meta_content_scope: meta.group.mq5
+        - meta_scope: meta.attribute.mql5
+        - meta_content_scope: meta.group.mql5
         - include: parens
         - include: strings
         - match: \)\)
-          scope: meta.group.mq5 punctuation.section.group.end.mq5
+          scope: meta.group.mql5 punctuation.section.group.end.mql5
           pop: true
     - match: \b(__declspec)(\()
       captures:
-        1: storage.modifier.mq5
-        2: meta.group.mq5 punctuation.section.group.begin.mq5
+        1: storage.modifier.mql5
+        2: meta.group.mql5 punctuation.section.group.begin.mql5
       push:
-        - meta_content_scope: meta.group.mq5
+        - meta_content_scope: meta.group.mql5
         - match: '\)'
-          scope: meta.group.mq5 punctuation.section.group.end.mq5
+          scope: meta.group.mql5 punctuation.section.group.end.mql5
           pop: true
         - match: '\b(align|allocate|code_seg|deprecated|property|uuid)\b\s*(\()'
           captures:
-            1: storage.modifier.mq5
-            2: meta.group.mq5 punctuation.section.group.begin.mq5
+            1: storage.modifier.mql5
+            2: meta.group.mql5 punctuation.section.group.begin.mql5
           push:
-            - meta_content_scope: meta.group.mq5
+            - meta_content_scope: meta.group.mql5
             - match: '\)'
-              scope: meta.group.mq5 punctuation.section.group.end.mq5
+              scope: meta.group.mql5 punctuation.section.group.end.mql5
               pop: true
             - include: numbers
             - include: strings
             - match: \b(get|put)\b
-              scope: variable.parameter.mq5
+              scope: variable.parameter.mql5
             - match: ','
-              scope: punctuation.separator.mq5
+              scope: punctuation.separator.mql5
             - match: '='
-              scope: keyword.operator.assignment.mq5
+              scope: keyword.operator.assignment.mql5
         - match: '\b(appdomain|deprecated|dllimport|dllexport|jintrinsic|naked|noalias|noinline|noreturn|nothrow|novtable|process|restrict|safebuffers|selectany|thread)\b'
-          scope: constant.other.mq5
+          scope: constant.other.mql5
 
   types-parens:
     - match: '\b(decltype)\b\s*(\()'
       captures:
-        1: storage.type.mq5
-        2: meta.group.mq5 punctuation.section.group.begin.mq5
+        1: storage.type.mql5
+        2: meta.group.mql5 punctuation.section.group.begin.mql5
       push:
-        - meta_content_scope: meta.group.mq5
+        - meta_content_scope: meta.group.mql5
         - match: '\)'
-          scope: meta.group.mq5 punctuation.section.group.end.mq5
+          scope: meta.group.mql5 punctuation.section.group.end.mql5
           pop: true
         - include: expressions
 
   keywords-angle-brackets:
     - match: \b({{casts}})\b\s*
-      scope: keyword.operator.word.cast.mq5
+      scope: keyword.operator.word.cast.mql5
       push:
         - match: '>'
-          scope: punctuation.section.generic.end.mq5
+          scope: punctuation.section.generic.end.mql5
           pop: true
         - match: '<'
-          scope: punctuation.section.generic.begin.mq5
+          scope: punctuation.section.generic.begin.mql5
           push:
             - match: '(?=>)'
               pop: true
@@ -423,46 +426,46 @@ contexts:
   keywords-parens:
     - match: '\b(alignof|typeid|static_assert|sizeof)\b\s*(\()'
       captures:
-        1: keyword.operator.word.mq5
-        2: meta.group.mq5 punctuation.section.group.begin.mq5
+        1: keyword.operator.word.mql5
+        2: meta.group.mql5 punctuation.section.group.begin.mql5
       push:
-        - meta_content_scope: meta.group.mq5
+        - meta_content_scope: meta.group.mql5
         - match: '\)'
-          scope: meta.group.mq5 punctuation.section.group.end.mq5
+          scope: meta.group.mql5 punctuation.section.group.end.mql5
           pop: true
         - include: expressions
 
   namespace:
     - match: '\b(using)\s+(namespace)\s+(?={{path_lookahead}})'
       captures:
-        1: keyword.control.mq5
-        2: keyword.control.mq5
+        1: keyword.control.mql5
+        2: keyword.control.mql5
       push:
         - include: identifiers
         - match: ''
           pop: true
     - match: '\b(namespace)\s+(?=({{path_lookahead}})?(?!\s*[;,]))'
-      scope: meta.namespace.mq5
+      scope: meta.namespace.mql5
       captures:
-        1: keyword.control.mq5
+        1: keyword.control.mql5
       push:
-        - meta_content_scope: meta.namespace.mq5 entity.name.namespace.mq5
+        - meta_content_scope: meta.namespace.mql5 entity.name.namespace.mql5
         - include: identifiers
         - match: ''
           set:
-            - meta_scope: meta.namespace.mq5
+            - meta_scope: meta.namespace.mql5
             - include: comments
             - match: '='
-              scope: keyword.operator.alias.mq5
+              scope: keyword.operator.alias.mql5
             - match: '(?=;)'
               pop: true
             - match: '\}'
-              scope: meta.block.mq5 punctuation.section.block.end.mq5
+              scope: meta.block.mql5 punctuation.section.block.end.mql5
               pop: true
             - match: '\{'
-              scope: punctuation.section.block.begin.mq5
+              scope: punctuation.section.block.begin.mql5
               push:
-                - meta_scope: meta.block.mq5
+                - meta_scope: meta.block.mql5
                 - match: '(?=\})'
                   pop: true
                 - include: preprocessor-global
@@ -479,133 +482,133 @@ contexts:
 
   template:
     - match: \btemplate\b
-      scope: storage.type.template.mq5
+      scope: storage.type.template.mql5
       push:
-        - meta_scope: meta.template.mq5
+        - meta_scope: meta.template.mql5
         # Explicitly include comments here at the top, in order to NOT match the
         # \S lookahead in the case of comments.
         - include: comments
         - match: <
-          scope: punctuation.section.generic.begin.mq5
+          scope: punctuation.section.generic.begin.mql5
           set:
-            - meta_content_scope: meta.template.mq5
+            - meta_content_scope: meta.template.mql5
             - match: '>'
-              scope: meta.template.mq5 punctuation.section.generic.end.mq5
+              scope: meta.template.mql5 punctuation.section.generic.end.mql5
               pop: true
             - match: \.{3}
-              scope: keyword.operator.variadic.mq5
+              scope: keyword.operator.variadic.mql5
             - match: \b(typename|{{before_tag}})\b
-              scope: storage.type.mq5
+              scope: storage.type.mql5
             - include: template # include template here for nested templates
             - include: template-common
         - match: (?=\S)
           set:
-            - meta_content_scope: meta.template.mq5
+            - meta_content_scope: meta.template.mql5
             - match: \b({{before_tag}})\b
-              scope: storage.type.mq5
+              scope: storage.type.mql5
             - include: template-common
 
   generic-type:
     - match: '(?=(?!template){{path_lookahead}}\s*{{generic_lookahead}}\s*\()'
       push:
-        - meta_scope: meta.function-call.mq5
+        - meta_scope: meta.function-call.mql5
         - match: \btemplate\b
-          scope: storage.type.template.mq5
+          scope: storage.type.template.mql5
         - match: '(?:(::)\s*)?{{identifier}}\s*(::)\s*'
           captures:
-            1: punctuation.accessor.double-colon.mq5
-            2: punctuation.accessor.double-colon.mq5
+            1: punctuation.accessor.double-colon.mql5
+            2: punctuation.accessor.double-colon.mql5
         - match: (?:(::)\s*)?({{identifier}})\s*(<)
           captures:
-            1: punctuation.accessor.double-colon.mq5
-            2: variable.function.mq5
-            3: punctuation.section.generic.begin.mq5
+            1: punctuation.accessor.double-colon.mql5
+            2: variable.function.mql5
+            3: punctuation.section.generic.begin.mql5
           push:
             - match: '>'
-              scope: punctuation.section.generic.end.mq5
+              scope: punctuation.section.generic.end.mql5
               pop: true
             - include: expressions-minus-generic-type-function-call
         - match: (?:(::)\s*)?({{identifier}})\s*(\()
           captures:
-            1: punctuation.accessor.double-colon.mq5
-            2: variable.function.mq5
-            3: punctuation.section.group.begin.mq5
+            1: punctuation.accessor.double-colon.mql5
+            2: variable.function.mql5
+            3: punctuation.section.group.begin.mql5
           set:
-            - meta_scope: meta.function-call.mq5
-            - meta_content_scope: meta.group.mq5
+            - meta_scope: meta.function-call.mql5
+            - meta_content_scope: meta.group.mql5
             - match: '\)'
-              scope: meta.group.mq5 punctuation.section.group.end.mq5
+              scope: meta.group.mql5 punctuation.section.group.end.mql5
               pop: true
             - include: expressions
         - include: angle-brackets
         - match: '\('
-          scope: meta.group.mq5 punctuation.section.group.begin.mq5
+          scope: meta.group.mql5 punctuation.section.group.begin.mql5
           set:
-            - meta_scope: meta.function-call.mq5
-            - meta_content_scope: meta.group.mq5
+            - meta_scope: meta.function-call.mql5
+            - meta_content_scope: meta.group.mql5
             - match: '\)'
-              scope: meta.group.mq5 punctuation.section.group.end.mq5
+              scope: meta.group.mql5 punctuation.section.group.end.mql5
               pop: true
             - include: expressions
     - match: '(?=(?!template){{path_lookahead}}\s*{{generic_lookahead}})'
       push:
         - include: identifiers
         - match: '<'
-          scope: punctuation.section.generic.begin.mq5
+          scope: punctuation.section.generic.begin.mql5
           set:
             - match: '>'
-              scope: punctuation.section.generic.end.mq5
+              scope: punctuation.section.generic.end.mql5
               pop: true
             - include: expressions-minus-generic-type-function-call
 
   angle-brackets:
     - match: '<(?!<)'
-      scope: punctuation.section.generic.begin.mq5
+      scope: punctuation.section.generic.begin.mql5
       push:
         - match: '>'
-          scope: punctuation.section.generic.end.mq5
+          scope: punctuation.section.generic.end.mql5
           pop: true
         - include: expressions-minus-generic-type-function-call
 
   block:
     - match: '\{'
-      scope: punctuation.section.block.begin.mq5
+      scope: punctuation.section.block.begin.mql5
       push:
-        - meta_scope: meta.block.mq5
+        - meta_scope: meta.block.mql5
         - match: (?=^\s*#\s*(elif|else|endif)\b)
           pop: true
         - match: '\}'
-          scope: punctuation.section.block.end.mq5
+          scope: punctuation.section.block.end.mql5
           pop: true
         - include: statements
 
   function-call:
     - match: (?={{path_lookahead}}\s*\()
       push:
-        - meta_scope: meta.function-call.mq5
+        - meta_scope: meta.function-call.mql5
         - include: scope:source.c#c99
         - match: '(?:(::)\s*)?{{identifier}}\s*(::)\s*'
-          scope: variable.function.mq5
+          scope: variable.function.mql5
           captures:
-            1: punctuation.accessor.mq5
-            2: punctuation.accessor.mq5
+            1: punctuation.accessor.mql5
+            2: punctuation.accessor.mql5
         - match: '(?:(::)\s*)?{{identifier}}'
-          scope: variable.function.mq5
+          scope: variable.function.mql5
           captures:
-            1: punctuation.accessor.mq5
+            1: punctuation.accessor.mql5
         - match: '\('
-          scope: meta.group.mq5 punctuation.section.group.begin.mq5
+          scope: meta.group.mql5 punctuation.section.group.begin.mql5
           set:
-            - meta_content_scope: meta.function-call.mq5 meta.group.mq5
+            - meta_content_scope: meta.function-call.mql5 meta.group.mql5
             - match: '\)'
-              scope: meta.function-call.mq5 meta.group.mq5 punctuation.section.group.end.mq5
+              scope: meta.function-call.mql5 meta.group.mql5 punctuation.section.group.end.mql5
               pop: true
             - include: expressions
 
   members-inside-function-call:
-    - meta_content_scope: meta.method-call.mq5 meta.group.mq5
+    - meta_content_scope: meta.method-call.mql5 meta.group.mql5
     - match: \)
-      scope: meta.method-call.mq5 meta.group.mq5 punctuation.section.group.end.mq5
+      scope: meta.method-call.mql5 meta.group.mql5 punctuation.section.group.end.mql5
       pop: true
     - include: expressions
 
@@ -614,17 +617,17 @@ contexts:
     # kind of entity we're accessing.
     - include: comments
     - match: \btemplate\b
-      scope: meta.method-call.mq5 storage.type.template.mq5
+      scope: meta.method-call.mql5 storage.type.template.mql5
       # Guaranteed to be a template member function call after we match this
       set:
-        - meta_content_scope: meta.method-call.mq5
+        - meta_content_scope: meta.method-call.mql5
         - include: comments
         - match: '{{identifier}}'
-          scope: variable.function.member.mq5
+          scope: variable.function.member.mql5
           set:
-            - meta_content_scope: meta.method-call.mq5
+            - meta_content_scope: meta.method-call.mql5
             - match: \(
-              scope: meta.group.mq5 punctuation.section.group.begin.mq5
+              scope: meta.group.mql5 punctuation.section.group.begin.mql5
               set: members-inside-function-call
             - include: comments
             - include: angle-brackets
@@ -635,34 +638,34 @@ contexts:
     # Operator overloading
     - match: '({{operator_method_name}})\s*(\()'
       captures:
-        0: meta.method-call.mq5
-        1: variable.function.member.mq5
-        2: meta.group.mq5 punctuation.section.group.begin.mq5
+        0: meta.method-call.mql5
+        1: variable.function.member.mql5
+        2: meta.group.mql5 punctuation.section.group.begin.mql5
       set: members-inside-function-call
     # Non-templated member function call
     - match: (~?{{identifier}})\s*(\()
       captures:
-        0: meta.method-call.mq5
-        1: variable.function.member.mq5
-        2: meta.group.mq5 punctuation.section.group.begin.mq5
+        0: meta.method-call.mql5
+        1: variable.function.member.mql5
+        2: meta.group.mql5 punctuation.section.group.begin.mql5
       set: members-inside-function-call
     # Templated member function call
     - match: (~?{{identifier}})\s*(?={{generic_lookahead}})
       captures:
-        1: variable.function.member.mq5
+        1: variable.function.member.mql5
       set:
-        - meta_scope: meta.method-call.mq5
+        - meta_scope: meta.method-call.mql5
         - match: <
-          scope: punctuation.section.generic.begin.mq5
+          scope: punctuation.section.generic.begin.mql5
           set:
-            - meta_content_scope: meta.method-call.mq5
+            - meta_content_scope: meta.method-call.mql5
             - match: '>'
-              scope: punctuation.section.generic.end.mq5
+              scope: punctuation.section.generic.end.mql5
               set:
-                - meta_content_scope: meta.method-call.mq5
+                - meta_content_scope: meta.method-call.mql5
                 - include: comments
                 - match: \(
-                  scope: punctuation.section.group.begin.mq5
+                  scope: punctuation.section.group.begin.mql5
                   set: members-inside-function-call
                 - match: (?=\S) # safety pop
                   pop: true
@@ -670,12 +673,12 @@ contexts:
     # Explicit base-class access
     - match: ({{identifier}})\s*(::)
       captures:
-        1: variable.other.base-class.mq5
-        2: punctuation.accessor.double-colon.mq5
+        1: variable.other.base-class.mql5
+        2: punctuation.accessor.double-colon.mql5
       set: members-after-accessor-junction # reset
     # Just a regular member variable
     - match: '{{identifier}}'
-      scope: variable.other.readwrite.member.mq5
+      scope: variable.other.readwrite.member.mql5
       pop: true
 
   members-dot:
@@ -684,7 +687,7 @@ contexts:
     # early-expressions-after-generic-type context. This means triple dots
     # (i.e. "..." or "variadic") is attempted first.
     - match: \.
-      scope: punctuation.accessor.dot.mq5
+      scope: punctuation.accessor.dot.mql5
       push: members-after-accessor-junction
 
   members-arrow:
@@ -692,39 +695,39 @@ contexts:
     # early-expressions-after-generic-type context because otherwise the "->"
     # from the C language will match.
     - match: ->
-      scope: punctuation.accessor.arrow.mq5
+      scope: punctuation.accessor.arrow.mql5
       push: members-after-accessor-junction
 
   typedef:
     - match: \btypedef\b
-      scope: storage.type.mq5
+      scope: storage.type.mql5
       push:
         - match: ({{identifier}})?\s*(?=;)
           captures:
-            1: entity.name.type.typedef.mq5
+            1: entity.name.type.typedef.mql5
           pop: true
         - match: \b(struct)\s+({{identifier}})\b
           captures:
-            1: storage.type.mq5
+            1: storage.type.mql5
         - include: expressions-minus-generic-type
 
   parens:
     - match: \(
-      scope: punctuation.section.group.begin.mq5
+      scope: punctuation.section.group.begin.mql5
       push:
-        - meta_scope: meta.group.mq5
+        - meta_scope: meta.group.mql5
         - match: \)
-          scope: punctuation.section.group.end.mq5
+          scope: punctuation.section.group.end.mql5
           pop: true
         - include: expressions
 
   brackets:
     - match: \[
-      scope: punctuation.section.brackets.begin.mq5
+      scope: punctuation.section.brackets.begin.mql5
       push:
-        - meta_scope: meta.brackets.mq5
+        - meta_scope: meta.brackets.mql5
         - match: \]
-          scope: punctuation.section.brackets.end.mq5
+          scope: punctuation.section.brackets.end.mql5
           pop: true
         - include: expressions
 
@@ -737,18 +740,18 @@ contexts:
     - include: modifiers
     - include: identifiers
     - match: \*|&
-      scope: keyword.operator.mq5
+      scope: keyword.operator.mql5
     - include: function-trailing-return-type-parens
     - match: '(?=\S)'
       pop: true
 
   function-trailing-return-type-parens:
     - match: \(
-      scope: punctuation.section.group.begin.mq5
+      scope: punctuation.section.group.begin.mql5
       push:
-        - meta_scope: meta.group.mq5
+        - meta_scope: meta.group.mql5
         - match: \)
-          scope: punctuation.section.group.end.mq5
+          scope: punctuation.section.group.end.mql5
           pop: true
         - include: function-trailing-return-type
 
@@ -761,13 +764,13 @@ contexts:
     # Constructors and destructors don't have a type
     - match: '(?={{path_lookahead}}\s*::\s*{{identifier}}\s*(\(|$))'
       set:
-        - meta_content_scope: meta.function.mq5 entity.name.function.constructor.mq5
+        - meta_content_scope: meta.function.mql5 entity.name.function.constructor.mql5
         - include: identifiers
         - match: '(?=[^\w\s])'
           set: function-definition-params
     - match: '(?={{path_lookahead}}\s*::\s*~{{identifier}}\s*(\(|$))'
       set:
-        - meta_content_scope: meta.function.mq5 entity.name.function.destructor.mq5
+        - meta_content_scope: meta.function.mql5 entity.name.function.destructor.mql5
         - include: identifiers
         - match: '~{{identifier}}'
         - match: '(?=[^\w\s])'
@@ -778,7 +781,7 @@ contexts:
     # since it doesn't seem most developers would create such a long typename.
     - match: '(?={{path_lookahead}}\s*::\s*$)'
       set:
-        - meta_content_scope: meta.function.mq5 entity.name.function.mq5
+        - meta_content_scope: meta.function.mql5 entity.name.function.mql5
         - include: identifiers
         - match: '~{{identifier}}'
         - match: '(?=[^\w\s])'
@@ -806,7 +809,7 @@ contexts:
           )
         )
       captures:
-        1: storage.type.mq5
+        1: storage.type.mql5
       set:
         - include: identifiers
         - match: ''
@@ -824,13 +827,13 @@ contexts:
     # Allow a macro call
     - match: '({{identifier}})\s*(\()(?=[^\)]+\))'
       captures:
-        1: variable.function.mq5
-        2: meta.group.mq5 punctuation.section.group.begin.mq5
+        1: variable.function.mql5
+        2: meta.group.mql5 punctuation.section.group.begin.mql5
       push:
-        - meta_scope: meta.function-call.mq5
-        - meta_content_scope: meta.group.mq5
+        - meta_scope: meta.function-call.mql5
+        - meta_content_scope: meta.group.mql5
         - match: '\)'
-          scope: meta.group.mq5 punctuation.section.group.end.mq5
+          scope: meta.group.mql5 punctuation.section.group.end.mql5
           pop: true
         - include: expressions
     - match: '(?={{path_lookahead}}\s*\()'
@@ -850,7 +853,7 @@ contexts:
     - match: '(?=\b({{control_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}})\b)'
       pop: true
     - match: '\b({{type_qualifier}})\b'
-      scope: storage.modifier.mq5
+      scope: storage.modifier.mql5
     - match: '{{non_angle_brackets}}'
       pop: true
     - include: angle-brackets
@@ -862,7 +865,7 @@ contexts:
     # Operator overloading
     - match: '(?=({{path_lookahead}}\s*(?:{{generic_lookahead}})?::\s*)?{{operator_method_name}}\s*(\(|$))'
       set:
-        - meta_content_scope: meta.function.mq5 entity.name.function.mq5
+        - meta_content_scope: meta.function.mql5 entity.name.function.mql5
         - include: identifiers
         - match: '(?=\s*(\(|$))'
           set: function-definition-params
@@ -885,16 +888,16 @@ contexts:
   global-function-identifier-generic:
     - include: angle-brackets
     - match: '::'
-      scope: punctuation.accessor.mq5
+      scope: punctuation.accessor.mql5
     - match: '(?={{identifier}}<.*>\s*\()'
       push:
-        - meta_content_scope: entity.name.function.mq5
+        - meta_content_scope: entity.name.function.mql5
         - include: identifiers
         - match: '(?=<)'
           pop: true
     - match: '(?={{identifier}}\s*\()'
       push:
-        - meta_content_scope: entity.name.function.mq5
+        - meta_content_scope: entity.name.function.mql5
         - include: identifiers
         - match: ''
           pop: true
@@ -902,29 +905,29 @@ contexts:
       pop: true
 
   global-function-identifier:
-    - meta_content_scope: entity.name.function.mq5
+    - meta_content_scope: entity.name.function.mql5
     - include: identifiers
     - match: '(?=\S)'
       pop: true
 
   function-definition-params:
-    - meta_content_scope: meta.function.mq5
+    - meta_content_scope: meta.function.mql5
     - include: comments
     - match: '(?=\()'
       set:
         - match: \(
-          scope: meta.function.parameters.mq5 meta.group.mq5 punctuation.section.group.begin.mq5
+          scope: meta.function.parameters.mql5 meta.group.mql5 punctuation.section.group.begin.mql5
           set:
-            - meta_content_scope: meta.function.parameters.mq5 meta.group.mq5
+            - meta_content_scope: meta.function.parameters.mql5 meta.group.mql5
             - match : \)
-              scope: punctuation.section.group.end.mq5
+              scope: punctuation.section.group.end.mql5
               set: function-definition-continue
             - match: '\bvoid\b'
-              scope: storage.type.mq5
+              scope: storage.type.mql5
             - match: '{{identifier}}(?=\s*(\[|,|\)|=))'
-              scope: variable.parameter.mq5
+              scope: variable.parameter.mql5
             - match: '='
-              scope: keyword.operator.assignment.mq5
+              scope: keyword.operator.assignment.mql5
               push:
                 - match: '(?=,|\))'
                   pop: true
@@ -936,22 +939,22 @@ contexts:
       pop: true
 
   function-definition-continue:
-    - meta_content_scope: meta.function.mq5
+    - meta_content_scope: meta.function.mql5
     - include: comments
     - match: '(?=;)'
       pop: true
     - match: '->'
-      scope: punctuation.separator.mq5
+      scope: punctuation.separator.mql5
       set: function-definition-trailing-return
     - include: function-specifiers
     - match: '='
-      scope: keyword.operator.assignment.mq5
+      scope: keyword.operator.assignment.mql5
     - match: '&'
-      scope: keyword.operator.mq5
+      scope: keyword.operator.mql5
     - match: \b0\b
-      scope: constant.numeric.mq5
+      scope: constant.numeric.mql5
     - match: \b(default|delete)\b
-      scope: storage.modifier.mq5
+      scope: storage.modifier.mql5
     - match: '(?=\{)'
       set: function-definition-body
     - match: '(?=\S)'
@@ -967,13 +970,13 @@ contexts:
     - include: function-trailing-return-type
 
   function-definition-body:
-    - meta_content_scope: meta.function.mq5 meta.block.mq5
+    - meta_content_scope: meta.function.mql5 meta.block.mql5
     - match: '\{'
-      scope: punctuation.section.block.begin.mq5
+      scope: punctuation.section.block.begin.mql5
       set:
-        - meta_content_scope: meta.function.mq5 meta.block.mq5
+        - meta_content_scope: meta.function.mql5 meta.block.mql5
         - match: '\}'
-          scope: meta.function.mq5 meta.block.mq5 punctuation.section.block.end.mq5
+          scope: meta.function.mql5 meta.block.mql5 punctuation.section.block.end.mql5
           pop: true
         - match: (?=^\s*#\s*(elif|else|endif)\b)
           pop: true
@@ -985,19 +988,19 @@ contexts:
 
   data-structures:
     - match: '\bclass\b'
-      scope: storage.type.mq5
+      scope: storage.type.mql5
       set: data-structures-class-definition
     # Detect variable type definitions using struct/enum/union followed by a tag
     - match: '\b({{before_tag}})(?=\s+{{path_lookahead}}\s+{{path_lookahead}}\s*[=;\[])'
-      scope: storage.type.mq5
+      scope: storage.type.mql5
     - match: '\bstruct\b'
-      scope: storage.type.mq5
+      scope: storage.type.mql5
       set: data-structures-struct-definition
     - match: '\benum(\s+(class|struct))?\b'
-      scope: storage.type.mq5
+      scope: storage.type.mql5
       set: data-structures-enum-definition
     - match: '\bunion\b'
-      scope: storage.type.mq5
+      scope: storage.type.mql5
       set: data-structures-union-definition
     - match: '(?=\S)'
       pop: true
@@ -1009,13 +1012,13 @@ contexts:
         1: meta.assumed-macro.c
 
   data-structures-class-definition:
-    - meta_scope: meta.class.mq5
+    - meta_scope: meta.class.mql5
     - include: data-structures-definition-common-begin
     - match: '{{identifier}}(?={{data_structures_forward_decl_lookahead}})'
-      scope: entity.name.class.forward-decl.mq5
+      scope: entity.name.class.forward-decl.mql5
       set: data-structures-class-definition-after-identifier
     - match: '{{identifier}}'
-      scope: entity.name.class.mq5
+      scope: entity.name.class.mql5
       set: data-structures-class-definition-after-identifier
     - match: '(?=[:{])'
       set: data-structures-class-definition-after-identifier
@@ -1023,27 +1026,27 @@ contexts:
       pop: true
 
   data-structures-class-definition-after-identifier:
-    - meta_content_scope: meta.class.mq5
+    - meta_content_scope: meta.class.mql5
     - include: data-structures-definition-common-begin
     # No matching of identifiers since they should all be macros at this point
     - include: data-structures-definition-common-end
     - match: '\{'
-      scope: meta.block.mq5 punctuation.section.block.begin.mq5
+      scope: meta.block.mql5 punctuation.section.block.begin.mql5
       set:
-        - meta_content_scope: meta.class.mq5 meta.block.mq5
+        - meta_content_scope: meta.class.mql5 meta.block.mql5
         - match: '\}'
-          scope: meta.class.mq5 meta.block.mq5 punctuation.section.block.end.mq5
+          scope: meta.class.mql5 meta.block.mql5 punctuation.section.block.end.mql5
           pop: true
         - include: data-structures-body
 
   data-structures-struct-definition:
-    - meta_scope: meta.struct.mq5
+    - meta_scope: meta.struct.mql5
     - include: data-structures-definition-common-begin
     - match: '{{identifier}}(?={{data_structures_forward_decl_lookahead}})'
-      scope: entity.name.struct.forward-decl.mq5
+      scope: entity.name.struct.forward-decl.mql5
       set: data-structures-struct-definition-after-identifier
     - match: '{{identifier}}'
-      scope: entity.name.struct.mq5
+      scope: entity.name.struct.mql5
       set: data-structures-struct-definition-after-identifier
     - match: '(?=[:{])'
       set: data-structures-struct-definition-after-identifier
@@ -1051,27 +1054,27 @@ contexts:
       pop: true
 
   data-structures-struct-definition-after-identifier:
-    - meta_content_scope: meta.struct.mq5
+    - meta_content_scope: meta.struct.mql5
     - include: data-structures-definition-common-begin
     # No matching of identifiers since they should all be macros at this point
     - include: data-structures-definition-common-end
     - match: '\{'
-      scope: meta.block.mq5 punctuation.section.block.begin.mq5
+      scope: meta.block.mql5 punctuation.section.block.begin.mql5
       set:
-        - meta_content_scope: meta.struct.mq5 meta.block.mq5
+        - meta_content_scope: meta.struct.mql5 meta.block.mql5
         - match: '\}'
-          scope: meta.struct.mq5 meta.block.mq5 punctuation.section.block.end.mq5
+          scope: meta.struct.mql5 meta.block.mql5 punctuation.section.block.end.mql5
           pop: true
         - include: data-structures-body
 
   data-structures-enum-definition:
-    - meta_scope: meta.enum.mq5
+    - meta_scope: meta.enum.mql5
     - include: data-structures-definition-common-begin
     - match: '{{identifier}}(?={{data_structures_forward_decl_lookahead}})'
-      scope: entity.name.enum.forward-decl.mq5
+      scope: entity.name.enum.forward-decl.mql5
       set: data-structures-enum-definition-after-identifier
     - match: '{{identifier}}'
-      scope: entity.name.enum.mq5
+      scope: entity.name.enum.mql5
       set: data-structures-enum-definition-after-identifier
     - match: '(?=[:{])'
       set: data-structures-enum-definition-after-identifier
@@ -1079,28 +1082,28 @@ contexts:
       pop: true
 
   data-structures-enum-definition-after-identifier:
-    - meta_content_scope: meta.enum.mq5
+    - meta_content_scope: meta.enum.mql5
     - include: data-structures-definition-common-begin
     # No matching of identifiers since they should all be macros at this point
     - include: data-structures-definition-common-end
     - match: '\{'
-      scope: meta.block.mq5 punctuation.section.block.begin.mq5
+      scope: meta.block.mql5 punctuation.section.block.begin.mql5
       set:
-        - meta_content_scope: meta.enum.mq5 meta.block.mq5
+        - meta_content_scope: meta.enum.mql5 meta.block.mql5
         # Enums don't support methods so we have a simplified body
         - match: '\}'
-          scope: meta.enum.mq5 meta.block.mq5 punctuation.section.block.end.mq5
+          scope: meta.enum.mql5 meta.block.mql5 punctuation.section.block.end.mql5
           pop: true
         - include: statements
 
   data-structures-union-definition:
-    - meta_scope: meta.union.mq5
+    - meta_scope: meta.union.mql5
     - include: data-structures-definition-common-begin
     - match: '{{identifier}}(?={{data_structures_forward_decl_lookahead}})'
-      scope: entity.name.union.forward-decl.mq5
+      scope: entity.name.union.forward-decl.mql5
       set: data-structures-union-definition-after-identifier
     - match: '{{identifier}}'
-      scope: entity.name.union.mq5
+      scope: entity.name.union.mql5
       set: data-structures-union-definition-after-identifier
     - match: '(?=[{])'
       set: data-structures-union-definition-after-identifier
@@ -1108,17 +1111,17 @@ contexts:
       pop: true
 
   data-structures-union-definition-after-identifier:
-    - meta_content_scope: meta.union.mq5
+    - meta_content_scope: meta.union.mql5
     - include: data-structures-definition-common-begin
     # No matching of identifiers since they should all be macros at this point
     # Unions don't support base classes
     - include: angle-brackets
     - match: '\{'
-      scope: meta.block.mq5 punctuation.section.block.begin.mq5
+      scope: meta.block.mql5 punctuation.section.block.begin.mql5
       set:
-        - meta_content_scope: meta.union.mq5 meta.block.mq5
+        - meta_content_scope: meta.union.mql5 meta.block.mql5
         - match: '\}'
-          scope: meta.union.mq5 meta.block.mq5 punctuation.section.block.end.mq5
+          scope: meta.union.mql5 meta.block.mql5 punctuation.section.block.end.mql5
           pop: true
         - include: data-structures-body
     - match: '(?=;)'
@@ -1136,25 +1139,25 @@ contexts:
   data-structures-definition-common-end:
     - include: angle-brackets
     - match: \bfinal\b
-      scope: storage.modifier.mq5
+      scope: storage.modifier.mql5
     - match: ':'
-      scope: punctuation.separator.mq5
+      scope: punctuation.separator.mql5
       push:
         - include: comments
         - include: preprocessor-other
         - include: modifiers-parens
         - include: modifiers
         - match: '\b(virtual|{{visibility_modifiers}})\b'
-          scope: storage.modifier.mq5
+          scope: storage.modifier.mql5
         - match: (?={{path_lookahead}})
           push:
-            - meta_scope: entity.other.inherited-class.mq5
+            - meta_scope: entity.other.inherited-class.mql5
             - include: identifiers
             - match: ''
               pop: true
         - include: angle-brackets
         - match: ','
-          scope: punctuation.separator.mq5
+          scope: punctuation.separator.mql5
         - match: (?=\{|;)
           pop: true
     - match: '(?=;)'
@@ -1170,71 +1173,71 @@ contexts:
     - include: typedef
     - match: \b({{visibility_modifiers}})\s*(:)(?!:)
       captures:
-        1: storage.modifier.mq5
-        2: punctuation.section.class.mq5
+        1: storage.modifier.mql5
+        2: punctuation.section.class.mql5
     - match: '^\s*(?=(?:~?\w+|::))'
       push: data-structures-modifier
     - include: expressions-minus-generic-type
 
   data-structures-modifier:
     - match: '\bfriend\b'
-      scope: storage.modifier.mq5
+      scope: storage.modifier.mql5
       push:
         - match: (?=;)
           pop: true
         - match: '\{'
-          scope: punctuation.section.block.begin.mq5
+          scope: punctuation.section.block.begin.mql5
           set:
-            - meta_scope: meta.block.mq5
+            - meta_scope: meta.block.mql5
             - match: '\}'
-              scope: punctuation.section.block.end.mq5
+              scope: punctuation.section.block.end.mql5
               pop: true
             - include: statements
         - match: '\b({{before_tag}})\b'
-          scope: storage.type.mq5
+          scope: storage.type.mql5
         - include: expressions-minus-function-call
     - include: comments
     - include: modifiers-parens
     - include: modifiers
     - match: '\bstatic_assert(?=\s*\()'
-      scope: meta.static-assert.mq5 keyword.operator.word.mq5
+      scope: meta.static-assert.mql5 keyword.operator.word.mql5
       push:
         - match: '\('
-          scope: meta.group.mq5 punctuation.section.group.begin.mq5
+          scope: meta.group.mql5 punctuation.section.group.begin.mql5
           set:
-            - meta_content_scope: meta.function-call.mq5 meta.group.mq5
+            - meta_content_scope: meta.function-call.mql5 meta.group.mql5
             - match: '\)'
-              scope: meta.function-call.mq5 meta.group.mq5 punctuation.section.group.end.mq5
+              scope: meta.function-call.mql5 meta.group.mql5 punctuation.section.group.end.mql5
               pop: true
             - include: expressions
     # Destructor
     - match: '(?:{{identifier}}\s*(::)\s*)?~{{identifier}}(?=\s*(\(|$))'
-      scope: meta.method.destructor.mq5 entity.name.function.destructor.mq5
+      scope: meta.method.destructor.mql5 entity.name.function.destructor.mql5
       captures:
-        1: punctuation.accessor.mq5
+        1: punctuation.accessor.mql5
       set: method-definition-params
     # It's a macro, not a constructor if there is no type in the first param
     - match: '({{identifier}})\s*(\()(?=\s*(?!void){{identifier}}\s*[),])'
       captures:
-        1: variable.function.mq5
-        2: meta.group.mq5 punctuation.section.group.begin.mq5
+        1: variable.function.mql5
+        2: meta.group.mql5 punctuation.section.group.begin.mql5
       push:
-        - meta_scope: meta.function-call.mq5
-        - meta_content_scope: meta.group.mq5
+        - meta_scope: meta.function-call.mql5
+        - meta_content_scope: meta.group.mql5
         - match: '\)'
-          scope: meta.group.mq5 punctuation.section.group.end.mq5
+          scope: meta.group.mql5 punctuation.section.group.end.mql5
           pop: true
         - include: expressions
     # Constructor
     - include: preprocessor-workaround-eat-macro-before-identifier
     - match: '((?!{{before_tag}}|template){{identifier}})(?=\s*\()'
-      scope: meta.method.constructor.mq5 entity.name.function.constructor.mq5
+      scope: meta.method.constructor.mql5 entity.name.function.constructor.mql5
       set: method-definition-params
     # Long form constructor
     - match: '({{identifier}}\s*(::)\s*{{identifier}})(?=\s*\()'
       captures:
-        1: meta.method.constructor.mq5 entity.name.function.constructor.mq5
-        2: punctuation.accessor.mq5
+        1: meta.method.constructor.mql5 entity.name.function.constructor.mql5
+        2: punctuation.accessor.mql5
       push: method-definition-params
     - match: '(?=\S)'
       set: data-structures-type
@@ -1242,11 +1245,11 @@ contexts:
   data-structures-type:
     - include: comments
     - match: \*|&
-      scope: keyword.operator.mq5
+      scope: keyword.operator.mql5
       # Cast methods
     - match: '(operator)\s+({{identifier}})(?=\s*(\(|$))'
       captures:
-        1: meta.method.mq5 entity.name.function.mq5
+        1: meta.method.mql5 entity.name.function.mql5
       set: method-definition-params
     - match: '(?=\b({{control_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}}|operator)\b)'
       pop: true
@@ -1265,7 +1268,7 @@ contexts:
           )
         )
       captures:
-        1: storage.type.mq5
+        1: storage.type.mql5
       set:
         - include: identifiers
         - match: ''
@@ -1294,7 +1297,7 @@ contexts:
     - match: '(?=\b({{control_keywords}}|{{casts}}|{{memory_operators}}|{{other_keywords}})\b)'
       pop: true
     - match: '\b({{type_qualifier}})\b'
-      scope: storage.modifier.mq5
+      scope: storage.modifier.mql5
     - match: '{{non_angle_brackets}}'
       pop: true
     - include: angle-brackets
@@ -1303,7 +1306,7 @@ contexts:
     - include: modifiers
     # Operator overloading
     - match: '{{operator_method_name}}(?=\s*(\(|$))'
-      scope: meta.method.mq5 entity.name.function.mq5
+      scope: meta.method.mql5 entity.name.function.mql5
       set: method-definition-params
     # Identifier that is not the function name - likely a macro or type
     - match: '(?={{path_lookahead}}([ \t]+|[*&])(?!\s*(<|::|\()))'
@@ -1325,7 +1328,7 @@ contexts:
     - include: angle-brackets
     - match: '(?={{identifier}})'
       push:
-        - meta_content_scope: entity.name.function.mq5
+        - meta_content_scope: entity.name.function.mql5
         - include: identifiers
         - match: '(?=<)'
           pop: true
@@ -1333,29 +1336,29 @@ contexts:
       pop: true
 
   data-structures-function-identifier:
-    - meta_content_scope: entity.name.function.mq5
+    - meta_content_scope: entity.name.function.mql5
     - include: identifiers
     - match: '(?=\S)'
       pop: true
 
   method-definition-params:
-    - meta_content_scope: meta.method.mq5
+    - meta_content_scope: meta.method.mql5
     - include: comments
     - match: '(?=\()'
       set:
         - match: \(
-          scope: meta.method.parameters.mq5 meta.group.mq5 punctuation.section.group.begin.mq5
+          scope: meta.method.parameters.mql5 meta.group.mql5 punctuation.section.group.begin.mql5
           set:
-            - meta_content_scope: meta.method.parameters.mq5 meta.group.mq5
+            - meta_content_scope: meta.method.parameters.mql5 meta.group.mql5
             - match : \)
-              scope: punctuation.section.group.end.mq5
+              scope: punctuation.section.group.end.mql5
               set: method-definition-continue
             - match: '\bvoid\b'
-              scope: storage.type.mq5
+              scope: storage.type.mql5
             - match: '{{identifier}}(?=\s*(\[|,|\)|=))'
-              scope: variable.parameter.mq5
+              scope: variable.parameter.mql5
             - match: '='
-              scope: keyword.operator.assignment.mq5
+              scope: keyword.operator.assignment.mql5
               push:
                 - match: '(?=,|\))'
                   pop: true
@@ -1365,45 +1368,45 @@ contexts:
       pop: true
 
   method-definition-continue:
-    - meta_content_scope: meta.method.mq5
+    - meta_content_scope: meta.method.mql5
     - include: comments
     - match: '(?=;)'
       pop: true
     - match: '->'
-      scope: punctuation.separator.mq5
+      scope: punctuation.separator.mql5
       set: method-definition-trailing-return
     - include: function-specifiers
     - match: '='
-      scope: keyword.operator.assignment.mq5
+      scope: keyword.operator.assignment.mql5
     - match: '&'
-      scope: keyword.operator.mq5
+      scope: keyword.operator.mql5
     - match: \b0\b
-      scope: constant.numeric.mq5
+      scope: constant.numeric.mql5
     - match: \b(default|delete)\b
-      scope: storage.modifier.mq5
+      scope: storage.modifier.mql5
     - match: '(?=:)'
       set:
         - match: ':'
-          scope: punctuation.separator.initializer-list.mq5
+          scope: punctuation.separator.initializer-list.mql5
           set:
-            - meta_scope: meta.method.constructor.initializer-list.mq5
+            - meta_scope: meta.method.constructor.initializer-list.mql5
             - match: '{{identifier}}'
-              scope: variable.other.readwrite.member.mq5
+              scope: variable.other.readwrite.member.mql5
               push:
                 - match: \(
-                  scope: meta.group.mq5 punctuation.section.group.begin.mq5
+                  scope: meta.group.mql5 punctuation.section.group.begin.mql5
                   set:
-                    - meta_content_scope: meta.group.mq5
+                    - meta_content_scope: meta.group.mql5
                     - match: \)
-                      scope: meta.group.mq5 punctuation.section.group.end.mq5
+                      scope: meta.group.mql5 punctuation.section.group.end.mql5
                       pop: true
                     - include: expressions
                 - match: \{
-                  scope: meta.group.mq5 punctuation.section.group.begin.mq5
+                  scope: meta.group.mql5 punctuation.section.group.begin.mql5
                   set:
-                    - meta_content_scope: meta.group.mq5
+                    - meta_content_scope: meta.group.mql5
                     - match: \}
-                      scope: meta.group.mq5 punctuation.section.group.end.mq5
+                      scope: meta.group.mql5 punctuation.section.group.end.mql5
                       pop: true
                     - include: expressions
                 - include: comments
@@ -1425,13 +1428,13 @@ contexts:
     - include: function-trailing-return-type
 
   method-definition-body:
-    - meta_content_scope: meta.method.mq5 meta.block.mq5
+    - meta_content_scope: meta.method.mql5 meta.block.mql5
     - match: '\{'
-      scope: punctuation.section.block.begin.mq5
+      scope: punctuation.section.block.begin.mql5
       set:
-        - meta_content_scope: meta.method.mq5 meta.block.mq5
+        - meta_content_scope: meta.method.mql5 meta.block.mql5
         - match: '\}'
-          scope: meta.method.mq5 meta.block.mq5 punctuation.section.block.end.mq5
+          scope: meta.method.mql5 meta.block.mql5 punctuation.section.block.end.mql5
           pop: true
         - match: (?=^\s*#\s*(elif|else|endif)\b)
           pop: true
@@ -1449,17 +1452,17 @@ contexts:
   preprocessor-rule-disabled-data-structures:
     - match: ^\s*((#if)\s+(0))\b
       captures:
-        1: meta.preprocessor.mq5
-        2: keyword.control.import.mq5
-        3: constant.numeric.preprocessor.mq5
+        1: meta.preprocessor.mql5
+        2: keyword.control.import.mql5
+        3: constant.numeric.preprocessor.mql5
       push:
         - match: ^\s*(#\s*endif)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.mql5
           pop: true
         - match: ^\s*(#\s*else)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.else.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
           push:
             - match: (?=^\s*#\s*endif\b)
               pop: true
@@ -1467,7 +1470,7 @@ contexts:
             - include: data-structures-body
         - match: ""
           push:
-            - meta_scope: comment.block.preprocessor.if-branch.mq5
+            - meta_scope: comment.block.preprocessor.if-branch.mql5
             - match: (?=^\s*#\s*(else|endif)\b)
               pop: true
             - include: scope:source.c#preprocessor-disabled
@@ -1475,19 +1478,19 @@ contexts:
   preprocessor-rule-enabled-data-structures:
     - match: ^\s*((#if)\s+(0*1))\b
       captures:
-        1: meta.preprocessor.mq5
-        2: keyword.control.import.mq5
-        3: constant.numeric.preprocessor.mq5
+        1: meta.preprocessor.mql5
+        2: keyword.control.import.mql5
+        3: constant.numeric.preprocessor.mql5
       push:
         - match: ^\s*(#\s*endif)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.mql5
           pop: true
         - match: ^\s*(#\s*else)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.else.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
           push:
-            - meta_content_scope: comment.block.preprocessor.else-branch.mq5
+            - meta_content_scope: comment.block.preprocessor.else-branch.mql5
             - match: (?=^\s*#\s*endif\b)
               pop: true
             - include: scope:source.c#preprocessor-disabled
@@ -1519,17 +1522,17 @@ contexts:
   preprocessor-rule-disabled-global:
     - match: ^\s*((#if)\s+(0))\b
       captures:
-        1: meta.preprocessor.mq5
-        2: keyword.control.import.mq5
-        3: constant.numeric.preprocessor.mq5
+        1: meta.preprocessor.mql5
+        2: keyword.control.import.mql5
+        3: constant.numeric.preprocessor.mql5
       push:
         - match: ^\s*(#\s*endif)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.mql5
           pop: true
         - match: ^\s*(#\s*else)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.else.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
           push:
             - match: (?=^\s*#\s*endif\b)
               pop: true
@@ -1538,7 +1541,7 @@ contexts:
             - include: global
         - match: ""
           push:
-            - meta_scope: comment.block.preprocessor.if-branch.mq5
+            - meta_scope: comment.block.preprocessor.if-branch.mql5
             - match: (?=^\s*#\s*(else|endif)\b)
               pop: true
             - include: scope:source.c#preprocessor-disabled
@@ -1546,19 +1549,19 @@ contexts:
   preprocessor-rule-enabled-global:
     - match: ^\s*((#if)\s+(0*1))\b
       captures:
-        1: meta.preprocessor.mq5
-        2: keyword.control.import.mq5
-        3: constant.numeric.preprocessor.mq5
+        1: meta.preprocessor.mql5
+        2: keyword.control.import.mql5
+        3: constant.numeric.preprocessor.mql5
       push:
         - match: ^\s*(#\s*endif)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.mql5
           pop: true
         - match: ^\s*(#\s*else)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.else.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
           push:
-            - meta_content_scope: comment.block.preprocessor.else-branch.mq5
+            - meta_content_scope: comment.block.preprocessor.else-branch.mql5
             - match: (?=^\s*#\s*endif\b)
               pop: true
             - include: scope:source.c#preprocessor-disabled
@@ -1573,13 +1576,13 @@ contexts:
   preprocessor-rule-other-global:
     - match: ^\s*(#\s*(?:if|ifdef|ifndef))\b
       captures:
-        1: keyword.control.import.mq5
+        1: keyword.control.import.mql5
       push:
-        - meta_scope: meta.preprocessor.mq5
+        - meta_scope: meta.preprocessor.mql5
         - include: scope:source.c#preprocessor-line-continuation
         - include: scope:source.c#preprocessor-comments
         - match: \bdefined\b
-          scope: keyword.control.mq5
+          scope: keyword.control.mql5
         # Enter a new scope where all elif/else branches have their
         # contexts popped by a subsequent elif/else/endif. This ensures that
         # preprocessor branches don't push multiple meta.block scopes on
@@ -1594,48 +1597,48 @@ contexts:
   preprocessor-if-branch-global:
     - match: ^\s*(#\s*endif)\b
       captures:
-        1: meta.preprocessor.mq5 keyword.control.import.mq5
+        1: meta.preprocessor.mql5 keyword.control.import.mql5
       pop: true
     - match: (?=^\s*#\s*(elif|else)\b)
       push: preprocessor-elif-else-branch-global
     - match: \{
-      scope: punctuation.section.block.begin.mq5
+      scope: punctuation.section.block.begin.mql5
       set: preprocessor-block-if-branch-global
     - include: preprocessor-global
     - include: negated-block
     - include: global
 
   preprocessor-block-if-branch-global:
-    - meta_scope: meta.block.mq5
+    - meta_scope: meta.block.mql5
     - match: ^\s*(#\s*endif)\b
       captures:
-        1: meta.preprocessor.mq5 keyword.control.import.mq5
+        1: meta.preprocessor.mql5 keyword.control.import.mql5
       set: preprocessor-block-finish-global
     - match: (?=^\s*#\s*(elif|else)\b)
       push: preprocessor-elif-else-branch-global
     - match: \}
-      scope: punctuation.section.block.end.mq5
+      scope: punctuation.section.block.end.mql5
       set: preprocessor-if-branch-global
     - include: statements
 
   preprocessor-block-finish-global:
-    - meta_scope: meta.block.mq5
+    - meta_scope: meta.block.mql5
     - match: ^\s*(#\s*(?:if|ifdef|ifndef))\b
       captures:
-        1: meta.preprocessor.mq5 keyword.control.import.mq5
+        1: meta.preprocessor.mql5 keyword.control.import.mql5
       set: preprocessor-block-finish-if-branch-global
     - match: \}
-      scope: punctuation.section.block.end.mq5
+      scope: punctuation.section.block.end.mql5
       pop: true
     - include: statements
 
   preprocessor-block-finish-if-branch-global:
     - match: ^\s*(#\s*endif)\b
       captures:
-        1: keyword.control.import.mq5
+        1: keyword.control.import.mql5
       pop: true
     - match: \}
-      scope: punctuation.section.block.end.mq5
+      scope: punctuation.section.block.end.mql5
       set: preprocessor-if-branch-global
     - include: statements
 
@@ -1651,17 +1654,17 @@ contexts:
   preprocessor-rule-disabled-statements:
     - match: ^\s*((#if)\s+(0))\b
       captures:
-        1: meta.preprocessor.mq5
-        2: keyword.control.import.mq5
-        3: constant.numeric.preprocessor.mq5
+        1: meta.preprocessor.mql5
+        2: keyword.control.import.mql5
+        3: constant.numeric.preprocessor.mql5
       push:
         - match: ^\s*(#\s*endif)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.mql5
           pop: true
         - match: ^\s*(#\s*else)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.else.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
           push:
             - match: (?=^\s*#\s*endif\b)
               pop: true
@@ -1669,7 +1672,7 @@ contexts:
             - include: statements
         - match: ""
           push:
-            - meta_scope: comment.block.preprocessor.if-branch.mq5
+            - meta_scope: comment.block.preprocessor.if-branch.mql5
             - match: (?=^\s*#\s*(else|endif)\b)
               pop: true
             - include: scope:source.c#preprocessor-disabled
@@ -1677,19 +1680,19 @@ contexts:
   preprocessor-rule-enabled-statements:
     - match: ^\s*((#if)\s+(0*1))\b
       captures:
-        1: meta.preprocessor.mq5
-        2: keyword.control.import.mq5
-        3: constant.numeric.preprocessor.mq5
+        1: meta.preprocessor.mql5
+        2: keyword.control.import.mql5
+        3: constant.numeric.preprocessor.mql5
       push:
         - match: ^\s*(#\s*endif)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.mql5
           pop: true
         - match: ^\s*(#\s*else)\b
           captures:
-            1: meta.preprocessor.mq5 keyword.control.import.else.mq5
+            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
           push:
-            - meta_content_scope: comment.block.preprocessor.else-branch.mq5
+            - meta_content_scope: comment.block.preprocessor.else-branch.mql5
             - match: (?=^\s*#\s*endif\b)
               pop: true
             - include: scope:source.c#preprocessor-disabled
@@ -1703,13 +1706,13 @@ contexts:
   preprocessor-rule-other-statements:
     - match: ^\s*(#\s*(?:if|ifdef|ifndef))\b
       captures:
-        1: keyword.control.import.mq5
+        1: keyword.control.import.mql5
       push:
-        - meta_scope: meta.preprocessor.mq5
+        - meta_scope: meta.preprocessor.mql5
         - include: scope:source.c#preprocessor-line-continuation
         - include: scope:source.c#preprocessor-comments
         - match: \bdefined\b
-          scope: keyword.control.mq5
+          scope: keyword.control.mql5
         # Enter a new scope where all elif/else branches have their
         # contexts popped by a subsequent elif/else/endif. This ensures that
         # preprocessor branches don't push multiple meta.block scopes on
@@ -1724,12 +1727,12 @@ contexts:
   preprocessor-if-branch-statements:
     - match: ^\s*(#\s*endif)\b
       captures:
-        1: meta.preprocessor.mq5 keyword.control.import.mq5
+        1: meta.preprocessor.mql5 keyword.control.import.mql5
       pop: true
     - match: (?=^\s*#\s*(elif|else)\b)
       push: preprocessor-elif-else-branch-statements
     - match: \{
-      scope: punctuation.section.block.begin.mq5
+      scope: punctuation.section.block.begin.mql5
       set: preprocessor-block-if-branch-statements
     - match: (?=(?!{{non_func_keywords}}){{path_lookahead}}\s*\()
       set: preprocessor-if-branch-function-call
@@ -1737,74 +1740,74 @@ contexts:
     - include: statements
 
   preprocessor-if-branch-function-call:
-    - meta_content_scope: meta.function-call.mq5
+    - meta_content_scope: meta.function-call.mql5
     - include: scope:source.c#c99
     - match: '(?:(::)\s*)?{{identifier}}\s*(::)\s*'
-      scope: variable.function.mq5
+      scope: variable.function.mql5
       captures:
-        1: punctuation.accessor.mq5
-        2: punctuation.accessor.mq5
+        1: punctuation.accessor.mql5
+        2: punctuation.accessor.mql5
     - match: '(?:(::)\s*)?{{identifier}}'
-      scope: variable.function.mq5
+      scope: variable.function.mql5
       captures:
-        1: punctuation.accessor.mq5
+        1: punctuation.accessor.mql5
     - match: '\('
-      scope: meta.group.mq5 punctuation.section.group.begin.mq5
+      scope: meta.group.mql5 punctuation.section.group.begin.mql5
       set: preprocessor-if-branch-function-call-arguments
 
   preprocessor-if-branch-function-call-arguments:
-    - meta_content_scope: meta.function-call.mq5 meta.group.mq5
+    - meta_content_scope: meta.function-call.mql5 meta.group.mql5
     - match : \)
-      scope: meta.function-call.mq5 meta.group.mq5 punctuation.section.group.end.mq5
+      scope: meta.function-call.mql5 meta.group.mql5 punctuation.section.group.end.mql5
       set: preprocessor-if-branch-statements
     - match: ^\s*(#\s*(?:elif|else))\b
       captures:
-        1: meta.preprocessor.mq5 keyword.control.import.mq5
+        1: meta.preprocessor.mql5 keyword.control.import.mql5
       set: preprocessor-if-branch-statements
     - match: ^\s*(#\s*endif)\b
       captures:
-        1: meta.preprocessor.mq5 keyword.control.import.mq5
+        1: meta.preprocessor.mql5 keyword.control.import.mql5
       set: preprocessor-if-branch-function-call-arguments-finish
     - include: expressions
 
   preprocessor-if-branch-function-call-arguments-finish:
-    - meta_content_scope: meta.function-call.mq5 meta.group.mq5
+    - meta_content_scope: meta.function-call.mql5 meta.group.mql5
     - match: \)
-      scope: meta.function-call.mq5 meta.group.mq5 punctuation.section.group.end.mq5
+      scope: meta.function-call.mql5 meta.group.mql5 punctuation.section.group.end.mql5
       pop: true
     - include: expressions
 
   preprocessor-block-if-branch-statements:
-    - meta_scope: meta.block.mq5
+    - meta_scope: meta.block.mql5
     - match: ^\s*(#\s*endif)\b
       captures:
-        1: meta.preprocessor.mq5 keyword.control.import.mq5
+        1: meta.preprocessor.mql5 keyword.control.import.mql5
       set: preprocessor-block-finish-statements
     - match: (?=^\s*#\s*(elif|else)\b)
       push: preprocessor-elif-else-branch-statements
     - match: \}
-      scope: punctuation.section.block.end.mq5
+      scope: punctuation.section.block.end.mql5
       set: preprocessor-if-branch-statements
     - include: statements
 
   preprocessor-block-finish-statements:
-    - meta_scope: meta.block.mq5
+    - meta_scope: meta.block.mql5
     - match: ^\s*(#\s*(?:if|ifdef|ifndef))\b
       captures:
-        1: meta.preprocessor.mq5 keyword.control.import.mq5
+        1: meta.preprocessor.mql5 keyword.control.import.mql5
       set: preprocessor-block-finish-if-branch-statements
     - match: \}
-      scope: punctuation.section.block.end.mq5
+      scope: punctuation.section.block.end.mql5
       pop: true
     - include: statements
 
   preprocessor-block-finish-if-branch-statements:
     - match: ^\s*(#\s*endif)\b
       captures:
-        1: keyword.control.import.mq5
+        1: keyword.control.import.mql5
       pop: true
     - match: \}
-      scope: meta.block.mq5 punctuation.section.block.end.mq5
+      scope: meta.block.mql5 punctuation.section.block.end.mql5
       set: preprocessor-if-branch-statements
     - include: statements
 
@@ -1818,10 +1821,10 @@ contexts:
 
   negated-block:
     - match: '\}'
-      scope: punctuation.section.block.end.mq5
+      scope: punctuation.section.block.end.mql5
       push:
         - match: '\{'
-          scope: punctuation.section.block.begin.mq5
+          scope: punctuation.section.block.begin.mql5
           pop: true
         - match: (?=^\s*#\s*(elif|else|endif)\b)
           pop: true
@@ -1830,70 +1833,70 @@ contexts:
   preprocessor-macro-define:
     - match: ^\s*(\#\s*define)\b
       captures:
-        1: meta.preprocessor.macro.mq5 keyword.control.import.define.mq5
+        1: meta.preprocessor.macro.mql5 keyword.control.define.mql5
       push:
-        - meta_content_scope: meta.preprocessor.macro.mq5
+        - meta_content_scope: meta.preprocessor.macro.mql5
         - include: scope:source.c#preprocessor-line-continuation
         - include: scope:source.c#preprocessor-line-ending
         - include: scope:source.c#preprocessor-comments
         - match: '({{identifier}})(?=\()'
-          scope: entity.name.function.preprocessor.mq5
+          scope: entity.name.function.preprocessor.mql5
           set:
             - match: '\('
-              scope: punctuation.section.group.begin.mq5
+              scope: punctuation.section.group.begin.mql5
               set: preprocessor-macro-params
         - match: '{{identifier}}'
-          scope: entity.name.constant.preprocessor.mq5
+          scope: entity.name.constant.preprocessor.mql5
           set: preprocessor-macro-definition
 
   preprocessor-macro-params:
-    - meta_scope: meta.preprocessor.macro.parameters.mq5 meta.group.mq5
+    - meta_scope: meta.preprocessor.macro.parameters.mql5 meta.group.mql5
     - match: '{{identifier}}'
-      scope: variable.parameter.mq5
+      scope: variable.parameter.mql5
     - match: \)
-      scope: punctuation.section.group.end.mq5
+      scope: punctuation.section.group.end.mql5
       set: preprocessor-macro-definition
     - match: ','
-      scope: punctuation.separator.mq5
+      scope: punctuation.separator.mql5
       push:
         - match: '{{identifier}}'
-          scope: variable.parameter.mq5
+          scope: variable.parameter.mql5
           pop: true
         - include: scope:source.c#preprocessor-line-continuation
         - include: scope:source.c#preprocessor-comments
         - match: '\.\.\.'
-          scope: keyword.operator.variadic.mq5
+          scope: keyword.operator.variadic.mql5
         - match: '(?=\))'
           pop: true
         - match: (/\*).*(\*/)
-          scope: comment.block.mq5
+          scope: comment.block.mql5
           captures:
-            1: punctuation.definition.comment.mq5
-            2: punctuation.definition.comment.mq5
+            1: punctuation.definition.comment.mql5
+            2: punctuation.definition.comment.mql5
         - match: '\S+'
-          scope: invalid.illegal.unexpected-character.mq5
+          scope: invalid.illegal.unexpected-character.mql5
     - include: scope:source.c#preprocessor-line-continuation
     - include: scope:source.c#preprocessor-comments
     - match: '\.\.\.'
-      scope: keyword.operator.variadic.mq5
+      scope: keyword.operator.variadic.mql5
     - match: (/\*).*(\*/)
-      scope: comment.block.mq5
+      scope: comment.block.mql5
       captures:
-        1: punctuation.definition.comment.mq5
-        2: punctuation.definition.comment.mq5
+        1: punctuation.definition.comment.mql5
+        2: punctuation.definition.comment.mql5
     - match: $\n
-      scope: invalid.illegal.unexpected-end-of-line.mq5
+      scope: invalid.illegal.unexpected-end-of-line.mql5
 
   preprocessor-macro-definition:
-    - meta_content_scope: meta.preprocessor.macro.mq5
+    - meta_content_scope: meta.preprocessor.macro.mql5
     - include: scope:source.c#preprocessor-line-continuation
     - include: scope:source.c#preprocessor-line-ending
     - include: scope:source.c#preprocessor-comments
     # Don't define blocks in define statements
     - match: '\{'
-      scope: punctuation.section.block.begin.mq5
+      scope: punctuation.section.block.begin.mql5
     - match: '\}'
-      scope: punctuation.section.block.end.mq5
+      scope: punctuation.section.block.end.mql5
     - include: expressions
 
   preprocessor-practical-workarounds:
@@ -1902,7 +1905,7 @@ contexts:
 
   preprocessor-convention-ignore-uppercase-ident-lines:
     - match: ^(\s*{{macro_identifier}})+\s*$
-      scope: meta.assumed-macro.mq5
+      scope: meta.assumed-macro.mql5
       push:
         # It's possible that we are dealing with a function return type on its own line, and the
         # name of the function is on the subsequent line.
@@ -1916,47 +1919,47 @@ contexts:
   preprocessor-other:
     - match: ^\s*(#\s*(?:if|ifdef|ifndef|elif|else|line|pragma|undef))\b
       captures:
-        1: keyword.control.import.mq5
+        1: keyword.control.import.mql5
       push:
-        - meta_scope: meta.preprocessor.mq5
+        - meta_scope: meta.preprocessor.mql5
         - include: scope:source.c#preprocessor-line-continuation
         - include: scope:source.c#preprocessor-line-ending
         - include: scope:source.c#preprocessor-comments
         - match: \bdefined\b
-          scope: keyword.control.mq5
+          scope: keyword.control.mql5
     - match: ^\s*(#\s*endif)\b
       captures:
-        1: meta.preprocessor.mq5 keyword.control.import.mq5
+        1: meta.preprocessor.mql5 keyword.control.import.mql5
     - match: ^\s*(#\s*(?:error|warning))\b
       captures:
-        1: keyword.control.import.error.mq5
+        1: keyword.control.import.error.mql5
       push:
-        - meta_scope: meta.preprocessor.diagnostic.mq5
+        - meta_scope: meta.preprocessor.diagnostic.mql5
         - include: scope:source.c#preprocessor-line-continuation
         - include: scope:source.c#preprocessor-line-ending
         - include: scope:source.c#preprocessor-comments
         - include: strings
         - match: '\S+'
-          scope: string.unquoted.mq5
-    - match: ^\s*(#\s*(?:include|include_next|import))\b
+          scope: string.unquoted.mql5
+    - match: ^\s*(#\s*(?:include|import))\b
       captures:
-        1: keyword.control.import.include.mq5
+        1: keyword.control.import.include.mql5
       push:
-        - meta_scope: meta.preprocessor.include.mq5
+        - meta_scope: meta.preprocessor.include.mql5
         - include: scope:source.c#preprocessor-line-continuation
         - include: scope:source.c#preprocessor-line-ending
         - include: scope:source.c#preprocessor-comments
         - match: '"'
-          scope: punctuation.definition.string.begin.mq5
+          scope: punctuation.definition.string.begin.mql5
           push:
-            - meta_scope: string.quoted.double.include.mq5
+            - meta_scope: string.quoted.double.include.mql5
             - match: '"'
-              scope: punctuation.definition.string.end.mq5
+              scope: punctuation.definition.string.end.mql5
               pop: true
         - match: <
-          scope: punctuation.definition.string.begin.mq5
+          scope: punctuation.definition.string.begin.mql5
           push:
-            - meta_scope: string.quoted.other.lt-gt.include.mq5
+            - meta_scope: string.quoted.other.lt-gt.include.mql5
             - match: '>'
-              scope: punctuation.definition.string.end.mq5
+              scope: punctuation.definition.string.end.mql5
               pop: true
