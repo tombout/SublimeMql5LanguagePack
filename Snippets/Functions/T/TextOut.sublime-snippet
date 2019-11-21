@@ -4,6 +4,6 @@
 TextOut(${1:text}, ${2:x}, ${3:y}, ${4:anchor}, ${5:&data[]}, ${6:width}, ${7:height}, ${8:color}, ${9:color_format})${0}
 ]]></content>
 	<tabTrigger>TextOut</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function displays a text in a custom array (buffer) and returns the result of that operation. The array is designed to create the graphical .</description>
 </snippet>

@@ -4,6 +4,6 @@
 FileGetInteger(${1:file_handle}, ${2:property_id})${0}
 ]]></content>
 	<tabTrigger>FileGetInteger</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Gets an integer property of a file. There are two variants of the function.</description>
 </snippet>

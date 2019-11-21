@@ -4,6 +4,6 @@
 EventChartCustom(${1:chart_id}, ${2:custom_event_id}, ${3:lparam}, ${4:dparam}, ${5:sparam})${0}
 ]]></content>
 	<tabTrigger>EventChartCustom</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function generates a custom event for the specified chart.</description>
 </snippet>

@@ -4,6 +4,6 @@
 iCustom(${1:symbol}, ${2:period}, ${3:name}, ${4:   ...})${0}
 ]]></content>
 	<tabTrigger>iCustom</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of a specified custom indicator.</description>
 </snippet>

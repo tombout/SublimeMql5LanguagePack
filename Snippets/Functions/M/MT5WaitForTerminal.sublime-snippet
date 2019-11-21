@@ -4,6 +4,6 @@
 MT5WaitForTerminal()${0}
 ]]></content>
 	<tabTrigger>MT5WaitForTerminal</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Wait till the MetaTrader 5 terminal connects to the trade server.</description>
 </snippet>

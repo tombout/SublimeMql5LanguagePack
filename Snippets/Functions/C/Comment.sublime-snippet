@@ -4,6 +4,6 @@
 Comment(${1:argument}, ${2:   ...})${0}
 ]]></content>
 	<tabTrigger>Comment</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>This function outputs a comment defined by a user in the top left corner of a chart.</description>
 </snippet>

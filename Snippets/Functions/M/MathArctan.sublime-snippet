@@ -4,6 +4,6 @@
 MathArctan(${1:value})${0}
 ]]></content>
 	<tabTrigger>MathArctan</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the arc tangent of x. If x is equal to 0, the function returns 0.</description>
 </snippet>

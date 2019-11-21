@@ -4,6 +4,6 @@
 Bars(${1:symbol_name}, ${2:timeframe })${0}
 ]]></content>
 	<tabTrigger>Bars</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the number of bars count in the history for a specified symbol and period. There are 2 variants of functions calls.</description>
 </snippet>

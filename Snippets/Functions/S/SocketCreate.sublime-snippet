@@ -4,6 +4,6 @@
 SocketCreate(${1:flags         })${0}
 ]]></content>
 	<tabTrigger>SocketCreate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Create a socket with specified flags and return its handle.</description>
 </snippet>

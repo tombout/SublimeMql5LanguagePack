@@ -4,6 +4,6 @@
 ArrayBsearch(${1:array[]}, ${2:value})${0}
 ]]></content>
 	<tabTrigger>ArrayBsearch</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Searches for a specified value in a multidimensional numeric array  ascending. Search is performed through the elements of the first dimension.</description>
 </snippet>

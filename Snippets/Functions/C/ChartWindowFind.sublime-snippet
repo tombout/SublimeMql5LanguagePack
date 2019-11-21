@@ -4,6 +4,6 @@
 ChartWindowFind(${1:chart_id}, ${2:indicator_shortname})${0}
 ]]></content>
 	<tabTrigger>ChartWindowFind</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the number of a subwindow where an indicator is drawn. There are 2 variants of the function.</description>
 </snippet>

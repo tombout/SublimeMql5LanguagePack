@@ -4,6 +4,6 @@
 StringCompare(${1:string1}, ${2:string2}, ${3:case_sensitive=true})${0}
 ]]></content>
 	<tabTrigger>StringCompare</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function compares two strings and returns the comparison result in form of an integer.</description>
 </snippet>

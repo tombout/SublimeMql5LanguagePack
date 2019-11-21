@@ -4,6 +4,6 @@
 ArraySetAsSeries(${1:array[]}, ${2:flag})${0}
 ]]></content>
 	<tabTrigger>ArraySetAsSeries</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function sets the AS_SERIES flag to a selected , and elements will be indexed like in .</description>
 </snippet>

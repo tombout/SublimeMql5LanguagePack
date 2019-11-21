@@ -4,6 +4,6 @@
 OrderCheck(${1:request}, ${2:,}, ${3:result })${0}
 ]]></content>
 	<tabTrigger>OrderCheck</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The OrderCheck() function checks if there are enough money to execute a required . The check results are placed to the fields of the  structure.</description>
 </snippet>

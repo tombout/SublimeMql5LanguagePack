@@ -4,6 +4,6 @@
 CopyTickVolume(${1:symbol_name}, ${2:timeframe}, ${3:start_pos}, ${4:count}, ${5:volume_array[]})${0}
 ]]></content>
 	<tabTrigger>CopyTickVolume</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function gets into volume_array the history data of tick volumes for the selected symbol-period pair in the specified quantity. It should be noted that elements ordering is from present to past, i.e., starting position of 0 means the current bar.</description>
 </snippet>

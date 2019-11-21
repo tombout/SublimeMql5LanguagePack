@@ -4,6 +4,6 @@
 ChartTimePriceToXY(${1:chart_id}, ${2:sub_window}, ${3:time}, ${4: }, ${5:price}, ${6: }, ${7:x}, ${8: }, ${9:y  })${0}
 ]]></content>
 	<tabTrigger>ChartTimePriceToXY</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Converts the coordinates of a chart from the time/price representation to the X and Y coordinates.</description>
 </snippet>

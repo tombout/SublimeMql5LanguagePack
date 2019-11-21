@@ -4,6 +4,6 @@
 MarketBookAdd(${1:symbol})${0}
 ]]></content>
 	<tabTrigger>MarketBookAdd</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Provides opening of Depth of Market for a selected symbol, and subscribes for receiving notifications of the DOM changes.</description>
 </snippet>

@@ -4,6 +4,6 @@
 GlobalVariablesDeleteAll(${1:prefix_name=NULL}, ${2:,}, ${3:limit_data=0})${0}
 ]]></content>
 	<tabTrigger>GlobalVariablesDeleteAll</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Deletes global variables of the client terminal.</description>
 </snippet>

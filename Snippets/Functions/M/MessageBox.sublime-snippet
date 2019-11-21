@@ -4,6 +4,6 @@
 MessageBox(${1:text}, ${2:caption=NULL}, ${3:flags=0})${0}
 ]]></content>
 	<tabTrigger>MessageBox</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It creates and shows a message box and manages it. A message box contains a message and header, any combination of predefined signs and command buttons.</description>
 </snippet>

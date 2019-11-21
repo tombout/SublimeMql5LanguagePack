@@ -4,6 +4,6 @@
 MathAbs(${1:value})${0}
 ]]></content>
 	<tabTrigger>fabs</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the absolute value (modulus) of the specified numeric value.</description>
 </snippet>

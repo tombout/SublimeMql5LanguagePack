@@ -4,6 +4,6 @@
 FileReadDatetime(${1:file_handle})${0}
 ]]></content>
 	<tabTrigger>FileReadDatetime</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Reads from the file of CSV type a string of one of the formats: "YYYY.MM.DD HH:MI:SS", "YYYY.MM.DD" or "HH:MI:SS" - and converts it into a value of datetime type.</description>
 </snippet>

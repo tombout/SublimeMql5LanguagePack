@@ -4,6 +4,6 @@
 ShortArrayToString(${1:array[]}, ${2:start=0}, ${3:count=-1})${0}
 ]]></content>
 	<tabTrigger>ShortArrayToString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It copies part of array into a returned string.</description>
 </snippet>

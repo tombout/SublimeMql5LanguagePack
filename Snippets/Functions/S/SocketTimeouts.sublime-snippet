@@ -4,6 +4,6 @@
 SocketTimeouts(${1:socket}, ${2:  }, ${3:timeout_send_ms}, ${4:      }, ${5:timeout_receive_ms    })${0}
 ]]></content>
 	<tabTrigger>SocketTimeouts</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Set timeouts for receiving and sending data for a socket system object.</description>
 </snippet>

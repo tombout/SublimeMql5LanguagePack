@@ -4,6 +4,6 @@
 StringReplace(${1:str}, ${2:find}, ${3:replacement})${0}
 ]]></content>
 	<tabTrigger>StringReplace</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description> It replaces all the found substrings of a string by a set sequence of symbols.</description>
 </snippet>

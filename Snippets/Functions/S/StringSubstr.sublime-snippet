@@ -4,6 +4,6 @@
 StringSubstr(${1:string_value}, ${2:start_pos}, ${3:length=-1})${0}
 ]]></content>
 	<tabTrigger>StringSubstr</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Extracts a substring from a text string starting from the specified position.</description>
 </snippet>

@@ -4,6 +4,6 @@
 CLHandleType(${1:handle})${0}
 ]]></content>
 	<tabTrigger>CLHandleType</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the type of an OpenCL handle as a value of the ENUM_OPENCL_HANDLE_TYPE enumeration.</description>
 </snippet>

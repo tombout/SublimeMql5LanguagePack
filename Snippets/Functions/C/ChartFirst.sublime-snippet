@@ -4,6 +4,6 @@
 ChartFirst()${0}
 ]]></content>
 	<tabTrigger>ChartFirst</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the ID of the first chart of the client terminal.</description>
 </snippet>

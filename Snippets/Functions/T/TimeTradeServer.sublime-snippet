@@ -4,6 +4,6 @@
 TimeTradeServer()${0}
 ]]></content>
 	<tabTrigger>TimeTradeServer</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the calculated current time of the trade server. Unlike , the calculation of the time value is performed in the client terminal and depends on the time settings on your computer. There are 2 variants of the function.</description>
 </snippet>

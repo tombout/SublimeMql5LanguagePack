@@ -4,6 +4,6 @@
 FileDelete(${1:file_name}, ${2:common_flag=0})${0}
 ]]></content>
 	<tabTrigger>FileDelete</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Deletes the specified file in a local folder of the client terminal.</description>
 </snippet>

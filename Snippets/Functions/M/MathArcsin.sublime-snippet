@@ -4,6 +4,6 @@
 MathArcsin(${1:val})${0}
 ]]></content>
 	<tabTrigger>MathArcsin</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the arc sine of x within the range of -π/2 to π/2 radians.</description>
 </snippet>

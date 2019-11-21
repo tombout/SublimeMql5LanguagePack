@@ -4,6 +4,6 @@
 MT5CopyTicksRange(${1:symbol}, ${2:from}, ${3:to}, ${4:flags })${0}
 ]]></content>
 	<tabTrigger>MT5CopyTicksRange</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get ticks for the specified date range from the MetaTrader 5 terminal.</description>
 </snippet>

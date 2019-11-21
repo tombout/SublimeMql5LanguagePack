@@ -4,6 +4,6 @@
 MathLog(${1:val})${0}
 ]]></content>
 	<tabTrigger>log</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns a natural logarithm.</description>
 </snippet>

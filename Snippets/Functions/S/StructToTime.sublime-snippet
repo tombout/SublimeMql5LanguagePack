@@ -4,6 +4,6 @@
 StructToTime(${1:dt_struct})${0}
 ]]></content>
 	<tabTrigger>StructToTime</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Converts a structure variable  into a value of  type and returns the resulting value.</description>
 </snippet>

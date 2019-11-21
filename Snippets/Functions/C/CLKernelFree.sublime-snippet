@@ -4,6 +4,6 @@
 CLKernelFree(${1:kernel})${0}
 ]]></content>
 	<tabTrigger>CLKernelFree</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Removes an OpenCL start function.</description>
 </snippet>

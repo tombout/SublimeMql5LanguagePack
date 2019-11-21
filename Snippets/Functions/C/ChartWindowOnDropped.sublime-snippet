@@ -4,6 +4,6 @@
 ChartWindowOnDropped()${0}
 ]]></content>
 	<tabTrigger>ChartWindowOnDropped</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the number (index) of the chart subwindow the Expert Advisor or script has been dropped to. 0 means the main chart window.</description>
 </snippet>

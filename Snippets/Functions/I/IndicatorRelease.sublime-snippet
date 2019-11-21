@@ -4,6 +4,6 @@
 IndicatorRelease(${1:indicator_handle})${0}
 ]]></content>
 	<tabTrigger>IndicatorRelease</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function removes an indicator handle and releases the calculation block of the indicator, if it's not used by anyone else.</description>
 </snippet>

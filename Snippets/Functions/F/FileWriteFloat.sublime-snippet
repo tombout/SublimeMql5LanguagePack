@@ -4,6 +4,6 @@
 FileWriteFloat(${1:file_handle}, ${2:value})${0}
 ]]></content>
 	<tabTrigger>FileWriteFloat</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function writes the value of the float parameter to a bin-file, starting from the current position of the file pointer.</description>
 </snippet>

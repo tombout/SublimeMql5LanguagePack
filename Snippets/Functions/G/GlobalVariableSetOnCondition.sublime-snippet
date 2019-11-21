@@ -4,6 +4,6 @@
 GlobalVariableSetOnCondition(${1:name}, ${2:value}, ${3:check_value})${0}
 ]]></content>
 	<tabTrigger>GlobalVariableSetOnCondition</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sets the new value of the existing global variable if the current value equals to the third parameter check_value. If there is no global variable, the function will generate an error ERR_GLOBALVARIABLE_NOT_FOUND (4501) and return false.</description>
 </snippet>

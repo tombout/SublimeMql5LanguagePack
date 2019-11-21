@@ -4,6 +4,6 @@
 OnTesterInit()${0}
 ]]></content>
 	<tabTrigger>OnTesterInit</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function is called in EAs when the  event occurs to perform necessary actions before optimization in the strategy tester. There are two function types.</description>
 </snippet>

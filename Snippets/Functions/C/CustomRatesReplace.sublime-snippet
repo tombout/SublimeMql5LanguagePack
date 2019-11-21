@@ -4,6 +4,6 @@
 CustomRatesReplace(${1:symbol}, ${2:from}, ${3:to}, ${4:rates[]}, ${5:count=WHOLE_ARRAY})${0}
 ]]></content>
 	<tabTrigger>CustomRatesReplace</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Fully replaces the price history of the custom symbol within the specified time interval with the data from the  type array.</description>
 </snippet>

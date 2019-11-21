@@ -4,6 +4,6 @@
 SymbolIsSynchronized(${1:name})${0}
 ]]></content>
 	<tabTrigger>SymbolIsSynchronized</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function checks whether data of a selected symbol in the terminal are synchronized with data on the trade server.</description>
 </snippet>

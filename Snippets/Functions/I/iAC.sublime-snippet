@@ -4,6 +4,6 @@
 iAC(${1:symbol}, ${2:period})${0}
 ]]></content>
 	<tabTrigger>iAC</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function creates Accelerator Oscillator in a global cache of the client terminal and returns its handle. It has only one buffer.</description>
 </snippet>

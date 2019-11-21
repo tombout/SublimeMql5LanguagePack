@@ -4,6 +4,6 @@
 TextGetSize(${1:text}, ${2:width}, ${3:height})${0}
 ]]></content>
 	<tabTrigger>TextGetSize</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the line width and height at the current .</description>
 </snippet>

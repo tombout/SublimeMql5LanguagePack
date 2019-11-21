@@ -4,6 +4,6 @@
 FileIsLineEnding(${1:file_handle})${0}
 ]]></content>
 	<tabTrigger>FileIsLineEnding</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Defines the line end in a text file in the process of reading.</description>
 </snippet>

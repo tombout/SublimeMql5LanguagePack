@@ -4,6 +4,6 @@
 SeriesInfoInteger(${1:symbol_name}, ${2:timeframe}, ${3:prop_id})${0}
 ]]></content>
 	<tabTrigger>SeriesInfoInteger</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns information about the state of historical data. There are 2 variants of function calls.</description>
 </snippet>

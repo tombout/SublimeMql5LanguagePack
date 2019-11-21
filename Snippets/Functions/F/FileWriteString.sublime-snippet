@@ -4,6 +4,6 @@
 FileWriteString(${1:file_handle}, ${2:text_string}, ${3:length=-1})${0}
 ]]></content>
 	<tabTrigger>FileWriteString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function writes the value of a string-type parameter into a BIN, CSV or TXT file starting from the current position of the file pointer. When writing to a CSV or TXT file: if there is a symbol in the string '\n' (LF) without previous character '\r' (CR), then before '\n' the missing '\r' is added.</description>
 </snippet>

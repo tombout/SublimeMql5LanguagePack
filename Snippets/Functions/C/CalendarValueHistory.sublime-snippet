@@ -4,6 +4,6 @@
 CalendarValueHistory(${1:values[]}, ${2:              }, ${3:datetime_from}, ${4:datetime_to=0  }, ${5:country_code=NULL}, ${6:currency=NULL     })${0}
 ]]></content>
 	<tabTrigger>CalendarValueHistory</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get the array of values for all events in a specified time range with the ability to sort by country and/or currency.</description>
 </snippet>

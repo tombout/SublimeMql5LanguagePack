@@ -4,6 +4,6 @@
 CLSetKernelArgMem(${1:kernel}, ${2:arg_index}, ${3:cl_mem_handle})${0}
 ]]></content>
 	<tabTrigger>CLSetKernelArgMem</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sets an OpenCL buffer as a parameter of the OpenCL function.</description>
 </snippet>

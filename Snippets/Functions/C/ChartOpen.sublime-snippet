@@ -4,6 +4,6 @@
 ChartOpen(${1:symbol}, ${2:period})${0}
 ]]></content>
 	<tabTrigger>ChartOpen</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Opens a new chart with the specified symbol and period.</description>
 </snippet>

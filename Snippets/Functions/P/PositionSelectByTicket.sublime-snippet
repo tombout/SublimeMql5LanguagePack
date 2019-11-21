@@ -4,6 +4,6 @@
 PositionSelectByTicket(${1:ticket})${0}
 ]]></content>
 	<tabTrigger>PositionSelectByTicket</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Selects an open position to work with based on the ticket number specified in the position. If successful, returns true. Returns false if the function failed. Call  for error details.</description>
 </snippet>

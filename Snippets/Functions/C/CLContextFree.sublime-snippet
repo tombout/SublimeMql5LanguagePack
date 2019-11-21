@@ -4,6 +4,6 @@
 CLContextFree(${1:context})${0}
 ]]></content>
 	<tabTrigger>CLContextFree</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Removes an OpenCL context.</description>
 </snippet>

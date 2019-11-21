@@ -4,6 +4,6 @@
 FileReadInteger(${1:file_handle}, ${2:size=INT_VALUE})${0}
 ]]></content>
 	<tabTrigger>FileReadInteger</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function reads int, short or char value from the current position of the file pointer depending on the length specified in bytes.</description>
 </snippet>

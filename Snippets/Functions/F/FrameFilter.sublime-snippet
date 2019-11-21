@@ -4,6 +4,6 @@
 FrameFilter(${1:name}, ${2:id})${0}
 ]]></content>
 	<tabTrigger>FrameFilter</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sets the frame reading filter and moves the pointer to the beginning.</description>
 </snippet>

@@ -4,6 +4,6 @@
 GlobalVariablesTotal()${0}
 ]]></content>
 	<tabTrigger>GlobalVariablesTotal</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the total number of global variables of the client terminal.</description>
 </snippet>

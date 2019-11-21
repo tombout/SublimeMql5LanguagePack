@@ -4,6 +4,6 @@
 FileWriteStruct(${1:file_handle}, ${2:struct_object}, ${3:size=-1})${0}
 ]]></content>
 	<tabTrigger>FileWriteStruct</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function writes into a bin-file contents of a structure passed as a parameter, starting from the current position of the file pointer.</description>
 </snippet>

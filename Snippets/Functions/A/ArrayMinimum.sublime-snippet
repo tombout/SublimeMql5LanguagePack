@@ -4,6 +4,6 @@
 ArrayMinimum(${1:array[]}, ${2:start=0}, ${3:count=WHOLE_ARRAY    })${0}
 ]]></content>
 	<tabTrigger>ArrayMinimum</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Searches for the lowest element in the first dimension of a multidimensional numeric array.</description>
 </snippet>

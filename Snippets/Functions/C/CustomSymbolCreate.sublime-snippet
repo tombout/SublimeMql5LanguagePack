@@ -4,6 +4,6 @@
 CustomSymbolCreate(${1:symbol_name}, ${2:symbol_path=""}, ${3:symbol_origin=NULL})${0}
 ]]></content>
 	<tabTrigger>CustomSymbolCreate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Creates a custom symbol with the specified name in the specified group.</description>
 </snippet>

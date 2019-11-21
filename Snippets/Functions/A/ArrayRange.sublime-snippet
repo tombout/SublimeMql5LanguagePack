@@ -4,6 +4,6 @@
 ArrayRange(${1:array[]}, ${2:rank_index})${0}
 ]]></content>
 	<tabTrigger>ArrayRange</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the number of elements in a selected array dimension.</description>
 </snippet>

@@ -4,6 +4,6 @@
 ChartSetDouble(${1:chart_id}, ${2:prop_id}, ${3:value})${0}
 ]]></content>
 	<tabTrigger>ChartSetDouble</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sets a value for a corresponding property of the specified chart. Chart property should be of a  type. The command is added to chart messages queue and will be executed after processing of all previous commands.</description>
 </snippet>

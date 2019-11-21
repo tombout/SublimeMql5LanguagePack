@@ -4,6 +4,6 @@
 MT5CopyRatesFrom(${1:symbol}, ${2:timeframe}, ${3:from}, ${4:count})${0}
 ]]></content>
 	<tabTrigger>MT5CopyRatesFrom</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get bars from the MetaTrader 5 terminal starting from the specified date.</description>
 </snippet>

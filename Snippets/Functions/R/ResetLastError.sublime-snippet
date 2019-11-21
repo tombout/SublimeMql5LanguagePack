@@ -4,6 +4,6 @@
 ResetLastError()${0}
 ]]></content>
 	<tabTrigger>ResetLastError</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sets the value of the predefined variable  into zero.</description>
 </snippet>

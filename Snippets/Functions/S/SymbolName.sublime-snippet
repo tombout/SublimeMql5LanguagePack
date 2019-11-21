@@ -4,6 +4,6 @@
 SymbolName(${1:pos}, ${2:selected})${0}
 ]]></content>
 	<tabTrigger>SymbolName</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the name of a symbol.</description>
 </snippet>

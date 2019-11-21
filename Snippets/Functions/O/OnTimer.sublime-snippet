@@ -4,6 +4,6 @@
 OnTimer()${0}
 ]]></content>
 	<tabTrigger>OnTimer</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description></description>
 </snippet>

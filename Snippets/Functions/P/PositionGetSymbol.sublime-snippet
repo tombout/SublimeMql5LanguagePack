@@ -4,6 +4,6 @@
 PositionGetSymbol(${1:index})${0}
 ]]></content>
 	<tabTrigger>PositionGetSymbol</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the symbol corresponding to the open position and automatically selects the position for further working with it using functions , , .</description>
 </snippet>

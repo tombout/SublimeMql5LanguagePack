@@ -4,6 +4,6 @@
 StringToCharArray(${1:text_string}, ${2:array[]}, ${3:start=0}, ${4:count=-1}, ${5:codepage=CP_ACP})${0}
 ]]></content>
 	<tabTrigger>StringToCharArray</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Symbol-wise copies a string converted from Unicode to ANSI, to a selected place of array of uchar type. It returns the number of copied elements.</description>
 </snippet>

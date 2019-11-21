@@ -4,6 +4,6 @@
 ArrayGetAsSeries(${1:array[]    })${0}
 ]]></content>
 	<tabTrigger>ArrayGetAsSeries</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It checks direction of an array index.</description>
 </snippet>

@@ -4,6 +4,6 @@
 MT5CopyRatesRange(${1:symbol}, ${2:timeframe}, ${3:date_from}, ${4:date_to})${0}
 ]]></content>
 	<tabTrigger>MT5CopyRatesRange</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get bars in the specified date range from the MetaTrader 5 terminal.</description>
 </snippet>

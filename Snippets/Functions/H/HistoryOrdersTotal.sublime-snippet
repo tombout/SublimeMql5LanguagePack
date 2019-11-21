@@ -4,6 +4,6 @@
 HistoryOrdersTotal()${0}
 ]]></content>
 	<tabTrigger>HistoryOrdersTotal</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the number of orders in the history. Prior to calling HistoryOrdersTotal(), first it is necessary to receive the history of deals and orders using the  or  function.</description>
 </snippet>

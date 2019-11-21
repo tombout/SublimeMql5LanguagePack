@@ -4,6 +4,6 @@
 TerminalClose(${1: }, ${2:ret_code})${0}
 ]]></content>
 	<tabTrigger>TerminalClose</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function commands the terminal to complete operation.</description>
 </snippet>

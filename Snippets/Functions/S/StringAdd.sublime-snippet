@@ -4,6 +4,6 @@
 StringAdd(${1:string_var}, ${2:add_substring})${0}
 ]]></content>
 	<tabTrigger>StringAdd</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function adds a substring to the end of a string.</description>
 </snippet>

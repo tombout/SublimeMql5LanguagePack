@@ -4,6 +4,6 @@
 Point()${0}
 ]]></content>
 	<tabTrigger>Point</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the point size of the current symbol in the quote currency.</description>
 </snippet>

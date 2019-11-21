@@ -4,6 +4,6 @@
 SetIndexBuffer(${1:index}, ${2:buffer[]}, ${3:data_type})${0}
 ]]></content>
 	<tabTrigger>SetIndexBuffer</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function binds a specified indicator buffer with one-dimensional dynamic array of the  type.</description>
 </snippet>

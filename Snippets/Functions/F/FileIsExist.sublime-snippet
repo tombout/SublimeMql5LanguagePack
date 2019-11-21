@@ -4,6 +4,6 @@
 FileIsExist(${1:file_name}, ${2:common_flag=0})${0}
 ]]></content>
 	<tabTrigger>FileIsExist</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Checks the existence of a file.</description>
 </snippet>

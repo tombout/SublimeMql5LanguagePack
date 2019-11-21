@@ -4,6 +4,6 @@
 CLGetInfoInteger(${1:handle}, ${2:prop})${0}
 ]]></content>
 	<tabTrigger>CLGetInfoInteger</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the value of an integer property for an OpenCL object or device.</description>
 </snippet>

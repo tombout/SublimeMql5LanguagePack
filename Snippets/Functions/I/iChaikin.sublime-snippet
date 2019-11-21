@@ -4,6 +4,6 @@
 iChaikin(${1:symbol}, ${2:period}, ${3:fast_ma_period}, ${4:slow_ma_period}, ${5:ma_method}, ${6:applied_volume})${0}
 ]]></content>
 	<tabTrigger>iChaikin</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Chaikin Oscillator indicator. It has only one buffer.</description>
 </snippet>

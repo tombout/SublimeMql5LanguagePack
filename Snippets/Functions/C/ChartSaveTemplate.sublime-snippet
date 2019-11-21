@@ -4,6 +4,6 @@
 ChartSaveTemplate(${1:chart_id}, ${2:filename})${0}
 ]]></content>
 	<tabTrigger>ChartSaveTemplate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Saves current chart settings in a template with a specified name.</description>
 </snippet>

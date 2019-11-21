@@ -4,6 +4,6 @@
 PositionSelect(${1:symbol})${0}
 ]]></content>
 	<tabTrigger>PositionSelect</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Chooses an open position for further working with it. Returns true if the function is successfully completed. Returns false in case of failure. To obtain information about the error, call .</description>
 </snippet>

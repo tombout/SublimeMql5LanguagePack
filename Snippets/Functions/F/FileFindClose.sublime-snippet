@@ -4,6 +4,6 @@
 FileFindClose(${1:search_handle})${0}
 ]]></content>
 	<tabTrigger>FileFindClose</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function closes the search handle.</description>
 </snippet>

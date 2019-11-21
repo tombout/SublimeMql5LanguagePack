@@ -4,6 +4,6 @@
 ArrayInitialize(${1:array[]}, ${2:value})${0}
 ]]></content>
 	<tabTrigger>ArrayInitialize</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function initializes a numeric array by a preset value.</description>
 </snippet>

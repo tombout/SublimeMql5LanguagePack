@@ -4,6 +4,6 @@
 ResourceReadImage(${1:resource_name}, ${2:data[]}, ${3:width}, ${4:            }, ${5:height}, ${6:        })${0}
 ]]></content>
 	<tabTrigger>ResourceReadImage</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function reads data from the graphical resource  or .</description>
 </snippet>

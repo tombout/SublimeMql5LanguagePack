@@ -4,6 +4,6 @@
 CLProgramCreate(${1:context}, ${2:source})${0}
 ]]></content>
 	<tabTrigger>CLProgramCreate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Creates an OpenCL program from a source code.</description>
 </snippet>

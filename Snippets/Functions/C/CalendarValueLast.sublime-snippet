@@ -4,6 +4,6 @@
 CalendarValueLast(${1:change_id}, ${2:values[]}, ${3:    }, ${4:country_code=NULL}, ${5:currency=NULL     })${0}
 ]]></content>
 	<tabTrigger>CalendarValueLast</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get the array of values for all events with the ability to sort by country and/or currency since the calendar database status with a specified change_id.</description>
 </snippet>

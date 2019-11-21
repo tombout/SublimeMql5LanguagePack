@@ -4,6 +4,6 @@
 ChartTimeOnDropped()${0}
 ]]></content>
 	<tabTrigger>ChartTimeOnDropped</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the time coordinate corresponding to the chart point the Expert Advisor or script has been dropped to.</description>
 </snippet>

@@ -4,6 +4,6 @@
 MathRand()${0}
 ]]></content>
 	<tabTrigger>MathRand</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns a pseudorandom integer within the range of 0 to 32767.</description>
 </snippet>

@@ -4,6 +4,6 @@
 CLSetKernelArg(${1:kernel}, ${2:arg_index}, ${3:arg_value})${0}
 ]]></content>
 	<tabTrigger>CLSetKernelArg</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sets a parameter for the OpenCL function.</description>
 </snippet>

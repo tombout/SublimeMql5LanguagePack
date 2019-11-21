@@ -4,6 +4,6 @@
 iWPR(${1:symbol}, ${2:period}, ${3:calc_period})${0}
 ]]></content>
 	<tabTrigger>iWPR</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Larry Williams' Percent Range indicator. It has only one buffer.</description>
 </snippet>

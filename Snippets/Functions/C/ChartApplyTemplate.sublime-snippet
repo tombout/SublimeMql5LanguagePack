@@ -4,6 +4,6 @@
 ChartApplyTemplate(${1:chart_id}, ${2:filename})${0}
 ]]></content>
 	<tabTrigger>ChartApplyTemplate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Applies a specific template from a specified file to the chart. The command is added to chart messages queue and will be executed after processing of all previous commands.</description>
 </snippet>

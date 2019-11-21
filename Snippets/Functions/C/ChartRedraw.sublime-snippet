@@ -4,6 +4,6 @@
 ChartRedraw(${1:chart_id=0})${0}
 ]]></content>
 	<tabTrigger>ChartRedraw</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>This function calls a forced redrawing of a specified chart.</description>
 </snippet>

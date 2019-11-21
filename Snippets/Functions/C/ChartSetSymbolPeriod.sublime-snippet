@@ -4,6 +4,6 @@
 ChartSetSymbolPeriod(${1:chart_id}, ${2:symbol}, ${3:period})${0}
 ]]></content>
 	<tabTrigger>ChartSetSymbolPeriod</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Changes the symbol and period of the specified chart. The function is asynchronous, i.e. it sends the command and does not wait for its execution completion. The command is added to chart messages queue and will be executed after processing of all previous commands.</description>
 </snippet>

@@ -4,6 +4,6 @@
 MT5Version()${0}
 ]]></content>
 	<tabTrigger>MT5Version</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Return the MetaTrader 5 terminal version.</description>
 </snippet>

@@ -4,6 +4,6 @@
 ArrayResize(${1:array[]}, ${2:new_size}, ${3:reserve_size=0})${0}
 ]]></content>
 	<tabTrigger>ArrayResize</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function sets a new size for the first dimension</description>
 </snippet>

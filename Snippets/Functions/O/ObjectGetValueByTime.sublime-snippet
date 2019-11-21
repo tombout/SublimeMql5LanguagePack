@@ -4,6 +4,6 @@
 ObjectGetValueByTime(${1:chart_id}, ${2:name}, ${3:time}, ${4:line_id})${0}
 ]]></content>
 	<tabTrigger>ObjectGetValueByTime</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the price value for the specified time value of the specified object.</description>
 </snippet>

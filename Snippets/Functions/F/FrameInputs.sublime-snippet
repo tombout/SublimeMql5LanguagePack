@@ -4,6 +4,6 @@
 FrameInputs(${1:pass}, ${2:parameters[]}, ${3:parameters_count})${0}
 ]]></content>
 	<tabTrigger>FrameInputs</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Receives , on which the frame with the specified pass number is formed.</description>
 </snippet>

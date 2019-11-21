@@ -4,6 +4,6 @@
 EnumToString(${1:value})${0}
 ]]></content>
 	<tabTrigger>EnumToString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Converting an enumeration value of any type to a text form.</description>
 </snippet>

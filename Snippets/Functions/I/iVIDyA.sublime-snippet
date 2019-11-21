@@ -4,6 +4,6 @@
 iVIDyA(${1:symbol}, ${2:period}, ${3:cmo_period}, ${4:ema_period}, ${5:ma_shift}, ${6:applied_price})${0}
 ]]></content>
 	<tabTrigger>iVIDyA</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Variable Index Dynamic Average indicator. It has only one buffer.</description>
 </snippet>

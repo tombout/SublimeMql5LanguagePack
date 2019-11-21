@@ -4,6 +4,6 @@
 CharArrayToString(${1:array[]}, ${2:start=0}, ${3:count=-1}, ${4:codepage=CP_ACP})${0}
 ]]></content>
 	<tabTrigger>CharArrayToString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It copies and converts part of array of uchar type into a returned string.</description>
 </snippet>

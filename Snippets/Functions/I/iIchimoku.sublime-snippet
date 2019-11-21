@@ -4,6 +4,6 @@
 iIchimoku(${1:symbol}, ${2:period}, ${3:tenkan_sen}, ${4:kijun_sen}, ${5:senkou_span_b})${0}
 ]]></content>
 	<tabTrigger>iIchimoku</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Ichimoku Kinko Hyo indicator.</description>
 </snippet>

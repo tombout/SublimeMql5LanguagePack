@@ -4,6 +4,6 @@
 ChartNavigate(${1:chart_id}, ${2:position}, ${3:shift=0})${0}
 ]]></content>
 	<tabTrigger>ChartNavigate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Performs shift of the specified chart by the specified number of bars relative to the specified position in the chart.</description>
 </snippet>

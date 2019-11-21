@@ -4,6 +4,6 @@
 StringInit(${1:string_var}, ${2:new_len=0}, ${3:character=0})${0}
 ]]></content>
 	<tabTrigger>StringInit</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Initializes a string by specified symbols and provides the specified string size.</description>
 </snippet>

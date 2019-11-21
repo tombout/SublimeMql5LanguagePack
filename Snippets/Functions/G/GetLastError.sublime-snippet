@@ -4,6 +4,6 @@
 GetLastError()${0}
 ]]></content>
 	<tabTrigger>GetLastError</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the contents of the system variable .</description>
 </snippet>

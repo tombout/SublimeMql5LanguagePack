@@ -4,6 +4,6 @@
 ChartID()${0}
 ]]></content>
 	<tabTrigger>ChartID</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the ID of the current chart.</description>
 </snippet>

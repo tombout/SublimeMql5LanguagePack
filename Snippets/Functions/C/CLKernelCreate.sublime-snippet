@@ -4,6 +4,6 @@
 CLKernelCreate(${1:program}, ${2:kernel_name})${0}
 ]]></content>
 	<tabTrigger>CLKernelCreate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Creates the OpenCL program kernel and returns its handle.</description>
 </snippet>

@@ -4,6 +4,6 @@
 CryptEncode(${1:method}, ${2:data[]}, ${3:key[]}, ${4:result[] })${0}
 ]]></content>
 	<tabTrigger>CryptDecode</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Performs the inverse transformation of the data from array, tranformed by .</description>
 </snippet>

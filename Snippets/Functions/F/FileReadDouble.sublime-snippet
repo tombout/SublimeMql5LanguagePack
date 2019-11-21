@@ -4,6 +4,6 @@
 FileReadDouble(${1:file_handle})${0}
 ]]></content>
 	<tabTrigger>FileReadDouble</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Reads a double-precision floating point number (double) from the current position of the binary file.</description>
 </snippet>

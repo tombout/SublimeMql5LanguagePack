@@ -4,6 +4,6 @@
 CustomRatesUpdate(${1:symbol}, ${2:rates[]}, ${3: }, ${4:count=WHOLE_ARRAY})${0}
 ]]></content>
 	<tabTrigger>CustomRatesUpdate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Adds missing bars to the custom symbol history and replaces existing data with  the ones from the  type array.</description>
 </snippet>

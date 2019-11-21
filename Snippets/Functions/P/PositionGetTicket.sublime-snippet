@@ -4,6 +4,6 @@
 PositionGetTicket(${1:index})${0}
 ]]></content>
 	<tabTrigger>PositionGetTicket</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the ticket of a position with the specified index in the list of open positions and automatically selects the position to work with using functions , , .</description>
 </snippet>

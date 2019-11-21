@@ -4,6 +4,6 @@
 MT5Shutdown()${0}
 ]]></content>
 	<tabTrigger>MT5Shutdown</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Close the previously established connection to the MetaTrader 5 terminal.</description>
 </snippet>

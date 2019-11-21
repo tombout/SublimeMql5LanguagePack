@@ -4,6 +4,6 @@
 FolderCreate(${1:folder_name}, ${2:common_flag=0})${0}
 ]]></content>
 	<tabTrigger>FolderCreate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Creates a directory in the Files folder (depending on the common_flag value)</description>
 </snippet>

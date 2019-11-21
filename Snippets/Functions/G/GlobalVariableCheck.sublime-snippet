@@ -4,6 +4,6 @@
 GlobalVariableCheck(${1:name})${0}
 ]]></content>
 	<tabTrigger>GlobalVariableCheck</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Checks the existence of a global variable with the specified name</description>
 </snippet>

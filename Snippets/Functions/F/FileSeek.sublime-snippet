@@ -4,6 +4,6 @@
 FileSeek(${1:               file_handle}, ${2:offset}, ${3:origin})${0}
 ]]></content>
 	<tabTrigger>FileSeek</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function moves the position of the file pointer by a specified number of bytes relative to the specified position.</description>
 </snippet>

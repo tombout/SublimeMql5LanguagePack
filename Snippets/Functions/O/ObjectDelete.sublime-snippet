@@ -4,6 +4,6 @@
 ObjectDelete(${1:chart_id}, ${2:name})${0}
 ]]></content>
 	<tabTrigger>ObjectDelete</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function removes the object with the specified name from the specified chart.</description>
 </snippet>

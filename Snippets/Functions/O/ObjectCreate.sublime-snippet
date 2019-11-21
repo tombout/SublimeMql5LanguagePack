@@ -4,6 +4,6 @@
 ObjectCreate(${1:chart_id}, ${2:name}, ${3:type}, ${4:nwin}, ${5:time1}, ${6:price1}, ${7:timeN=0}, ${8:priceN=0}, ${9:time30=0}, ${10:price30=0})${0}
 ]]></content>
 	<tabTrigger>ObjectCreate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function creates an object with the specified name, type, and the initial coordinates in the specified chart subwindow. During creation up to 30 coordinates can be specified.</description>
 </snippet>

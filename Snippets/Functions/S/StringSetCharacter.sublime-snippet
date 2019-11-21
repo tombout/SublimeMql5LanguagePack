@@ -4,6 +4,6 @@
 StringSetCharacter(${1:string_var}, ${2:pos}, ${3:character})${0}
 ]]></content>
 	<tabTrigger>StringSetCharacter</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns copy of a string with a changed character in a specified position.</description>
 </snippet>

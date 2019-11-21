@@ -4,6 +4,6 @@
 HistoryOrderGetTicket(${1:index})${0}
 ]]></content>
 	<tabTrigger>HistoryOrderGetTicket</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Return the ticket of a corresponding order in the history. Prior to calling HistoryOrderGetTicket(), first it is necessary to receive the history of deals and orders using the  or  function.</description>
 </snippet>

@@ -4,6 +4,6 @@
 ArrayIsDynamic(${1:array[]})${0}
 ]]></content>
 	<tabTrigger>ArrayIsDynamic</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function checks whether an array is dynamic.</description>
 </snippet>

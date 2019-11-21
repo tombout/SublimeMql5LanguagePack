@@ -4,6 +4,6 @@
 FileSize(${1:file_handle})${0}
 ]]></content>
 	<tabTrigger>FileSize</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the file size in bytes.</description>
 </snippet>

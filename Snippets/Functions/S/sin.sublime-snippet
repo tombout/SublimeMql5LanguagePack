@@ -4,6 +4,6 @@
 MathSin(${1:value})${0}
 ]]></content>
 	<tabTrigger>sin</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the sine of a specified angle.</description>
 </snippet>

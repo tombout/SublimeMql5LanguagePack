@@ -4,6 +4,6 @@
 SocketIsConnected(${1:socket      })${0}
 ]]></content>
 	<tabTrigger>SocketIsConnected</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Checks if the socket is currently connected.</description>
 </snippet>

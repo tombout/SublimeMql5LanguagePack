@@ -4,6 +4,6 @@
 FileReadString(${1:file_handle}, ${2:length=-1})${0}
 ]]></content>
 	<tabTrigger>FileReadString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function reads a string from the current position of a file pointer in a file.</description>
 </snippet>

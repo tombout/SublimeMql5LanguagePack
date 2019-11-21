@@ -4,6 +4,6 @@
 CalendarCountryById(${1:country_id}, ${2:country    })${0}
 ]]></content>
 	<tabTrigger>CalendarCountryById</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get a country description by its ID.</description>
 </snippet>

@@ -4,6 +4,6 @@
 MT5CopyTicksFrom(${1:symbol}, ${2:from}, ${3:count}, ${4:flags })${0}
 ]]></content>
 	<tabTrigger>MT5CopyTicksFrom</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get ticks from the MetaTrader 5 terminal starting from the specified date.</description>
 </snippet>

@@ -4,6 +4,6 @@
 FileIsEnding(${1:file_handle})${0}
 ]]></content>
 	<tabTrigger>FileIsEnding</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Defines the end of a file in the process of reading.</description>
 </snippet>

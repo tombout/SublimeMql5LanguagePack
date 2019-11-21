@@ -4,6 +4,6 @@
 SymbolSelect(${1:name}, ${2:select})${0}
 ]]></content>
 	<tabTrigger>SymbolSelect</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Selects a symbol in the Market Watch window or removes a symbol from the window.</description>
 </snippet>

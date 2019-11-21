@@ -4,6 +4,6 @@
 MathTan(${1:rad})${0}
 ]]></content>
 	<tabTrigger>MathTan</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns a tangent of a number.</description>
 </snippet>

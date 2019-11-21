@@ -4,6 +4,6 @@
 EventSetTimer(${1:seconds})${0}
 ]]></content>
 	<tabTrigger>EventSetTimer</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function indicates to the client terminal, that for this indicator or Expert Advisor, events from the  must be generated with the specified periodicity.</description>
 </snippet>

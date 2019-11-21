@@ -4,6 +4,6 @@
 ObjectsTotal(${1:chart_id}, ${2:sub_window=-1}, ${3:type=-1})${0}
 ]]></content>
 	<tabTrigger>ObjectsTotal</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the number of objects in the specified chart, specified subwindow, of the specified type.</description>
 </snippet>

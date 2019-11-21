@@ -4,6 +4,6 @@
 CLBufferFree(${1:buffer})${0}
 ]]></content>
 	<tabTrigger>CLBufferFree</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Deletes an OpenCL buffer.</description>
 </snippet>

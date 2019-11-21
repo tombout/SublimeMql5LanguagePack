@@ -4,6 +4,6 @@
 TextSetFont(${1:name}, ${2:size}, ${3:flags}, ${4:orientation=0})${0}
 ]]></content>
 	<tabTrigger>TextSetFont</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function sets the font for displaying the text using drawing methods and returns the result of that operation. Arial font with the size -120 (12 pt) is used by default.</description>
 </snippet>

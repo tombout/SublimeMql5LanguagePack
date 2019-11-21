@@ -4,6 +4,6 @@
 FolderClean(${1:folder_name}, ${2:common_flag=0})${0}
 ]]></content>
 	<tabTrigger>FolderClean</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function deletes all files in a specified folder.</description>
 </snippet>

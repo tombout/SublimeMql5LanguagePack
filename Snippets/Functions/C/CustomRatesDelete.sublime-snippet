@@ -4,6 +4,6 @@
 CustomRatesDelete(${1:symbol}, ${2:from}, ${3:to})${0}
 ]]></content>
 	<tabTrigger>CustomRatesDelete</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Deletes all bars from the price history of the custom symbol in the specified time interval.</description>
 </snippet>

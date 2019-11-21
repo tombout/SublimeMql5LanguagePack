@@ -4,6 +4,6 @@
 OrderSelect(${1:ticket})${0}
 ]]></content>
 	<tabTrigger>OrderSelect</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Selects an order to work with. Returns true if the function has been successfully completed. Returns false if the function completion has failed. For more information about an error call .</description>
 </snippet>

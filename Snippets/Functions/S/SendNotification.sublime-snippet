@@ -4,6 +4,6 @@
 SendNotification(${1:text})${0}
 ]]></content>
 	<tabTrigger>SendNotification</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sends push notifications to the mobile terminals, whose MetaQuotes IDs are specified in the "Notifications" tab.</description>
 </snippet>

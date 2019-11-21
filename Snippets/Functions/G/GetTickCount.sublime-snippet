@@ -4,6 +4,6 @@
 GetTickCount()${0}
 ]]></content>
 	<tabTrigger>GetTickCount</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The GetTickCount() function returns the number of milliseconds that elapsed since the system start.</description>
 </snippet>

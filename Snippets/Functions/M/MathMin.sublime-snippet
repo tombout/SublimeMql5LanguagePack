@@ -4,6 +4,6 @@
 MathMin(${1:value1}, ${2:value2})${0}
 ]]></content>
 	<tabTrigger>MathMin</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the minimal value of two values.</description>
 </snippet>

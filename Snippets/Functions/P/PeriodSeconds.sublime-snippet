@@ -4,6 +4,6 @@
 PeriodSeconds(${1:period=PERIOD_CURRENT})${0}
 ]]></content>
 	<tabTrigger>PeriodSeconds</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>This function returns number of seconds in a period.</description>
 </snippet>

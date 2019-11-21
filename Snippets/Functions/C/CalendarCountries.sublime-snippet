@@ -4,6 +4,6 @@
 CalendarCountries(${1:countries[]      })${0}
 ]]></content>
 	<tabTrigger>CalendarCountries</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get the array of country names available in the Calendar.</description>
 </snippet>

@@ -4,6 +4,6 @@
 SocketIsReadable(${1:socket      })${0}
 ]]></content>
 	<tabTrigger>SocketIsReadable</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get a number of bytes that can be read from a socket.</description>
 </snippet>

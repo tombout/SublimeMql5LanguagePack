@@ -4,6 +4,6 @@
 SocketRead(${1:socket}, ${2:  }, ${3:buffer[]}, ${4:             }, ${5:buffer_maxlen}, ${6:        }, ${7:timeout_ms            })${0}
 ]]></content>
 	<tabTrigger>SocketRead</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Read data from a socket.</description>
 </snippet>

@@ -4,6 +4,6 @@
 FileTell(${1:file_handle})${0}
 ]]></content>
 	<tabTrigger>FileTell</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The file returns the current position of the file pointer of an open file.</description>
 </snippet>

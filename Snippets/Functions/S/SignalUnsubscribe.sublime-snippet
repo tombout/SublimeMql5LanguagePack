@@ -4,6 +4,6 @@
 SignalUnsubscribe()${0}
 ]]></content>
 	<tabTrigger>SignalUnsubscribe</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Cancels subscription.</description>
 </snippet>

@@ -4,6 +4,6 @@
 SymbolInfoTick(${1:symbol}, ${2:tick  })${0}
 ]]></content>
 	<tabTrigger>SymbolInfoTick</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns current prices of a specified symbol in a variable of the MqlTick type.</description>
 </snippet>

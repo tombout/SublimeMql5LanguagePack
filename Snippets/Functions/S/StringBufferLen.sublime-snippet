@@ -4,6 +4,6 @@
 StringBufferLen(${1:string_var})${0}
 ]]></content>
 	<tabTrigger>StringBufferLen</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the size of buffer allocated for the string.</description>
 </snippet>

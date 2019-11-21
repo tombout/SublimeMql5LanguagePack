@@ -4,6 +4,6 @@
 MathSqrt(${1:value})${0}
 ]]></content>
 	<tabTrigger>sqrt</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the square root of a number.</description>
 </snippet>

@@ -4,6 +4,6 @@
 FileWriteArray(${1:file_handle}, ${2:array[]}, ${3:start=0}, ${4:count=WHOLE_ARRAY})${0}
 ]]></content>
 	<tabTrigger>FileWriteArray</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function writes arrays of any type except for string to a BIN file (can be an array of structures not containing strings or dynamic arrays).</description>
 </snippet>

@@ -4,6 +4,6 @@
 ChartScreenShot(${1:chart_id}, ${2:filename}, ${3:width}, ${4:height}, ${5:align_mode=ALIGN_RIGHT})${0}
 ]]></content>
 	<tabTrigger>ChartScreenShot</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function provides a screenshot of the chart in its current state in the GIF, PNG or BMP format depending on specified extension.</description>
 </snippet>

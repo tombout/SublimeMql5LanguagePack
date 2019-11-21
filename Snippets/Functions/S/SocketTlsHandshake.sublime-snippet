@@ -4,6 +4,6 @@
 SocketTlsHandshake(${1:socket}, ${2:  }, ${3:host                  })${0}
 ]]></content>
 	<tabTrigger>SocketTlsHandshake</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Initiate secure TLS (SSL) connection to a specified host via TLS Handshake protocol. During Handshake, a client and a server agree on connection parameters: applied protocol version and data encryption method.</description>
 </snippet>

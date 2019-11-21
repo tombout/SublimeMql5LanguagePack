@@ -4,6 +4,6 @@
 OnTrade()${0}
 ]]></content>
 	<tabTrigger>OnTrade</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description></description>
 </snippet>

@@ -4,6 +4,6 @@
 ExpertRemove()${0}
 ]]></content>
 	<tabTrigger>ExpertRemove</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function stops an  and unloads it from a chart.</description>
 </snippet>

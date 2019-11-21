@@ -4,6 +4,6 @@
 FileWrite(${1:file_handle}, ${2:...})${0}
 ]]></content>
 	<tabTrigger>FileWrite</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function is intended for writing of data into a CSV file, delimiter being inserted automatically unless it is equal to 0. After writing into the file, the line end character "\r\n" will be added.</description>
 </snippet>

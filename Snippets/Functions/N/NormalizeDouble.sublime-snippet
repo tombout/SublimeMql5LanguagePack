@@ -4,6 +4,6 @@
 NormalizeDouble(${1:value}, ${2:digits})${0}
 ]]></content>
 	<tabTrigger>NormalizeDouble</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Rounding floating point number to a specified accuracy.</description>
 </snippet>

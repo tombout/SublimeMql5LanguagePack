@@ -4,6 +4,6 @@
 ChartIndicatorName(${1:chart_id}, ${2:sub_window }, ${3:index })${0}
 ]]></content>
 	<tabTrigger>ChartIndicatorName</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the short name of the indicator by the number in the indicators list on the specified chart window.</description>
 </snippet>

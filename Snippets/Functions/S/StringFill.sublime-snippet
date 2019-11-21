@@ -4,6 +4,6 @@
 StringFill(${1:string_var}, ${2:character})${0}
 ]]></content>
 	<tabTrigger>StringFill</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It fills out a selected string by specified symbols.</description>
 </snippet>

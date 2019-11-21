@@ -4,6 +4,6 @@
 CLContextCreate(${1:device})${0}
 ]]></content>
 	<tabTrigger>CLContextCreate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Creates an OpenCL context and returns its handle.</description>
 </snippet>

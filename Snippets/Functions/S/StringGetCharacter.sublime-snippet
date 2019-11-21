@@ -4,6 +4,6 @@
 StringGetCharacter(${1:string_value}, ${2:pos})${0}
 ]]></content>
 	<tabTrigger>StringGetCharacter</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns value of a symbol, located in the specified position of a string.</description>
 </snippet>

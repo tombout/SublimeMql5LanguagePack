@@ -4,6 +4,6 @@
 ArrayFree(${1:array[]})${0}
 ]]></content>
 	<tabTrigger>ArrayFree</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It frees up a buffer of any dynamic array and sets the size of the zero dimension to 0. </description>
 </snippet>

@@ -4,6 +4,6 @@
 CharToString(${1:char_code})${0}
 ]]></content>
 	<tabTrigger>CharToString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description></description>
 </snippet>

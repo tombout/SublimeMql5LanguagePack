@@ -4,6 +4,6 @@
 ChartIndicatorAdd(${1:chart_id}, ${2:sub_window }, ${3:indicator_handle })${0}
 ]]></content>
 	<tabTrigger>ChartIndicatorAdd</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Adds an indicator with the specified handle into a specified chart window. Indicator and chart should be generated on the same symbol and time frame.</description>
 </snippet>

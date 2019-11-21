@@ -4,6 +4,6 @@
 ChartSymbol(${1:chart_id=0})${0}
 ]]></content>
 	<tabTrigger>ChartSymbol</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the symbol name for the specified chart.</description>
 </snippet>

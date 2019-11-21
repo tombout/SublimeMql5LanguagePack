@@ -4,6 +4,6 @@
 CustomTicksDelete(${1:symbol}, ${2:from_msc}, ${3:to_msc })${0}
 ]]></content>
 	<tabTrigger>CustomTicksDelete</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Deletes all ticks from the price history of the custom symbol in the specified time interval.</description>
 </snippet>

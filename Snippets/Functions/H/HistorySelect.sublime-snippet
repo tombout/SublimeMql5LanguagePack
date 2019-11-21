@@ -4,6 +4,6 @@
 HistorySelect(${1:from_date}, ${2:to_date})${0}
 ]]></content>
 	<tabTrigger>HistorySelect</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Retrieves the history of deals and orders for the specified period of server time.</description>
 </snippet>

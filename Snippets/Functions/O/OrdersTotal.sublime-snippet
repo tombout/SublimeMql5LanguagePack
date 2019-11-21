@@ -4,6 +4,6 @@
 OrdersTotal()${0}
 ]]></content>
 	<tabTrigger>OrdersTotal</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the number of current orders.</description>
 </snippet>

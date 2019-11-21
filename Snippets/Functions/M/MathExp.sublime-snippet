@@ -4,6 +4,6 @@
 MathExp(${1:value})${0}
 ]]></content>
 	<tabTrigger>MathExp</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the value of e raised to the power of d.</description>
 </snippet>

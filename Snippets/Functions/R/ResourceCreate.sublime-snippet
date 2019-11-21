@@ -4,6 +4,6 @@
 ResourceCreate(${1:resource_name}, ${2:path          })${0}
 ]]></content>
 	<tabTrigger>ResourceCreate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Creates an image resource based on a data set. There are two variants of the function:Creating a resource based on a file</description>
 </snippet>

@@ -4,6 +4,6 @@
 StringToShortArray(${1:text_string}, ${2:array[]}, ${3:start=0}, ${4:count=-1})${0}
 ]]></content>
 	<tabTrigger>StringToShortArray</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function symbol-wise copies a string into a specified place of an array of ushort type. It returns the number of copied elements.</description>
 </snippet>

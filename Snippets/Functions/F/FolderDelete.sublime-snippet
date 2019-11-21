@@ -4,6 +4,6 @@
 FolderDelete(${1:folder_name}, ${2:common_flag=0})${0}
 ]]></content>
 	<tabTrigger>FolderDelete</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function removes the specified directory. If the folder is not empty, then it can't be removed.</description>
 </snippet>

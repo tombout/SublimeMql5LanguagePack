@@ -4,6 +4,6 @@
 MathArccos(${1:val})${0}
 ]]></content>
 	<tabTrigger>MathArccos</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the arccosine of x within the range 0 to π in radians.</description>
 </snippet>

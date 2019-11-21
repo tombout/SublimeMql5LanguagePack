@@ -4,6 +4,6 @@
 SendFTP(${1:filename}, ${2:ftp_path=NULL})${0}
 ]]></content>
 	<tabTrigger>SendFTP</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sends a file at the address, specified in the setting window of the "FTP" tab.</description>
 </snippet>

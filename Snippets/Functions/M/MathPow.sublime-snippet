@@ -4,6 +4,6 @@
 MathPow(${1:base}, ${2:exponent})${0}
 ]]></content>
 	<tabTrigger>MathPow</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function raises a base to a specified power.</description>
 </snippet>

@@ -4,6 +4,6 @@
 MathMax(${1:value1}, ${2:value2})${0}
 ]]></content>
 	<tabTrigger>fmax</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the maximal value of two values.</description>
 </snippet>

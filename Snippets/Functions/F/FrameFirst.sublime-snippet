@@ -4,6 +4,6 @@
 FrameFirst()${0}
 ]]></content>
 	<tabTrigger>FrameFirst</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Moves a pointer of frame reading to the beginning and resets a set filter.</description>
 </snippet>

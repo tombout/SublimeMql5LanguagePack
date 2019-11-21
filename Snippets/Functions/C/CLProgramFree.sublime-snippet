@@ -4,6 +4,6 @@
 CLProgramFree(${1:program})${0}
 ]]></content>
 	<tabTrigger>CLProgramFree</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Removes an OpenCL program.</description>
 </snippet>

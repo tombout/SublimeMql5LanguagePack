@@ -4,6 +4,6 @@
 StringSplit(${1:string_value}, ${2:separator}, ${3: result[]})${0}
 ]]></content>
 	<tabTrigger>StringSplit</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Gets substrings by a specified separator from the specified string, returns the number of substrings obtained.</description>
 </snippet>

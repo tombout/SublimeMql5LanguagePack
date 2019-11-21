@@ -4,6 +4,6 @@
 Period()${0}
 ]]></content>
 	<tabTrigger>Period</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the current chart timeframe.</description>
 </snippet>

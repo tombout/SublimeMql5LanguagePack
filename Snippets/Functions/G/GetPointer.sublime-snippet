@@ -4,6 +4,6 @@
 GetPointer(${1:anyobject})${0}
 ]]></content>
 	<tabTrigger>GetPointer</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the object .</description>
 </snippet>

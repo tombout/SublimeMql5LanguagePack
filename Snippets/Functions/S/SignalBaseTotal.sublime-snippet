@@ -4,6 +4,6 @@
 SignalBaseTotal()${0}
 ]]></content>
 	<tabTrigger>SignalBaseTotal</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the total amount of signals, available in terminal.</description>
 </snippet>

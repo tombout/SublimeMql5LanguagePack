@@ -4,6 +4,6 @@
 ColorToString(${1:color_value}, ${2:color_name})${0}
 ]]></content>
 	<tabTrigger>ColorToString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It converts color value into string of "R,G,B" form.</description>
 </snippet>

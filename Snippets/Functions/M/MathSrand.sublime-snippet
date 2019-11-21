@@ -4,6 +4,6 @@
 MathSrand(${1:seed})${0}
 ]]></content>
 	<tabTrigger>MathSrand</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sets the starting point for generating a series of pseudorandom integers.</description>
 </snippet>

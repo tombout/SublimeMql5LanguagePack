@@ -4,6 +4,6 @@
 iCCI(${1:symbol}, ${2:period}, ${3:ma_period}, ${4:applied_price  })${0}
 ]]></content>
 	<tabTrigger>iCCI</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Commodity Channel Index indicator. It has only one buffer.</description>
 </snippet>

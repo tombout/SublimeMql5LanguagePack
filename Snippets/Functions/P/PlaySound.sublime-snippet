@@ -4,6 +4,6 @@
 PlaySound(${1:filename})${0}
 ]]></content>
 	<tabTrigger>PlaySound</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It plays a sound file.</description>
 </snippet>

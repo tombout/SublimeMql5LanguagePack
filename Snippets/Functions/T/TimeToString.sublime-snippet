@@ -4,6 +4,6 @@
 TimeToString(${1:value}, ${2:mode=TIME_DATE|TIME_MINUTES})${0}
 ]]></content>
 	<tabTrigger>TimeToString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Converting a value containing time in seconds elapsed since 01.01.1970 into a string of "yyyy.mm.dd hh:mi" format.</description>
 </snippet>

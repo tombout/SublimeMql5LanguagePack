@@ -4,6 +4,6 @@
 SendMail(${1:subject}, ${2:some_text})${0}
 ]]></content>
 	<tabTrigger>SendMail</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sends an email at the address specified in the settings window of the "Email" tab.</description>
 </snippet>

@@ -4,6 +4,6 @@
 SignalInfoSetDouble(${1:property_id}, ${2:value            })${0}
 ]]></content>
 	<tabTrigger>SignalInfoSetDouble</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sets the value of  type property of signal copy settings.</description>
 </snippet>

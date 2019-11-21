@@ -4,6 +4,6 @@
 Alert(${1:argument}, ${2:   ...})${0}
 ]]></content>
 	<tabTrigger>Alert</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Displays a message in a separate window.</description>
 </snippet>

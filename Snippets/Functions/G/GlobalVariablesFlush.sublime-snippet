@@ -4,6 +4,6 @@
 GlobalVariablesFlush()${0}
 ]]></content>
 	<tabTrigger>GlobalVariablesFlush</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Forcibly saves contents of all global variables to a disk. </description>
 </snippet>

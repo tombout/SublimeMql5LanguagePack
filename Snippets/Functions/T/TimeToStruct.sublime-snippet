@@ -4,6 +4,6 @@
 TimeToStruct(${1:dt}, ${2:dt_struct})${0}
 ]]></content>
 	<tabTrigger>TimeToStruct</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Converts a value of datetime type (number of seconds since 01.01.1970) into a structure variable .</description>
 </snippet>

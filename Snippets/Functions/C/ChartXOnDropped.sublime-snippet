@@ -4,6 +4,6 @@
 ChartXOnDropped()${0}
 ]]></content>
 	<tabTrigger>ChartXOnDropped</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the X coordinate of the chart point the Expert Advisor or script has been dropped to.</description>
 </snippet>

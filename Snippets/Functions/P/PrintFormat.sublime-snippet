@@ -4,6 +4,6 @@
 PrintFormat(${1:format_string}, ${2:   ...})${0}
 ]]></content>
 	<tabTrigger>PrintFormat</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It formats and enters sets of symbols and values in the Expert Advisor log in accordance with a preset format.</description>
 </snippet>

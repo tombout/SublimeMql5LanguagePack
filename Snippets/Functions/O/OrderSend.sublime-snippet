@@ -4,6 +4,6 @@
 OrderSend(${1:request}, ${2:,}, ${3:result })${0}
 ]]></content>
 	<tabTrigger>OrderSend</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The OrderSend() function is used for executing  by sending  to a trade server.</description>
 </snippet>

@@ -4,6 +4,6 @@
 iForce(${1:symbol}, ${2:period}, ${3:ma_period}, ${4:ma_method}, ${5:applied_volume})${0}
 ]]></content>
 	<tabTrigger>iForce</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Force Index indicator. It has only one buffer.</description>
 </snippet>

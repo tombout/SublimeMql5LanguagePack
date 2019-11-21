@@ -4,6 +4,6 @@
 ChartPeriod(${1:chart_id=0})${0}
 ]]></content>
 	<tabTrigger>ChartPeriod</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the timeframe  of specified chart.</description>
 </snippet>

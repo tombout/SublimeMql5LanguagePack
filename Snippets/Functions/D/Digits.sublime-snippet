@@ -4,6 +4,6 @@
 Digits()${0}
 ]]></content>
 	<tabTrigger>Digits</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the number of decimal digits determining the accuracy of price of the current chart symbol.</description>
 </snippet>

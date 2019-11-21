@@ -4,6 +4,6 @@
 TimeCurrent()${0}
 ]]></content>
 	<tabTrigger>TimeCurrent</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the last known server time, time of the last quote receipt for one of the symbols selected in the "Market Watch" window. In the  handler, this function returns the time of the received handled tick. In other cases (for example, call in  OnInit(), OnDeinit(), OnTimer() and so on) this is the  for any symbol available in the "Market Watch" window, the time shown in the title of this window. The time value is formed on a trade server and does not depend on the time settings on your computer. There are 2 variants of the function.</description>
 </snippet>

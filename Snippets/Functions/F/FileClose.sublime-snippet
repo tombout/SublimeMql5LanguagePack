@@ -4,6 +4,6 @@
 FileClose(${1:file_handle})${0}
 ]]></content>
 	<tabTrigger>FileClose</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Close the file previously opened by .</description>
 </snippet>

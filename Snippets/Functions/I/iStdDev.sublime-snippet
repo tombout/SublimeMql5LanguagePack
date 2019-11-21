@@ -4,6 +4,6 @@
 iStdDev(${1:symbol}, ${2:period}, ${3:ma_period}, ${4:ma_shift}, ${5:ma_method}, ${6:applied_price})${0}
 ]]></content>
 	<tabTrigger>iStdDev</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Standard Deviation indicator. It has only one buffer.</description>
 </snippet>

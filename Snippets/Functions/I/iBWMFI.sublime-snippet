@@ -4,6 +4,6 @@
 iBWMFI(${1:symbol}, ${2:period}, ${3:applied_volume})${0}
 ]]></content>
 	<tabTrigger>iBWMFI</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Market Facilitation Index indicator. It has only one buffer.</description>
 </snippet>

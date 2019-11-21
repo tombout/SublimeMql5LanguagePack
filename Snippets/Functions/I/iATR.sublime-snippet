@@ -4,6 +4,6 @@
 iATR(${1:symbol}, ${2:period}, ${3:ma_period})${0}
 ]]></content>
 	<tabTrigger>iATR</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Average True Range indicator. It has only one buffer.</description>
 </snippet>

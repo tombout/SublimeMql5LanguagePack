@@ -4,6 +4,6 @@
 StringFormat(${1:format}, ${2:...})${0}
 ]]></content>
 	<tabTrigger>StringFormat</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function formats obtained parameters and returns a string.</description>
 </snippet>

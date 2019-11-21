@@ -4,6 +4,6 @@
 HistoryDealGetTicket(${1:index})${0}
 ]]></content>
 	<tabTrigger>HistoryDealGetTicket</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function selects a deal for further processing and returns the deal ticket in history. Prior to calling HistoryDealGetTicket(), first it is necessary to receive the history of deals and orders using the  or  function.</description>
 </snippet>

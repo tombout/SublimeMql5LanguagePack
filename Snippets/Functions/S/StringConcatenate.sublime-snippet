@@ -4,6 +4,6 @@
 StringConcatenate(${1:string_var}, ${2:argument1      }, ${3:   }, ${4:argument2 }, ${5:...})${0}
 ]]></content>
 	<tabTrigger>StringConcatenate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function forms a string of passed parameters and returns the size of the formed string. Parameters can be of any type. Number of parameters can't be less than 2 or more than 64.</description>
 </snippet>

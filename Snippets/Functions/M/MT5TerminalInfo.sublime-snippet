@@ -4,6 +4,6 @@
 MT5TerminalInfo()${0}
 ]]></content>
 	<tabTrigger>MT5TerminalInfo</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get status and parameters of the connected MetaTrader 5 terminal.</description>
 </snippet>

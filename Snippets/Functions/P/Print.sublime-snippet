@@ -4,6 +4,6 @@
 Print(${1:argument}, ${2:   ...})${0}
 ]]></content>
 	<tabTrigger>Print</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It enters a message in the Expert Advisor log. Parameters can be of any type.</description>
 </snippet>

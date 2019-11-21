@@ -4,6 +4,6 @@
 StringToLower(${1:string_var})${0}
 ]]></content>
 	<tabTrigger>StringToLower</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Transforms all symbols of a selected string into lowercase.</description>
 </snippet>

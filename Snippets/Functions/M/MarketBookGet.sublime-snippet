@@ -4,6 +4,6 @@
 MarketBookGet(${1:symbol}, ${2:book[]})${0}
 ]]></content>
 	<tabTrigger>MarketBookGet</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns a structure array  containing records of the Depth of Market of a specified symbol.</description>
 </snippet>

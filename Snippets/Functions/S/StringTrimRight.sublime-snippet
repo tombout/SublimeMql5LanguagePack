@@ -4,6 +4,6 @@
 StringTrimRight(${1:string_var})${0}
 ]]></content>
 	<tabTrigger>StringTrimRight</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function cuts line feed characters, spaces and tabs in the right part of the string after the last meaningful symbol. The string is modified at place.</description>
 </snippet>

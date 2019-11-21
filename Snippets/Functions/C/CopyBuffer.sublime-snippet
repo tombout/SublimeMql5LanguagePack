@@ -4,6 +4,6 @@
 CopyBuffer(${1:indicator_handle}, ${2:buffer_num}, ${3:start_pos}, ${4:count}, ${5:buffer[]})${0}
 ]]></content>
 	<tabTrigger>CopyBuffer</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Gets data of a specified buffer of a certain indicator in the necessary quantity.</description>
 </snippet>

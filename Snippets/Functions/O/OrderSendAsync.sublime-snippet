@@ -4,6 +4,6 @@
 OrderSendAsync(${1:request}, ${2:,}, ${3:result })${0}
 ]]></content>
 	<tabTrigger>OrderSendAsync</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The OrderSendAsync() function is used for conducting asynchronous  without waiting for the trade server's response to a sent . The function is designed for high-frequency trading, when under the terms of the trading algorithm it is unacceptable to waste time waiting for a response from the server.</description>
 </snippet>

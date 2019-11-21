@@ -4,6 +4,6 @@
 FileReadLong(${1:file_handle})${0}
 ]]></content>
 	<tabTrigger>FileReadLong</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function reads an integer of long type (8 bytes) from the current position of the binary file.</description>
 </snippet>

@@ -4,6 +4,6 @@
 OnStart()${0}
 ]]></content>
 	<tabTrigger>OnStart</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function is called in scripts and services when the  event occurs. The function is intended for one-time execution of actions implemented in a program. There are two function types.</description>
 </snippet>

@@ -4,6 +4,6 @@
 FrameAdd(${1:name}, ${2:id}, ${3:value}, ${4:filename})${0}
 ]]></content>
 	<tabTrigger>FrameAdd</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Adds a frame with data. There are two variants of the function.</description>
 </snippet>

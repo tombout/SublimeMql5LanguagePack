@@ -4,6 +4,6 @@
 iADXWilder(${1:symbol}, ${2:period}, ${3:adx_period})${0}
 ]]></content>
 	<tabTrigger>iADXWilder</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of Average Directional Movement Index by Welles Wilder.</description>
 </snippet>

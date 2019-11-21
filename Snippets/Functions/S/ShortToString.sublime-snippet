@@ -4,6 +4,6 @@
 ShortToString(${1:symbol_code})${0}
 ]]></content>
 	<tabTrigger>ShortToString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It converts the symbol code (unicode) into one-symbol string and returns resulting string.</description>
 </snippet>

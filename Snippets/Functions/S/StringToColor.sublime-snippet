@@ -4,6 +4,6 @@
 StringToColor(${1:color_string})${0}
 ]]></content>
 	<tabTrigger>StringToColor</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Converting "R,G,B" string or string with color name into color type value.</description>
 </snippet>

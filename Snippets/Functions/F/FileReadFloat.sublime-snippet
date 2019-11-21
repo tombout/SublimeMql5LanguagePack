@@ -4,6 +4,6 @@
 FileReadFloat(${1:file_handle})${0}
 ]]></content>
 	<tabTrigger>FileReadFloat</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Reads the single-precision floating point number (float) from the current position of the binary file.</description>
 </snippet>

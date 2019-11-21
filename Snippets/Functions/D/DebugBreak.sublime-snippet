@@ -4,6 +4,6 @@
 DebugBreak()${0}
 ]]></content>
 	<tabTrigger>DebugBreak</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>It is a program breakpoint in debugging.</description>
 </snippet>

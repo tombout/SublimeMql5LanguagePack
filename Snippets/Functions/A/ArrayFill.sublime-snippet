@@ -4,6 +4,6 @@
 ArrayFill(${1:array[]}, ${2:start}, ${3:count}, ${4:value})${0}
 ]]></content>
 	<tabTrigger>ArrayFill</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function fills an array with the specified value.</description>
 </snippet>

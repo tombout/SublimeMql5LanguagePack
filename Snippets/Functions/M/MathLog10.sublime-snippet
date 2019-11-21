@@ -4,6 +4,6 @@
 MathLog10(${1:val})${0}
 ]]></content>
 	<tabTrigger>MathLog10</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the logarithm of a number by base 10.</description>
 </snippet>

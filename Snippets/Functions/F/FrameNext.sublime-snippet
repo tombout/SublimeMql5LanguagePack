@@ -4,6 +4,6 @@
 FrameNext(${1:pass}, ${2:name}, ${3:id}, ${4:value })${0}
 ]]></content>
 	<tabTrigger>FrameNext</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Reads a frame and moves the pointer to the next one. There are two variants of the function.</description>
 </snippet>

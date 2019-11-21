@@ -4,6 +4,6 @@
 SymbolsTotal(${1:selected})${0}
 ]]></content>
 	<tabTrigger>SymbolsTotal</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the number of available (selected in Market Watch or all) symbols.</description>
 </snippet>

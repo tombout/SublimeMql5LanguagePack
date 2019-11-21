@@ -4,6 +4,6 @@
 ArraySort(${1:array[]})${0}
 ]]></content>
 	<tabTrigger>ArraySort</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sorts the values in the first dimension of a multidimensional numeric array in the ascending order.</description>
 </snippet>

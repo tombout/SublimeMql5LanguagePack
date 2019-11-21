@@ -4,6 +4,6 @@
 IndicatorParameters(${1:indicator_handle}, ${2:indicator_type}, ${3:parameters[]    })${0}
 ]]></content>
 	<tabTrigger>IndicatorParameters</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Based on the specified handle, returns the number of input parameters of the indicator, as well as the values and types of the parameters.</description>
 </snippet>

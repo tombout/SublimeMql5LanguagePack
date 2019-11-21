@@ -4,6 +4,6 @@
 ColorToARGB(${1:clr}, ${2:alpha=255     })${0}
 ]]></content>
 	<tabTrigger>ColorToARGB</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function converts  type into  type to get ARGB representation of the color. ARGB color format is used to generate a , , as well as for CCanvas standard library class.</description>
 </snippet>

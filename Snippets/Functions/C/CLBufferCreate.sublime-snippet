@@ -4,6 +4,6 @@
 CLBufferCreate(${1:context}, ${2:size}, ${3:flags})${0}
 ]]></content>
 	<tabTrigger>CLBufferCreate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Creates an OpenCL buffer and returns its handle.</description>
 </snippet>

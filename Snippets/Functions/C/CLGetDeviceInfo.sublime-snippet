@@ -4,6 +4,6 @@
 CLGetDeviceInfo(${1:handle}, ${2:property_id}, ${3:data[]}, ${4:size})${0}
 ]]></content>
 	<tabTrigger>CLGetDeviceInfo</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function receives device property from OpenCL driver.</description>
 </snippet>

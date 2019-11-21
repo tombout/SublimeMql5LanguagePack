@@ -4,6 +4,6 @@
 TimeGMTOffset()${0}
 ]]></content>
 	<tabTrigger>TimeGMTOffset</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the current difference between GMT time and the local computer time in seconds, taking into account switch to winter or summer time. Depends on the time settings of your computer.</description>
 </snippet>

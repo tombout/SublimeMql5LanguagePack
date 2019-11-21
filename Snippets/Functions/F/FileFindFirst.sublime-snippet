@@ -4,6 +4,6 @@
 FileFindFirst(${1:file_filter}, ${2:returned_filename}, ${3:common_flag=0})${0}
 ]]></content>
 	<tabTrigger>FileFindFirst</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function starts the search of files or subdirectories in a directory in accordance with the specified filter.</description>
 </snippet>

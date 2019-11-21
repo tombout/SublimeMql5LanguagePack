@@ -4,6 +4,6 @@
 PositionsTotal()${0}
 ]]></content>
 	<tabTrigger>PositionsTotal</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the number of open positions.</description>
 </snippet>

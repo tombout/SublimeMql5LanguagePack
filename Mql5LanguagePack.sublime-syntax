@@ -4,7 +4,7 @@
 file_extensions:
   - mq5
   - mqh
-scope: source.mq5
+scope: source.mql5
 variables:
   identifier: \b[[:alpha:]_][[:alnum:]_]*\b # upper and lowercase
   macro_identifier: \b[[:upper:]_][[:upper:][:digit:]_]{2,}\b # only uppercase, at least 3 chars

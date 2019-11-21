@@ -4,6 +4,6 @@
 OnTester()${0}
 ]]></content>
 	<tabTrigger>OnTester</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function is called in Expert Advisors when the  event occurs to perform necessary actions after testing.</description>
 </snippet>

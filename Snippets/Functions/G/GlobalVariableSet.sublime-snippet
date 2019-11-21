@@ -4,6 +4,6 @@
 GlobalVariableSet(${1:name}, ${2:value})${0}
 ]]></content>
 	<tabTrigger>GlobalVariableSet</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sets a new value for a global variable. If the variable does not exist, the system creates a new global variable.</description>
 </snippet>

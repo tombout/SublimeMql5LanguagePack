@@ -4,6 +4,6 @@
 OnTick()${0}
 ]]></content>
 	<tabTrigger>OnTick</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description></description>
 </snippet>

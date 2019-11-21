@@ -4,6 +4,6 @@
 iSAR(${1:symbol}, ${2:period}, ${3:step}, ${4:maximum})${0}
 ]]></content>
 	<tabTrigger>iSAR</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Parabolic Stop and Reverse system indicator. It has only one buffer.</description>
 </snippet>

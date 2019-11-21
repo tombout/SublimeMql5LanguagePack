@@ -4,6 +4,6 @@
 TimeGMT()${0}
 ]]></content>
 	<tabTrigger>TimeGMT</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the GMT, which is calculated taking into account the DST switch by the local time on the computer where the client terminal is running. There are 2 variants of the function.</description>
 </snippet>

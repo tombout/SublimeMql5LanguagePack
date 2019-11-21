@@ -4,6 +4,6 @@
 SocketSend(${1:socket}, ${2:  }, ${3:buffer[]}, ${4:             }, ${5:buffer_len            })${0}
 ]]></content>
 	<tabTrigger>SocketSend</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Write data to a socket.</description>
 </snippet>

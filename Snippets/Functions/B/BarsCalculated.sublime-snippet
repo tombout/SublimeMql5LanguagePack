@@ -4,6 +4,6 @@
 BarsCalculated(${1:indicator_handle})${0}
 ]]></content>
 	<tabTrigger>BarsCalculated</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the number of calculated data for the specified indicator.</description>
 </snippet>

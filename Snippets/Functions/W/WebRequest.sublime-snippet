@@ -4,6 +4,6 @@
 WebRequest(${1:method}, ${2:url}, ${3:cookie}, ${4:referer}, ${5:timeout}, ${6:   }, ${7:&data[]}, ${8:data_size}, ${9:      }, ${10:&result[]}, ${11:        }, ${12:&result_headers   })${0}
 ]]></content>
 	<tabTrigger>WebRequest</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function sends an HTTP request to a specified server. The function has two versions:</description>
 </snippet>

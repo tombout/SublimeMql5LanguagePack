@@ -4,6 +4,6 @@
 SocketIsWritable(${1:socket      })${0}
 ]]></content>
 	<tabTrigger>SocketIsWritable</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Check whether data can be written to a socket at the current time.</description>
 </snippet>

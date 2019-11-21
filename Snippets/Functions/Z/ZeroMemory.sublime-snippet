@@ -4,6 +4,6 @@
 ZeroMemory(${1:variable})${0}
 ]]></content>
 	<tabTrigger>ZeroMemory</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function resets a variable passed to it by reference.</description>
 </snippet>

@@ -4,6 +4,6 @@
 OnTradeTransaction(${1:trans}, ${2:request}, ${3:result})${0}
 ]]></content>
 	<tabTrigger>OnTradeTransaction</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description></description>
 </snippet>

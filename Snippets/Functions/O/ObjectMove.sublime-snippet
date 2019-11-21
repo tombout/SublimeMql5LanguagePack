@@ -4,6 +4,6 @@
 ObjectMove(${1:chart_id}, ${2:name}, ${3:point_index}, ${4:time}, ${5:price})${0}
 ]]></content>
 	<tabTrigger>ObjectMove</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function changes coordinates of the specified anchor point of the object.</description>
 </snippet>

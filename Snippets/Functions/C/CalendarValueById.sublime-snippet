@@ -4,6 +4,6 @@
 CalendarValueById(${1:value_id}, ${2:value      })${0}
 ]]></content>
 	<tabTrigger>CalendarValueById</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get an event value description by its ID.</description>
 </snippet>

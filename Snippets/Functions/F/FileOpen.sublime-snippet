@@ -4,6 +4,6 @@
 FileOpen(${1:file_name}, ${2:open_flags}, ${3:delimiter='\t'}, ${4:codepage=CP_ACP})${0}
 ]]></content>
 	<tabTrigger>FileOpen</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function opens the file with the specified name and flag.</description>
 </snippet>

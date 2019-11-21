@@ -4,6 +4,6 @@
 SymbolInfoMarginRate(${1:name}, ${2:order_type}, ${3:initial_margin_rate}, ${4:maintenance_margin_rate})${0}
 ]]></content>
 	<tabTrigger>SymbolInfoMarginRate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the margin rates depending on the order type and direction.</description>
 </snippet>

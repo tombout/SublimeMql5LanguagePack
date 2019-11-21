@@ -4,6 +4,6 @@
 EventKillTimer()${0}
 ]]></content>
 	<tabTrigger>EventKillTimer</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Specifies the client terminal that is necessary to stop the generation of events from .</description>
 </snippet>

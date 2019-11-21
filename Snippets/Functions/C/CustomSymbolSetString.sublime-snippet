@@ -4,6 +4,6 @@
 CustomSymbolSetString(${1:symbol_name}, ${2:property_id}, ${3:property_value})${0}
 ]]></content>
 	<tabTrigger>CustomSymbolSetString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Sets the string type property value for a custom symbol.</description>
 </snippet>

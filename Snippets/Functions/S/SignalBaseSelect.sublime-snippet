@@ -4,6 +4,6 @@
 SignalBaseSelect(${1:index     })${0}
 ]]></content>
 	<tabTrigger>SignalBaseSelect</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Selects a signal from signals, available in terminal for further working with it.</description>
 </snippet>

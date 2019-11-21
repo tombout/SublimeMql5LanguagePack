@@ -4,6 +4,6 @@
 FileReadBool(${1:file_handle})${0}
 ]]></content>
 	<tabTrigger>FileReadBool</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Reads from the file of CSV type string from the current position to a delimiter (or till the end of the text line) and converts the read string to a bool type value.</description>
 </snippet>

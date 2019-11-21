@@ -4,6 +4,6 @@
 StringToInteger(${1:value})${0}
 ]]></content>
 	<tabTrigger>StringToInteger</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function converts string containing a symbol representation of number into number of int (integer) type.</description>
 </snippet>

@@ -4,6 +4,6 @@
 CalendarValueLastByEvent(${1:event_id}, ${2:change_id}, ${3:values[]     })${0}
 ]]></content>
 	<tabTrigger>CalendarValueLastByEvent</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Get the array of event values by its ID since the Calendar database status with a specified change_id.</description>
 </snippet>

@@ -4,6 +4,6 @@
 StringFind(${1:string_value}, ${2:match_substring}, ${3:start_pos=0})${0}
 ]]></content>
 	<tabTrigger>StringFind</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Search for a substring in a string.</description>
 </snippet>

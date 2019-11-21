@@ -4,6 +4,6 @@
 ChartGetString(${1:chart_id}, ${2:prop_id })${0}
 ]]></content>
 	<tabTrigger>ChartGetString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns the value of a corresponding property of the specified chart. Chart property must be of string type. There are 2 variants of the function call.</description>
 </snippet>

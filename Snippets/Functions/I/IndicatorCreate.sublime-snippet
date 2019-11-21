@@ -4,6 +4,6 @@
 IndicatorCreate(${1:symbol}, ${2:period}, ${3:indicator_type}, ${4:parameters_cnt=0,}, ${5:parameters_array[]=NULL})${0}
 ]]></content>
 	<tabTrigger>IndicatorCreate</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of a specified technical indicator created based on the array of parameters of  type.</description>
 </snippet>

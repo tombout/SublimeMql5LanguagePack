@@ -4,6 +4,6 @@
 $function_name($function_params)$${0}
 ]]></content>
 	<tabTrigger>$tab_trigger</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>$description</description>
 </snippet>

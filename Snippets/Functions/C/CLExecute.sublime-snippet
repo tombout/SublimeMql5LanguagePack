@@ -4,6 +4,6 @@
 CLExecute(${1:kernel })${0}
 ]]></content>
 	<tabTrigger>CLExecute</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function runs an OpenCL program. There are 3 versions of the function:</description>
 </snippet>

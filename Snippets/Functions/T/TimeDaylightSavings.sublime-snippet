@@ -4,6 +4,6 @@
 TimeDaylightSavings()${0}
 ]]></content>
 	<tabTrigger>TimeDaylightSavings</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Returns correction for daylight saving time in seconds, if the switch to summer time has been made. It depends on the time settings of your computer.</description>
 </snippet>

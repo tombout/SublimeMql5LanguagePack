@@ -4,6 +4,6 @@
 GlobalVariableDel(${1:name})${0}
 ]]></content>
 	<tabTrigger>GlobalVariableDel</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Deletes a global variable from the client terminal.</description>
 </snippet>

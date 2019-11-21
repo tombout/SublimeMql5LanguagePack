@@ -4,6 +4,6 @@
 MathRound(${1:value})${0}
 ]]></content>
 	<tabTrigger>round</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns a value rounded off to the nearest integer of the specified numeric value.</description>
 </snippet>

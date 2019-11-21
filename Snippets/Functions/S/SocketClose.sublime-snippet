@@ -4,6 +4,6 @@
 SocketClose(${1:socket      })${0}
 ]]></content>
 	<tabTrigger>SocketClose</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>Close a socket.</description>
 </snippet>

@@ -4,6 +4,6 @@
 iRVI(${1:symbol}, ${2:period}, ${3:ma_period})${0}
 ]]></content>
 	<tabTrigger>iRVI</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Relative Vigor Index indicator.</description>
 </snippet>

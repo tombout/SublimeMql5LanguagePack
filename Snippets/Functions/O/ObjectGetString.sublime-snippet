@@ -4,6 +4,6 @@
 ObjectGetString(${1:chart_id}, ${2:name}, ${3:prop_id}, ${4:prop_modifier=0})${0}
 ]]></content>
 	<tabTrigger>ObjectGetString</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the value of the corresponding object property. The object property must be of the  type. There are 2 variants of the function.</description>
 </snippet>

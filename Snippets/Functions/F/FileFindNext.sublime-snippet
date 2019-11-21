@@ -4,6 +4,6 @@
 FileFindNext(${1:search_handle}, ${2:returned_filename})${0}
 ]]></content>
 	<tabTrigger>FileFindNext</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function continues the search started by .</description>
 </snippet>

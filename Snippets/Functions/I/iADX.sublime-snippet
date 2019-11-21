@@ -4,6 +4,6 @@
 iADX(${1:symbol}, ${2:period}, ${3:adx_period})${0}
 ]]></content>
 	<tabTrigger>iADX</tabTrigger>
-	<scope>source.mq5</scope>
+	<scope>source.mql5</scope>
 	<description>The function returns the handle of the Average Directional Movement Index indicator.</description>
 </snippet>
