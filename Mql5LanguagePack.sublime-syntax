@@ -1437,72 +1437,14 @@ contexts:
   ## Preprocessor for data-structures
 
   preprocessor-data-structures:
-    - include: preprocessor-rule-enabled-data-structures
-    - include: preprocessor-rule-disabled-data-structures
     - include: preprocessor-practical-workarounds
-
-  preprocessor-rule-disabled-data-structures:
-    - match: ^\s*((#if)\s+(0))\b
-      captures:
-        1: meta.preprocessor.mql5
-        2: keyword.control.import.mql5
-        3: constant.numeric.preprocessor.mql5
-      push:
-        - match: ^\s*(#\s*endif)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.mql5
-          pop: true
-        - match: ^\s*(#\s*else)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
-          push:
-            - match: (?=^\s*#\s*endif\b)
-              pop: true
-            - include: negated-block
-            - include: data-structures-body
-        - match: ""
-          push:
-            - meta_scope: comment.block.preprocessor.if-branch.mql5
-            - match: (?=^\s*#\s*(else|endif)\b)
-              pop: true
-            - include: scope:source.c#preprocessor-disabled
-
-  preprocessor-rule-enabled-data-structures:
-    - match: ^\s*((#if)\s+(0*1))\b
-      captures:
-        1: meta.preprocessor.mql5
-        2: keyword.control.import.mql5
-        3: constant.numeric.preprocessor.mql5
-      push:
-        - match: ^\s*(#\s*endif)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.mql5
-          pop: true
-        - match: ^\s*(#\s*else)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
-          push:
-            - meta_content_scope: comment.block.preprocessor.else-branch.mql5
-            - match: (?=^\s*#\s*endif\b)
-              pop: true
-            - include: scope:source.c#preprocessor-disabled
-        - match: ""
-          push:
-            - match: (?=^\s*#\s*(else|endif)\b)
-              pop: true
-            - include: negated-block
-            - include: data-structures-body
 
   ## Preprocessor for global
 
   preprocessor-global:
-    - include: preprocessor-rule-enabled-global
-    - include: preprocessor-rule-disabled-global
     - include: preprocessor-rule-other-global
 
   preprocessor-statements:
-    - include: preprocessor-rule-enabled-statements
-    - include: preprocessor-rule-disabled-statements
     - include: preprocessor-rule-other-statements
 
   preprocessor-expressions:
@@ -1511,62 +1453,8 @@ contexts:
     - include: scope:source.c#pragma-mark
     - include: preprocessor-other
 
-  preprocessor-rule-disabled-global:
-    - match: ^\s*((#if)\s+(0))\b
-      captures:
-        1: meta.preprocessor.mql5
-        2: keyword.control.import.mql5
-        3: constant.numeric.preprocessor.mql5
-      push:
-        - match: ^\s*(#\s*endif)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.mql5
-          pop: true
-        - match: ^\s*(#\s*else)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
-          push:
-            - match: (?=^\s*#\s*endif\b)
-              pop: true
-            - include: preprocessor-global
-            - include: negated-block
-            - include: global
-        - match: ""
-          push:
-            - meta_scope: comment.block.preprocessor.if-branch.mql5
-            - match: (?=^\s*#\s*(else|endif)\b)
-              pop: true
-            - include: scope:source.c#preprocessor-disabled
-
-  preprocessor-rule-enabled-global:
-    - match: ^\s*((#if)\s+(0*1))\b
-      captures:
-        1: meta.preprocessor.mql5
-        2: keyword.control.import.mql5
-        3: constant.numeric.preprocessor.mql5
-      push:
-        - match: ^\s*(#\s*endif)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.mql5
-          pop: true
-        - match: ^\s*(#\s*else)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
-          push:
-            - meta_content_scope: comment.block.preprocessor.else-branch.mql5
-            - match: (?=^\s*#\s*endif\b)
-              pop: true
-            - include: scope:source.c#preprocessor-disabled
-        - match: ""
-          push:
-            - match: (?=^\s*#\s*(else|endif)\b)
-              pop: true
-            - include: preprocessor-global
-            - include: negated-block
-            - include: global
-
   preprocessor-rule-other-global:
-    - match: ^\s*(#\s*(?:if|ifdef|ifndef))\b
+    - match: ^\s*(#\s*(?:ifdef|ifndef))\b
       captures:
         1: keyword.control.import.mql5
       push:
@@ -1615,7 +1503,7 @@ contexts:
 
   preprocessor-block-finish-global:
     - meta_scope: meta.block.mql5
-    - match: ^\s*(#\s*(?:if|ifdef|ifndef))\b
+    - match: ^\s*(#\s*(?:ifdef|ifndef))\b
       captures:
         1: meta.preprocessor.mql5 keyword.control.import.mql5
       set: preprocessor-block-finish-if-branch-global
@@ -1642,58 +1530,6 @@ contexts:
     - include: global
 
   ## Preprocessor for statements
-
-  preprocessor-rule-disabled-statements:
-    - match: ^\s*((#if)\s+(0))\b
-      captures:
-        1: meta.preprocessor.mql5
-        2: keyword.control.import.mql5
-        3: constant.numeric.preprocessor.mql5
-      push:
-        - match: ^\s*(#\s*endif)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.mql5
-          pop: true
-        - match: ^\s*(#\s*else)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
-          push:
-            - match: (?=^\s*#\s*endif\b)
-              pop: true
-            - include: negated-block
-            - include: statements
-        - match: ""
-          push:
-            - meta_scope: comment.block.preprocessor.if-branch.mql5
-            - match: (?=^\s*#\s*(else|endif)\b)
-              pop: true
-            - include: scope:source.c#preprocessor-disabled
-
-  preprocessor-rule-enabled-statements:
-    - match: ^\s*((#if)\s+(0*1))\b
-      captures:
-        1: meta.preprocessor.mql5
-        2: keyword.control.import.mql5
-        3: constant.numeric.preprocessor.mql5
-      push:
-        - match: ^\s*(#\s*endif)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.mql5
-          pop: true
-        - match: ^\s*(#\s*else)\b
-          captures:
-            1: meta.preprocessor.mql5 keyword.control.import.else.mql5
-          push:
-            - meta_content_scope: comment.block.preprocessor.else-branch.mql5
-            - match: (?=^\s*#\s*endif\b)
-              pop: true
-            - include: scope:source.c#preprocessor-disabled
-        - match: ""
-          push:
-            - match: (?=^\s*#\s*(else|endif)\b)
-              pop: true
-            - include: negated-block
-            - include: statements
 
   preprocessor-rule-other-statements:
     - match: ^\s*(#\s*(?:if|ifdef|ifndef))\b
@@ -1784,7 +1620,7 @@ contexts:
 
   preprocessor-block-finish-statements:
     - meta_scope: meta.block.mql5
-    - match: ^\s*(#\s*(?:if|ifdef|ifndef))\b
+    - match: ^\s*(#\s*(?:ifdef|ifndef))\b
       captures:
         1: meta.preprocessor.mql5 keyword.control.import.mql5
       set: preprocessor-block-finish-if-branch-statements
@@ -1909,7 +1745,7 @@ contexts:
           pop: true
 
   preprocessor-other:
-    - match: ^\s*(#\s*(?:if|ifdef|ifndef|elif|else|line|pragma|undef))\b
+    - match: ^\s*(#\s*(?:ifdef|ifndef|else|undef))\b
       captures:
         1: keyword.control.import.mql5
       push:

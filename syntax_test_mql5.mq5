@@ -62,6 +62,28 @@ string ErrorDescription(int error_code);
   }
 // <- meta.preprocessor.macro.mql5
 
+// Conditional compilation: https://www.mql5.com/en/docs/basis/preprosessor/conditional_compilation
+#ifdef _DEBUG
+// <- keyword.control.import.mql5
+    Print("Hello from MQL5 compiler [DEBUG]");
+#else
+// <- keyword.control.import.mql5
+    #ifdef _RELEASE
+//  ^ keyword.control.import.mql5
+        Print("Hello from MQL5 compiler [RELEASE]");
+    #endif
+//  ^ keyword.control.import.mql5
+#endif
+// <- keyword.control.import.mql5
+#undef _RELEASE
+// <- keyword.control.import.mql5
+
+// To be sure assert that we do not hightlight not supported C macros
+#pragma
+// <- - keyword.control.import.mql5
+#if
+// <- - keyword.control.import.mql5
+
 // Integer Types: https://www.mql5.com/en/docs/basis/types/integer
 char a = -128;
 // <- storage.type.mql5
