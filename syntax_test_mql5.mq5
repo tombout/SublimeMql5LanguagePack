@@ -64,6 +64,7 @@ string ErrorDescription(int error_code);
 
 // Conditional compilation: https://www.mql5.com/en/docs/basis/preprosessor/conditional_compilation
 #ifdef _DEBUG
+// <- meta.preprocessor.mql5
 // <- keyword.control.import.mql5
     Print("Hello from MQL5 compiler [DEBUG]");
 #else
@@ -75,6 +76,8 @@ string ErrorDescription(int error_code);
 //  ^ keyword.control.import.mql5
 #endif
 // <- keyword.control.import.mql5
+//   ^ meta.preprocessor.mql5
+//    ^ - meta.preprocessor.mql5
 #undef _RELEASE
 // <- keyword.control.import.mql5
 
@@ -89,17 +92,21 @@ string ErrorDescription(int error_code);
 input group           "Signal"
 // <- storage.type.mql5
 //    ^ storage.type.mql5
-input int             ExtBBPeriod   = 20;       // Bollinger Bands period
-input double          ExtBBDeviation= 2.0;      // deviation
-input ENUM_TIMEFRAMES ExtSignalTF=PERIOD_M15;   // BB timeframe
+input int             ExtBBPeriod   = EMPTY_VALUE;
+//                                        ^ support.constant.mql5
+input double          ExtBBDeviation= 2.0;
+input ENUM_TIMEFRAMES ExtSignalTF=PERIOD_M15;
 
 // Integer Types: https://www.mql5.com/en/docs/basis/types/integer
 char a = -128;
 // <- storage.type.mql5
+//        ^ constant.numeric.mql5
 uchar b = 12;
 // <- storage.type.mql5
+//        ^ constant.numeric.mql5
 bool c = true;
 // <- storage.type.mql5
+//        ^ constant.language.mql5
 short d = -1;
 // <- storage.type.mql5
 ushort e = 1;
@@ -117,11 +124,19 @@ ulong j = 16777215;
 datetime k = 16777215;
 // <- storage.type.mql5
 
+// Assert that as long as we have an additional dot at end
+// of a number the next line will not highlight correctly.
+double k = 16777215.2.;
+int
+// <- - storage.type.mql5
+
 // Real Types: https://www.mql5.com/en/docs/basis/types/double
-double l = 12.111;
+double l = -12.111;
 // <- storage.type.mql5
+//           ^ constant.numeric.mql5
 float m = 0.0001;
 // <- storage.type.mql5
+//           ^ constant.numeric.mql5
 
 // String Type: https://www.mql5.com/en/docs/basis/types/stringconst
 string svar="This is a character string";
