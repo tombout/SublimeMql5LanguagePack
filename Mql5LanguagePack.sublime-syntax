@@ -44,46 +44,6 @@ contexts:
   # Reusable contexts
   #############################################################################
 
-  unique-late-expressions:
-    # This is highlighted after all of the other control keywords
-    # to allow operator overloading to be lexed properly
-    - match: \boperator\b
-      scope: keyword.control.mql5
-
-  unique-modifiers:
-    - match: \b({{modifiers}})\b
-      scope: storage.modifier.mql5
-
-  unique-variables:
-    - match: \bthis\b
-      scope: variable.language.mql5
-    # common mql5 instance var naming idiom -- fMemberName
-    - match: '\b(f|m)[[:upper:]]\w*\b'
-      scope: variable.other.readwrite.member.mql5
-    # common mql5 instance var naming idiom -- m_member_name
-    - match: '\bm_[[:alnum:]_]+\b'
-      scope: variable.other.readwrite.member.mql5
-
-  unique-constants:
-    - match: \bnullptr\b
-      scope: constant.language.mql5
-
-  unique-keywords:
-    - match: \busing\b
-      scope: keyword.control.mql5
-    - match: \bbreak\b
-      scope: keyword.control.flow.break.mql5
-    - match: \bcontinue\b
-      scope: keyword.control.flow.continue.mql5
-    - match: \breturn\b
-      scope: keyword.control.flow.return.mql5
-    - match: \bthrow\b
-      scope: keyword.control.flow.throw.mql5
-    - match: \b({{control_keywords}})\b
-      scope: keyword.control.mql5
-    - match: '\bdelete\b(\s*\[\])?|\bnew\b(?!])'
-      scope: keyword.control.mql5
-
   unique-strings:
     - match: '((?:L|u8|u|U)?R)("([^\(\)\\ ]{0,16})\()'
       captures:
@@ -267,7 +227,10 @@ contexts:
       scope: punctuation.terminator.mql5
 
   late-expressions-before-function-call:
-    - include: unique-late-expressions
+    # This is highlighted after all of the other control keywords
+    # to allow operator overloading to be lexed properly
+    - match: \boperator\b
+      scope: keyword.control.mql5
     - include: modifiers-parens
     - include: modifiers
     - include: types
@@ -286,20 +249,28 @@ contexts:
     - include: scope:source.c#operators
 
   modifiers:
-    - include: unique-modifiers
-    - include: scope:source.c#modifiers
+    - match: \b({{modifiers}})\b
+      scope: storage.modifier.mql5
 
   variables:
-    - include: unique-variables
+    - match: \bthis\b
+      scope: variable.language.mql5
+    # common mql5 instance var naming idiom -- m_member_name
+    - match: '\bm_[[:alnum:]_]+\b'
+      scope: variable.other.readwrite.member.mql5
     - include: scope:source.c#variables
 
   constants:
-    - include: unique-constants
-    - include: scope:source.c#constants
+    - match: \b(NULL|true|false)\b
+      scope: constant.language.mql5
+    - match: \b(__FILE__|__FUNCTION__|__LINE__)\b
+      scope: support.constant.mql5
 
   keywords:
-    - include: unique-keywords
-    - include: scope:source.c#keywords
+    - match: \b({{control_keywords}})\b
+      scope: keyword.control.mql5
+    - match: \bsizeof\b
+      scope: keyword.operator.word.mql5
 
   types:
     - match: \b({{basic_types}})\b
