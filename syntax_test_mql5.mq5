@@ -84,6 +84,15 @@ string ErrorDescription(int error_code);
 #if
 // <- - keyword.control.import.mql5
 
+// Inputs: https://www.mql5.com/en/docs/basis/variables/inputvariables
+// For now we take inputs as a base type
+input group           "Signal"
+// <- storage.type.mql5
+//    ^ storage.type.mql5
+input int             ExtBBPeriod   = 20;       // Bollinger Bands period
+input double          ExtBBDeviation= 2.0;      // deviation
+input ENUM_TIMEFRAMES ExtSignalTF=PERIOD_M15;   // BB timeframe
+
 // Integer Types: https://www.mql5.com/en/docs/basis/types/integer
 char a = -128;
 // <- storage.type.mql5
