@@ -260,10 +260,34 @@ contexts:
       scope: variable.other.readwrite.member.mql5
     - include: scope:source.c#variables
 
+  # https://www.mql5.com/en/docs/constants/namedconstants
   constants:
     - match: \b(NULL|true|false)\b
       scope: constant.language.mql5
-    - match: \b(__FILE__|__FUNCTION__|__LINE__)\b
+    # Predefined Macro Substitutions
+    - match: \b(__DATE__|__DATETIME__|__FILE__|__FUNCTION__|__FUNCSIG__|__PATH__|__LINE__|__MQLBUILD__|__MQL5BUILD__)\b
+      scope: support.constant.mql5
+    # Mathematical Constants
+    - match: \b(M_E|M_LOG2E|M_LOG10E|M_LN2|M_LN10|M_PI|M_PI_2|M_PI_4|M_1_PI|M_2_PI|M_2_SQRTPI|M_SQRT2|M_SQRT1_2)\b
+      scope: support.constant.mql5
+    # Numerical Type Constants 1
+    - match: \b(CHAR_MIN|CHAR_MAX|UCHAR_MAX|SHORT_MIN|SHORT_MAX|USHORT_MAX|INT_MIN|INT_MAX|UINT_MAX|LONG_MIN|LONG_MAX|ULONG_MAX)\b
+      scope: support.constant.mql5
+    # Numerical Type Constants 2
+    - match: \b(DBL_MIN|DBL_MAX|DBL_EPSILON|DBL_DIG|DBL_MANT_DIG|DBL_MAX_10_EXP|DBL_MAX_EXP|DBL_MIN_10_EXP|DBL_MIN_EXP)\b
+      scope: support.constant.mql5
+    # Numerical Type Constants 3
+    - match: \b(FLT_MIN|FLT_MAX|FLT_EPSILON|FLT_DIG|FLT_MANT_DIG|FLT_MAX_10_EXP|FLT_MAX_EXP|FLT_MIN_10_EXP|FLT_MIN_EXP)\b
+      scope: support.constant.mql5
+    # Uninitialization Reason Codes
+    - match: \b(REASON_PROGRAM|REASON_REMOVE|REASON_RECOMPILE|REASON_CHARTCHANGE|REASON_CHARTCLOSE
+             + |REASON_PARAMETERS|REASON_ACCOUNT|REASON_TEMPLATE|REASON_INITFAILED|REASON_CLOSE)\b
+      scope: support.constant.mql5
+    # Checking Object Pointer
+    - match: \b(POINTER_INVALID|POINTER_DYNAMIC|POINTER_AUTOMATIC)\b
+      scope: support.constant.mql5
+    # Other Constants
+    - match: \b(CHARTS_MAX|clrNONE|EMPTY_VALUE|INVALID_HANDLE|IS_DEBUG_MODE|IS_PROFILE_MODE|WHOLE_ARRAY|WRONG_VALUE)\b
       scope: support.constant.mql5
 
   keywords:
