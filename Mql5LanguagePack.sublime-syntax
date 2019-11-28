@@ -289,6 +289,9 @@ contexts:
     # Other Constants
     - match: \b(CHARTS_MAX|clrNONE|EMPTY_VALUE|INVALID_HANDLE|IS_DEBUG_MODE|IS_PROFILE_MODE|WHOLE_ARRAY|WRONG_VALUE)\b
       scope: support.constant.mql5
+    # Periods
+    - match: \b(PERIOD_(CURRENT|M1|M2|M3|M4|M5|M6|M10|M12|M15|M20|M30|H1|H2|H3|H4|H6|H8|H12|D1|W1|MN1))\b
+      scope: support.constant.mql5
 
   keywords:
     - match: \b({{control_keywords}})\b

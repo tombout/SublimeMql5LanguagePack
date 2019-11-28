@@ -92,7 +92,7 @@ string ErrorDescription(int error_code);
 input group           "Signal"
 // <- storage.type.mql5
 //    ^ storage.type.mql5
-input int             ExtBBPeriod   = EMPTY_VALUE;
+input int             ExtBBPeriod   = PERIOD_CURRENT;
 //                                        ^ support.constant.mql5
 input double          ExtBBDeviation= 2.0;
 input ENUM_TIMEFRAMES ExtSignalTF=PERIOD_M15;
