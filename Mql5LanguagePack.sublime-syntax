@@ -247,6 +247,8 @@ contexts:
 
   operators:
     - include: scope:source.c#operators
+    - match: \b({{memory_operators}})\b
+      scope: keyword.other.mql5
 
   modifiers:
     - match: \b({{modifiers}})\b

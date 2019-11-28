@@ -194,11 +194,18 @@ string HTML_head="<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN
                     "</head>";
                     // <- string.quoted.double.mql5
 
+// Memory operators
+Object* aObj = new Object;
+//             ^^^ keyword.other.mql5
+delete aObj;
+// ^ keyword.other.mql5
+
 // Functions:
 int somefunc(double a, double d=0.0001,
              int n=5, bool b=true,
              string s="passed string")
   {
+   Object* aObj = new Object;
    Print("Required parameter a = ",a);
    Print("Pass the following parameters: d = ",d," n = ",n," b = ",b," s = ",s);
    return(0);
