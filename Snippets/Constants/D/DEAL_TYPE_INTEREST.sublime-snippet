@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-25 22:45:23.907000. -->
+<snippet>
+	<content><![CDATA[
+DEAL_TYPE_INTEREST${0}
+]]></content>
+	<tabTrigger>DEAL_TYPE_INTEREST</tabTrigger>
+	<scope>source.mql5</scope>
+	<description>ENUM_DEAL_TYPE</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-25 22:44:54.642000. -->
+<snippet>
+	<content><![CDATA[
+SERIES_SYNCHRONIZED${0}
+]]></content>
+	<tabTrigger>SERIES_SYNCHRONIZED</tabTrigger>
+	<scope>source.mql5</scope>
+	<description>ENUM_SERIES_INFO_INTEGER</description>
+</snippet>

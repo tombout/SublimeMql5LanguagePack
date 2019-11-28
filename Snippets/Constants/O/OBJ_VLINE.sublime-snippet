@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-25 22:28:01.736000. -->
+<snippet>
+	<content><![CDATA[
+OBJ_VLINE${0}
+]]></content>
+	<tabTrigger>OBJ_VLINE</tabTrigger>
+	<scope>source.mql5</scope>
+	<description>ENUM_OBJECT</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-25 22:45:23.798000. -->
+<snippet>
+	<content><![CDATA[
+DEAL_COMMISSION${0}
+]]></content>
+	<tabTrigger>DEAL_COMMISSION</tabTrigger>
+	<scope>source.mql5</scope>
+	<description>ENUM_DEAL_PROPERTY_DOUBLE</description>
+</snippet>

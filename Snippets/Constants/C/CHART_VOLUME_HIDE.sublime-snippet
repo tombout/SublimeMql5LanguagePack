@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-25 22:46:41.294000. -->
+<snippet>
+	<content><![CDATA[
+CHART_VOLUME_HIDE${0}
+]]></content>
+	<tabTrigger>CHART_VOLUME_HIDE</tabTrigger>
+	<scope>source.mql5</scope>
+	<description>ENUM_CHART_VOLUME_MODE</description>
+</snippet>

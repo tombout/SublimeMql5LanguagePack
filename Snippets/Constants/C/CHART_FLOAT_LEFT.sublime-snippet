@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-25 22:46:20.792000. -->
+<snippet>
+	<content><![CDATA[
+CHART_FLOAT_LEFT${0}
+]]></content>
+	<tabTrigger>CHART_FLOAT_LEFT</tabTrigger>
+	<scope>source.mql5</scope>
+	<description>ENUM_CHART_PROPERTY_INTEGER</description>
+</snippet>

@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-25 22:28:01.866000. -->
+<snippet>
+	<content><![CDATA[
+OBJ_ARROW_THUMB_UP${0}
+]]></content>
+	<tabTrigger>OBJ_ARROW_THUMB_UP</tabTrigger>
+	<scope>source.mql5</scope>
+	<description>ENUM_OBJECT</description>
+</snippet>

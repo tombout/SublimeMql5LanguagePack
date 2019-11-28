@@ -1,0 +1,9 @@
+<!-- This file was generated with snippet_crawler.py at 2019-11-25 22:45:14.677000. -->
+<snippet>
+	<content><![CDATA[
+POSITION_TIME_UPDATE${0}
+]]></content>
+	<tabTrigger>POSITION_TIME_UPDATE</tabTrigger>
+	<scope>source.mql5</scope>
+	<description>ENUM_POSITION_PROPERTY_INTEGER</description>
+</snippet>
